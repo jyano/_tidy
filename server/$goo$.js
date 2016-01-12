@@ -6,7 +6,8 @@ $mg.connect("mongodb://localhost/final", function () {
 })
 
 picSchema = new $mg.Schema({
-	user: {type: $mg.Schema.Types.ObjectId, ref: 'user', required: true},
+	user: {type: $mg.Schema.Types.ObjectId, ref: 'user',
+	 required: true},
 	//user: {type: $mg.Schema.Types.ObjectId, ref:'user', required:true},
 	date: {type: Date, default: Date.now},
 	modified: Date,
@@ -14,7 +15,6 @@ picSchema = new $mg.Schema({
 	name: String,
 	ext: String
 })
-
 imageSchema = new $mg.Schema({
 	username: String,
 	date: Date,
@@ -23,7 +23,6 @@ imageSchema = new $mg.Schema({
 	dats: [Number],
 	physicsData: [Number]
 })
-
 userSchema = new $mg.Schema({
 	un: {type: String, required: true},
 	pw: String,
@@ -32,9 +31,7 @@ userSchema = new $mg.Schema({
 	mugURL: String,
 	buds: [String]
 })
-
 User = $mg.model('User', userSchema)
-  
 qp = qpn$ = function (fn, q, p, nx) {
 	 q = q$(q)
 	 q.ss = ss$(q.session)
@@ -44,8 +41,6 @@ qp = qpn$ = function (fn, q, p, nx) {
 		 fn(q, p, nx)
 	 }
  }
-
-
 q$ = $Q = miniQ = req = function (q) {
 
 	q= q||{}
@@ -95,7 +90,6 @@ q$ = $Q = miniQ = req = function (q) {
 	 return q
  
 }
-
 ss$ = $Ss = function (ss) {
 	ss = ss || {}
 	 ss.sv = ss.save;
@@ -123,7 +117,6 @@ ss$ = $Ss = function (ss) {
 	 }
 	 return ss
  }
-
 p$ = $P = miniP = $res = function (p) {
 	p=p ||{}
 	 p.js = p.j = p.json
@@ -243,7 +236,6 @@ p$ = $P = miniP = $res = function (p) {
 	 // p.a = p.app;   // p.hdS = p.headersSent
 	 return p
  }
- 
 N$ = n$ = $N = nx$ = function (nx) {
 	nx = nx ||{}
 	 nx.if = function (z) {

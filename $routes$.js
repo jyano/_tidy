@@ -32,23 +32,7 @@ Stage = ['cjs', 'cjsMC',
 		'fizApps', 'forcesApps', 'mouseJtApps',
 		'worldApps', 'bxWebsiteEx1', 'bxWebsiteEx2',
 		'boxEach', 'queryAB', 'queryPoint',
-		'joints', 'distanceJt', 'mouseJt', 'boxKlas','spazMake'
-	]
-Both = ['superUnder', 'superJ', 'superTime']
-Web = ['jq',
-	'webColor', 'webCss', 'webFont', 'web',
-	'rules', 'media', 'flex', 'styles',
-	'sJQ', 'attributes', 'qAnim', 'traverse',
-	'html', 'inputs', 'lists', 'submit',
-	'root', 'nest', 'appy', 'localStorage',
-	'll', 'l',
-	'webEvents',
-	'webMouse',
-	'webDrag',
-	'press',
-	'webTouch',
-	'webKeys'
-]
+		'joints', 'distanceJt', 'mouseJt', 'boxKlas','spazMake']
 Graphics = [
 	'gpc', 'pureDa',
 	'jqGraphics', 'gpClipper', 'superCtx', 'superCan',
@@ -65,20 +49,33 @@ Front = [
 	'bb', 'bone', 'bbColl', 'bbDirt', 'bbEvt', 'bbFiltColl', 'bbRtr', 'bbView', 'bbLS', 'bbServer', 'bbServerMore',
 	'ko', 'knock', 'koCustom', 'koMore'
 ]
+
 Wap = ['wappy', 'users', 'login', 'social', 'widUser']
 
 
+
+Web = ['both', 'jq','web','l', 'superCanvas'
+]
+
+
 jsArrs= [
-	Both, Web,  Graphics, Stage, Box//, Front, Wap
+  Web//,  Graphics, Stage, Box//, Front, Wap
 ]
 
 $a.get('/box/:app*', function (q, p) {
 	app = q.params.app.toUpperCase()
 	html = ''//' - '
+	html += '<h1>hello</h1>'
 	html += '<link rel="stylesheet" type="text/css"  href="/jqui.css"></script>'
-	html += '<link rel="stylesheet" type="text/css"  href="/theme.css"></script>'
+	
+
 	html += $js(jsArrs)
+	
 	html += '<script> $(function(){ $l("app:  ' + app + '"); ' + app + '()})</script>'
+	
 	p.send(html)
+	
 })
- 
+$l('no theme')
+//html += '<link rel="stylesheet" type="text/css"  href="/theme.css"></script>'
+	

@@ -1117,7 +1117,7 @@ _canIndex = function (el) {
 	_canText(el)
 	_canTransform(el)
 	_canDraw(el)
-	_canMug(el)
+	//_canMug(el)
 	return el
 }
 _canBasic = function (el) {

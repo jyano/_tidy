@@ -819,7 +819,7 @@ function superTemplate() {
 		return $(el).A($.tH().A(
 				$.tr().K('header')(
 						$.th().A('Name'),
-						$.th.().A('Age'))))
+						$.th().A('Age'))))
 	}
 	//   use like this: q = $.tpFn( $.tpFn.thed ).A()
 	$.tp.lii = function (ob, el) {//two ways ok!!!!
