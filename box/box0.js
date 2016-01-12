@@ -249,112 +249,44 @@ b2d.tB = b2d.toBody = function (b) {
 		return false
 	}
 }
-function util() {
+ 
 	b2d.tF = b2d.toFxt = function (f) {
 		return b2d.iB(f) ? f.f() : f
 	}
-}
+ 
 b2Color = b2d.Cm.b2Color
-function generalBodyStuffAdvanced() {
-	function bodyTransformClone() {
-		b.copyXY = function (b1) {
-			var b = this
-			return b.XY(b1.X(), b1.Y()).rt(b1.rt())
-		}
-	}
-}
+ 
 b2d.Cxs = b2d.D.Contacts
 b2d.Cx = b2d.Cxs.b2Contact
-bx.divPoints = bx.divPts = bx.vs = function () {
-	var g = G(arguments)
-	//all this does is to 'scale down' a series of points
-	//can pass in pts naked OR in an array
-	return _.m(
-			g.s ? g : //passed in verts ([],[],[])
-					g.f,
-			bx.div
-	) //passed an array [[],[],[]]
-	//bx.div <- function div(v){return V(v).div()}	
-}
-bx.add = function (vs, p) {
-	return _.m(vs, function (v) {
-		return V(v).add(p)
-	})
-}
-bx.sub = function (vs, p) { //bx.ptsMinus = bx.vertsMinus =
-	return _.m(vs, function (v) {
-		return V(v).sub(p)
-	})
-}
-bx.add = function (vs, p) {
-	return _.m(vs, function (v) {
-		return V(v).add(p)
-	})
-}
-bx.xy = function (o) {
-	if (bx.iF(O(o.x))) {
-		o.x = o.x.B()
+b2d.Cxs = b2d.D.Contacts
+b2d.Cx = b2d.Cxs.b2Contact
+b2d.toBody = function (fixtOrBody) {
+	if (b2d.isBody(fixtOrBody)) {
+		return fixtOrBody
 	}
-	if (O(o.x)) {
-		o.x = F(o.x.X) ? o.x.X() : o.x.x
+	if (b2d.isFixt(fixtOrBody)) {
+		return fixtOrBody.body()
 	}
-	if (O(o.y)) {
-		o.y = F(o.x.Y) ? o.x.Y() : o.x.y
-	}
-	return o
+	return false
 }
-bx.add = function (vs, p) {
-	return _.m(vs, function (v) {
-		return v.add(p)
-	})
+b2d.bodyX = b2d.bodyDefX = function (x, y) {
+	var bodyDef = new b2BodyDef()
+	x = N(x) ? x : 300
+	y = N(y) ? y : 300
+	bodyDef.xy(x, y)
+	return bodyDef
 }
-bx.d = bx.div = function (v) {
-	return V(v).div()
-}
-bx.m = bx.mult = function (v) {
-	return V(v).mult()
-	function alt() {
-		bx.m = function (vs) {
-			return _.m(vs, bx.mult)
+b2d.tB = b2d.toBody = function (b) {
+	return b2d.iB(b) ? b :
+			b2d.iF(b) ? b.B() :
+					null
+	b2d.toBodyAlt = function (fixtOrBody) {
+		if (b2d.isBody(fixtOrBody)) {
+			return fixtOrBody
 		}
-	}
-}
-bx.mat22 = function (v1, v2) {
-	var m = new bx.Mat22()
-	m.SetVV(v1, v2)
-	return m
-}
-bx.AB = bx.C.b2AABB
-ab = bx.AB.prototype
-ab.LB = function (x, y) {
-	this.lowerBound.Set(x, y)
-	return this
-}
-ab.UB = function (x, y) {
-	this.upperBound.Set(x, y)
-	return this
-}
-ab.lUB = function () {
-	var ab = this, g = G(arguments),
-			o = {
-				x1: g.f, y1: g.s,
-				x2: g.t, y2: g.fo
-			}
-	if (g.n) {
-		o.x1 /= 30;
-		o.y1 /= 30;
-		o.x2 /= 30;
-		o.y2 /= 30
-	}
-	ab.LB(o.x1, o.y1)
-	ab.UB(o.x2, o.y2)
-	return ab
-}
-ab.pt = function (x, y) {
-	var g = G(arguments)
-	return this.lUB(alg(x, '-'), alg(y, '-'), alg(x), alg(y))
-	function alg() {
-		var g = G(arguments)
-		return g.f / 30 + (g.n ? -.01 : .01)
+		if (b2d.isFixt(fixtOrBody)) {
+			return fixtOrBody.body()
+		}
+		return false
 	}
 }

@@ -28,4 +28,15 @@ $stc = function () {
 }
 
 
-$stc('', '../art','_', 'web')
+$stc('', '../art','_', 'web',
+		
+		'easel',
+		'clipper',
+		'box','fiz','spaz',
+		'joints','controller',
+		'scroll',
+		'track',
+		'protos',
+		'arcade'
+
+)

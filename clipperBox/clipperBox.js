@@ -1,61 +1,3 @@
-window.$pt = window.$pt || {}
-gpc = gpcas
-// other lib:  http://jsclipper.sourceforge.net/6.1.3.2/main_demo.html
-gpc.g = gpc.geometry
-PolyDefault = gpc.g.PolyDefault;
-ArrayList = gpc.util.ArrayList;
-PolySimple = gpc.g.PolySimple;
-Clip = gpc.g.Clip;
-OperationType = gpc.g.OperationType;
-LmtTable = gpc.g.LmtTable;
-ScanBeamTreeEntries = gpc.g.ScanBeamTreeEntries;
-EdgeTable = gpc.g.EdgeTable;
-EdgeNode = gpc.g.EdgeNode;
-ScanBeamTree = gpc.g.ScanBeamTree;
-Rectangle = gpc.g.Rectangle;
-BundleState = gpc.g.BundleState;
-LmtNode = gpc.g.LmtNode;
-TopPolygonNode = gpc.g.TopPolygonNode;
-AetTree = gpc.g.AetTree;
-HState = gpc.g.HState;
-VertexType = gpc.g.VertexType;
-VertexNode = gpc.g.VertexNode;
-PolygonNode = gpc.g.PolygonNode;
-ItNodeTable = gpc.g.ItNodeTable;
-StNode = gpc.g.StNode;
-ItNode = gpc.g.ItNode;
-gpc.PS = gpc.g.PolySimple
-gpc.PD = gpc.g.PolyDefault
-pS = ps = $pt.pS = gpc.PS.prototype
-pD = $pt.pD = gpc.PD.prototype
-M.btwPts = function (x, x1, x2) {
-	var res1 = (x < (x1 + 0.1) && x >= x2 - 0.1)
-	var res2 = (x > (x1 - 0.1) && x <= x2 + 0.1)
-	return res1 || res2
-}
-M.onSgm = isOnSegment = function (px, py, x1, y1, x2, y2) {
-	var btwPts = M.btwPts(px, x1, x2) && M.btwPts(py, y1, y2)
-	return btwPts && isOnLine(px, py, x1, y1, x2, y2)
-}
-M.slope = function (x1, y1, x2, y2) {
-	return (y2 - y1) / (x2 - x1)
-}
-M.lnY = function (x, x1, y1, x2, y2) {
-	var mx = M.slope(x1, y1, x2, y2)
-	var b = x - x1 + y1
-	var y = mx * b
-	return y
-}
-M.onLn = function (px, py, x1, y1, x2, y2) {
-	M.veryClose = function (a, b) {
-		return M.abs(a - b) > 0.1
-	}
-	var vC = M.veryClose
-	return vC(x2, x1) ?
-			!vC(py,
-					(y2 - y1) / (x2 - x1) * (px - x1) + y1) :
-			vC(px - x1)
-}
 b.clone = function (x, y, a) {
 	var b = this
 	x = N(x, b.X())
@@ -908,4 +850,4 @@ b2d.toFixture = b2d.tF = function (f) {
 }
 b2d.glu = function (a, b) {
 	return a.glu(b)
-}  
+}

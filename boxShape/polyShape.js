@@ -10,88 +10,7 @@ G.rectangle = G.boxBox = function (g) {
 	o.w = N(o.w, 50)
 	o.h = N(o.h, 50)
 	return o
-}
-pH = b2d.PolygonShape.prototype
-pH._box = function () {
-	var pH = this
-	pH.SetAsOrientedBox.apply(this, arguments)
-	return pH
-}
-pH.box = function () { // tx uses!
-	var pH = this, g = G(arguments),
-			o = G.boxBox(g)
-	return pH._box(
-			o.w / 60,
-			o.h / 60,
-			V(o.x, o.y, '-'),
-			M.tR(o.rt)
-	)
-}
-$pH = b2d.pH = function (W, H, x, y, a) {
-	
-	
-	
-	
-	//makes a fixtDef with a polyShape
-	//| 50,200[[,200,60,45
-	//| [20,300],.. //-> g.a(p,'arr')// -> g.a(p.arr)
-	var g = G(arguments)
-	var pH = new b2d.PolygonShape()
-	if (g.N_) {
-		pH.box(g.f, g.s, g.t, g.fo, g.fi)
-	}
-	else if (g.OO_) {
-		$a(pH, 'arr', g)
-	}
-	return pH
-}
-$rec = $pFD = $pF = function (wd, ht, x, y, rt) {
-	var rec = $pH(wd, ht, x, y, rt)
-	var fD = $fD(rec)
-	return fD
-}
-fD.asBox = function (a, b) {
-	this.shape.SetAsBox(a / 30, b / 30)
-	return this
-}
-fD._sAOB = function (a, b, p, aa) {
-	this.shape.SetAsOrientedBox(a, b, p, aa)
-	return this
-}
-fD.asOrBox = function (a, b, p, aa) {
-	return this._sAOB(a / 30, b / 30, p, aa)
-}
-fD.box = fD.sAB = function (a, b, p, A) {
-	if (!p) {
-		this.shape.SetAsBox(a / 30, b / 30)
-	}
-	else {
-		this.shape.SetAsOrientedBox(a / 30, b / 30, p, A)
-	}
-	return this
-}
-pH.vs = pH.vertsx = function () {
-	alert('pH.vs. see boxShapes.js')
-	var pH = this
-	return _.m(pH.m_vertices, function (v) {
-		return [v.x * 30, v.y * 30]
-	})
-}
-pH.arr = function (v) {
-	var p = this
-	v = _.m(v, function (v) {
-		return V(v).d()
-	})
-	p.SetAsArray(v, v.length)
-	return p
-}
-pH.setAsVec = function (v, sc) {
-	var pH = this //used by SepLib
-	pH.SetAsVector(_.m(v, function (v) {
-		return V(v).d(N(sc, 30))
-	}))
-	return pH
-}
+} 
 b2d.pol = function () {
 	return b2d.fD($a(b2d.pH, arguments))
 			.d(1).fr(.2).r(.2)
@@ -150,3 +69,27 @@ $bi = $XYR = function () {
 	var b = w.sB(545, 595)
 	return b.A(b2d.cFD(150).DBF())
 }
+$pH = b2d.pH = function (W, H, x, y, a) {
+	
+	
+	
+	
+	//makes a fixtDef with a polyShape
+	//| 50,200[[,200,60,45
+	//| [20,300],.. //-> g.a(p,'arr')// -> g.a(p.arr)
+	var g = G(arguments)
+	var pH = new b2d.PolygonShape()
+	if (g.N_) {
+		pH.box(g.f, g.s, g.t, g.fo, g.fi)
+	}
+	else if (g.OO_) {
+		$a(pH, 'arr', g)
+	}
+	return pH
+}
+$rec = $pFD = $pF = function (wd, ht, x, y, rt) {
+	var rec = $pH(wd, ht, x, y, rt)
+	var fD = $fD(rec)
+	return fD
+}
+ 

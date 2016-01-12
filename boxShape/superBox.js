@@ -1,70 +1,33 @@
  
-$sB = $bD = function (x, y) {
-	//return $bD(x, y).ty(0)
-	var g = G(arguments)
-	var bD = new b2d.BD()
-	if (g.u) {
-		return bD
-	}
-	var v = V(x, y)
-	bD.XY(N(v.x, 0),
-			N(v.y, 0)
-	)
-//	x = N(x) ? x : 300
-//	y = N(y) ? y : 300
-	return bD
-	// = $dBD=b2d.D = b2d.bD = b2d.BD = b2d.dBD = b2d.dD = b2d.dyn
-//b2d.staticDef = b2d.staticBodyDef =StaticBodyDef=sBD=
-	function alt() {
-		$bD = function (x, y) {
-			_$bD = function () {
-				return new b2d.BD()
-			}
-			return U(x) ? _$bD() : _$bD().XY(x, y)
-		}
-	}
+BOX1 = function () {
+	c = $.c('y', 1800, 1500)
+	x = c.ctx()
+	$.i('me', function (i) {
+		x.drawImage(i, 0, 0)
+	})
+	var DD = b2DebugDraw; //dbD=  //	dbD.SetSprite(x); //  dbD.SetDrawScale(30); //	dbD.SetLineThickness(20) //	dbD.SetFillAlpha(1)// dbD.flag( b2DebugDraw.e_shapeBit | DD.e_pairBit | DD.e_aabbBit | DD.e_centerOfMassBit )
+	w = $bW().sDD($dD(x, 30))
+	//.fl( b2DebugDraw.e_shapeBit | DD.e_pairBit | DD.e_aabbBit | DD.e_centerOfMassBit )
+	$bi()
+	b = $ba()
+	$l(w.numBods())
+	T.t(function () {
+		w.DrawDebugData()
+		w.step(1 / 20, 10, 8)
+		ps = b.GetPosition()
+		//$l(ps.x * 30 + ', ' + ps.y * 30)
+	})
 }
-$dB = function (x, y) {
-
-//return $bD(x, y).ty(2)
-	//aside: interesting that dyn comes after kin
-	return $bD(x, y).ty(2)
-	//.dyn()
-	//$dBD =   b2d.bD =   b2d.dBD =
-}
-$bulBD = function (x, y) {
-	var bD = $dB(x, y)
-	bD.bullet = true
-	bD
-}
-$kB = $kBD = b2d.kD = function (x, y) {
-	return $bD(x, y).T(1)
-}
-$kB = $bD1 = function (x, y) {
-	return $bD(x, y).ty(1)
-}
-$kBD = b2d.kD = function (x, y) {
-	return $dBD(x, y).T(1)
-}
-$fD = function (h) {
-	var g = G(arguments)
-	var fD = new b2d.FD()
-	if (b2d.iH(h)) {
-		fD.shape = h
-	}
-	if (g.n) {
-		fD.isSensor = true
-	}
-	fD.de(1)
-	//if (b2d.isShape(shape)) {f.shape = shape}
-	if (O(g.f)) {
-		fD.shape = g.f
-		if (g.s) {//only cir?
-			fD.shape.lP(g.s, g.t)
-		}
-	}
-	return fD
-	// = b2d.fD = b2d.f
+BOX = function () {
+	w = $bW().sDD($dD($.c('z', 1800, 1500)))
+	_.ev(.1, function () {
+		w.go(1 / 5, '+')
+	})
+	$bi()
+	_.ev(2, function () {
+		$ba()
+	})
+	$l('bodyCOunt:' + w.numBods())
 }
 $rH = function () {
 	var pH = $pH(), g = G(arguments)
@@ -310,24 +273,7 @@ $cH = function (r, x, y) {
 	}
 	return h
 }
-b2d.iH = b2d.isShape = function (h) {
-	if (!O(h)) {
-		return
-	}
-	var ty = h.constructor.name
-	return ty == "b2PolygonShape" ? 'p' :
-			ty == "b2CircleShape" ? 'c' :
-					ty == "b2AShape" ? 'a' : false
-}
-b2d.iPH = b2d.iP = function () {
-	return this.iH() == 'p'
-}
-b2d.iCH = b2d.iC = function () {
-	return this.iH() == 'c'
-}
-b2d.iAH = b2d.iA = function () {
-	return this.iH() == 'a'
-}
+ 
 CIR = function () {
 	W().ship()
 	cH = $cH(34)
@@ -448,168 +394,4 @@ TRI = function () {
 	// w.dyn(x,y, b2d.triangleFixt2)
 	//w.dyn(x,y, b2d.triangleFixt3)
 }
-$eH = function (x1, y1, x2, y2) {
-	return _$pH().SAE(V(x1, y1, '-'), V(x2, y2, '-'))
-}
-SAE = function () {
-	W().p()
-	w.eg(100, 500, 1000, 0)
-	w.eg(50, 50, 100, 500)
-	w.eg(0, 0, 1000, 100)
-	w.cirB(410, 100, 2)
-	_.in(4, function () {
-		w.eg(100, 100, 500, 300)
-		w.eg(100, 200, 500, 400)
-		w.eg(100, 300, 500, 500)
-		w.eg(1000, 100, 600, 300)
-		w.eg(1000, 200, 600, 400)
-		w.eg(1000, 300, 600, 500)
-		w.cirB(410, 100)
-	})
-}
-moreEdge = function () {
-	EDE = function () {
-		W()
-		v1 = V(0, 0)
-		v2 = V(40, 0)
-		eH = $eH()
-		eH.Set(v1, v2)
-	}
-	GHOST = GHO = function () {
-// / // This an edge shape with ghost vertices.
-		eH = $eH()
-		eH.Set(v1 = V(30, 8), v2 = V(0, 0));
-		eH.m_hasVertex0 = true;
-		eH.m_hasVertex3 = true;
-		eH.m_vertex0 = v0 = V(40, 0);
-		eH.m_vertex3 = v3 = V(40, 14);
-	}
-//chain:
-	CHAIN = CHA = function () {
-		vs = [V(30, 0), V(50, 10), V(0, 0), V(-30, 80)]
-		chain = $chH()
-		chain.CreateChain(vs, 4);
-	}
-	GHOSTVERTS = GHV = function () {
-// // Install ghost vertices
-		chain = $chH();
-		chain.SetPrevVertex(V(90, 30));
-		chain.SetNextVertex(V(-60, 0))
-	}
-	LOOP = function () {// You may also create loops automatically.
-//
-// // Create a loop. The first and last vertices are connected.
-//
-		chain = $chainH();
-		chain.CreateLoop(vs, 4);
-		// Self-intersection of chain shapes is not supported.
-// It might work, it might not.
-// The code that prevents ghost collisions assumes there are no self-intersections
-// of the chain.
-// Each edge in the chain is treated as a child shape and can be accessed by index.
-//
-// // Visit each child edge.
-//
-		for (i = 0; i < chain.GetChildCount(); ++i) {
-			eH = $eH();
-			chain.GetChildEdge(eH, i)
-		}
-	}
-}
-b2d.polySens = function (kind) {
-	return b2d.poly.apply(null, _.rest(arguments)).sensor(true).K(kind)
-}
-b2d.fixtParse = function (arr) {
-
-//takes array of arrays
-//if something in array is NOT array, it assumes it is already a fixt
-//but if it IS an array, it makes it into a fixture
-	return _.m(arr, function (fixt) {
-		if (!A(fixt)) {
-			return fixt
-		}
-		if (fixt.isSensor) {// weird
-			return b2d.polySens.apply(null, fixt)
-		}
-		var len = fixt.length
-		return (len == 1) ? b2d.circ(fixt[0])
-				: (len == 2) ? b2d.poly.apply(null, fixt)
-				: (len == 3) ? b2d.circ.apply(null, fixt)
-				: b2d.poly.apply(null, fixt)
-	})
-	b2d.fixtParse = function (arr) {
-		return _.m(arr, function (fixt) {
-			var len
-			if (!A(fixt)) {
-				return fixt
-			}
-			if (fixt.isSensor) {
-				return b2d.polySens.apply(null, fixt)
-				return b2d.poly.apply(null, _.rest(arguments)).sensor(true).K(kind)
-			}
-			len = fixt.length
-			if (len == 1) {
-				return b2d.circ(fixt[0])
-			}
-			else if (len == 2) {
-				return b2d.poly.apply(null, fixt)
-			}
-			else if (len == 3) {
-				return b2d.circ.apply(null, fixt)
-			}
-			return b2d.poly.apply(null, fixt)
-		})
-	}
-}
-b2d.Cxs = b2d.D.Contacts
-b2d.Cx = b2d.Cxs.b2Contact
-b2d.toBody = function (fixtOrBody) {
-	if (b2d.isBody(fixtOrBody)) {
-		return fixtOrBody
-	}
-	if (b2d.isFixt(fixtOrBody)) {
-		return fixtOrBody.body()
-	}
-	return false
-}
-b2d.bodyX = b2d.bodyDefX = function (x, y) {
-	var bodyDef = new b2BodyDef()
-	x = N(x) ? x : 300
-	y = N(y) ? y : 300
-	bodyDef.xy(x, y)
-	return bodyDef
-}
-b2d.tB = b2d.toBody = function (b) {
-	return b2d.iB(b) ? b :
-			b2d.iF(b) ? b.B() :
-					null
-	b2d.toBodyAlt = function (fixtOrBody) {
-		if (b2d.isBody(fixtOrBody)) {
-			return fixtOrBody
-		}
-		if (b2d.isFixt(fixtOrBody)) {
-			return fixtOrBody.body()
-		}
-		return false
-	}
-}
-b2d.kin = b2d.kinematic = KinematicBodyDef = kBD = function (x, y) {
-	return b2d.bodyDef(x, y).T(1)
-}
-b2d.fxPar = $$$cirORpoly$$$ = function (fxs, fn) {
-	var b = this
-	//if its not an array,, assume is fine, and leave it as is
-	fxs = _.m(fxs, function (f) {
-		return !A(f) ? f :
-				f.length == 1 || f.length == 3 ?
-						$cF.apply(null, f) :
-						$pF.apply(null, f)
-	})
-	// fn = _.b(fn, b) ?
-	if (fn) {
-		_.e(fxs, fn);
-		return b
-	}
-	return fxs
-	//if (f.isSensor) {return b2d.polySens.apply(null, f)}
-}
+  

@@ -1,13 +1,14 @@
-function originalScroll(){
-
-// OLD:
- 
-} 
- 
-b.dif = function () {
+old = b.dif = function () {
+	// has to do with camera 'offset' :
 	var b = this
-	return {x: 600 - b.X(), y: 400 - b.Y()}
+	
+	return {
+		x: 600 - b.X(),
+		y: 400 - b.Y()
+	 }
 }
+
+
 
 b.getScrollXScale = function () {
 	var getScale = function (y) {
@@ -15,24 +16,24 @@ b.getScrollXScale = function () {
 	}
 	return getScale(this.X())
 }
-
-SCROLLSCALE = WAY1 = function () {
-	$sclLev = function (fn) {
-		$levelWalls()
-		p = w.playa()
-		w.right.kill();
-		w.left.kill()
-		w.st.XY(300, 150).rXY(300, 150)
-		w.clouds(500, -200).clouds(1000, -200).clouds(-500, -200)
-		w.ice(800, 280, 10000);
-		w.rubber(50, 100, 300);
-		w.rubber(-400, 100, 300)
-		w.rect(1200, 30, 600, 4).stat();
-		if (fn) {
-			$t(fn)
-		}
-		st = w.st
+$sclLev = function (fn) {
+	$levelWalls()
+	p = w.playa()
+	w.right.kill();
+	w.left.kill()
+	w.st.XY(300, 150).rXY(300, 150)
+	w.clouds(500, -200).clouds(1000, -200).clouds(-500, -200)
+	w.ice(800, 280, 10000);
+	w.rubber(50, 100, 300);
+	w.rubber(-400, 100, 300)
+	w.rect(1200, 30, 600, 4).stat();
+	if (fn) {
+		$t(fn)
 	}
+	st = w.st
+}
+SCROLLSCALE = WAY1 = function () {
+
 	$sclLev(function () {
 		if (!O(p.sprite)) {
 			return
@@ -84,6 +85,8 @@ SCROLLSCALECENTER = WAY2 = function () {
 		)
 	})
 }
+
+
 //i can leave the world-centering in fw
 // can optionally filter it with scale itself
 //  has limits now!  and more..
