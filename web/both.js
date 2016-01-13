@@ -1246,11 +1246,7 @@ _.jS = function (a, b, c) {
 _.jP = function (a, b, c) {
 	return S(a) ? JSON.parse(a, b) : $(a).prepend(b, c)
 }
-_.tFn = function (fn, fn2) {
-	return F(fn) ? fn : fn2 ? fn2 : function () {
-		return
-	}
-}
+ 
 M = Math
 M.tN = _.tN = function (what, aNum) {
 	return N(what) ? what : aNum || 0

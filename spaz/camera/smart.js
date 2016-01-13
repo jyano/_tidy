@@ -1,30 +1,8 @@
- 
+  
 w.stgYCap = function (y) {
 	var w = this, g = G(arguments)
 	var max = (w.worldH() - w.gameH()) / w._zoom
 	return _.capTop(y, max)
-}
-w.stgXCap = function (x) {
-	var w = this, g = G(arguments)
-	var dif = ( w.worldW() - w.gameW()  )
-	var max = dif / w._zoom
-	return _.capTop(x, max)
-}
-w._stgX = function (x) {
-	var w = this, g = G(arguments)
-	if (g.u) {
-		return g.n ? -w.st.x : w.st.x
-	}
-	w.st.x = g.n ? -x : x
-	return w
-}
-w.stgX = function (x) {
-	var w = this, g = G(arguments)
-	if (g.u) {
-		return -w.st.x
-	}
-	w.st.x = -w.stgXCap(x)
-	return w
 }
 w.stgY = function (y) {
 	var w = this, g = G(arguments)
@@ -60,17 +38,6 @@ w.sXY = function (x, y) {
 	this.sY(y)
 	return this
 }
-w.sXCap = function (s) {
-	return _.cap(s, 0, this.w * this.z - this.W)
-}
-w.sX = function (x) {
-	var w = this
-	if (U(x)) {
-		return -this.s.x
-	}
-	this.s.x = -this.sXCap(x)
-	return w
-}
 w.sYCap = function (s) {
 	return _.cap(s, 0, this.h * this.z - this.H)
 }
@@ -84,8 +51,10 @@ w.sY = function (y) {
 }
 
 w.camScaleMin = w.camZoomMin = function () {
-	return 1 / _.lower(this.wMultiple, this.hMultiple);
+	return 1 / _.lower(this.wMultiple,
+	 this.hMultiple);
 }
+
 w.camXMax = function () {
 	return this.scaledWorldW() - this.gameW
 }
@@ -116,6 +85,31 @@ w.capCamPos = function () {
 	w.camX(w.camX())
 	w.camY(w.camY())
 	return w
-} 
-  
-	
+}
+w.stgY = function (y) {
+	var w = this;
+	if (U(y)) {
+		return w.st.y
+	}
+	w.st.y = y
+	return w
+}
+w.stgXY = function (x, y) {
+	var w = this
+	w.stgX(x)
+	w.stgY(y)
+	return w
+}
+cjs.adj2 = function (income, tax) {
+	//tax ~ deltaLimit ~ buffer
+	var income = income || 0
+	var tax = tax || 0
+	if (Math.abs(income) <= tax) {
+		return 0
+	}
+	return income > 0 ? income - tax :
+	income + tax
+}
+$t = function (fn) {
+	cjs.tick(fn)
+}

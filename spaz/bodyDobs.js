@@ -1,38 +1,5 @@
-w.loader = w._ = function (fn) {
-	Q(function () {
-		fn(w)
-	})
-}
-b.bS = function () {
-	var b = this, w = b.W(), g = G(arguments), o, i, a, sc
-	//pass it a display object (which i guess implies its already loaded)
-	o = cjs.iDO(g.f) ? {i: g.f, bm: g.f} :
-			g.O ? g.f :
-			{i: g.f, sc: g.s, x: g.t, y: g[3], r: g[4], al: g[5]}
-	if (S(o.i)) {
-		w.g.bm(o.i, function (bm) {
-			b.bS(_.x(o, {i: bm, bm: bm}))
-		})
-	}
-	//if not loaded, async loads and passes it back as a data object 
-	// next time, then, when loaded it can bypass async
-	else {
-		$df.xyr(o)
-		$df.sc(o)
-		$df.im(o)
-		//they can pass in a formed shapeer
-		if (cjs.hasDim(o.bm) && !g.n) {
-			o.bm.rC()
-		} //regCent //can not center things that dont have dimensions! 
-		// scale, position and place the bm in the ct (which is on the stage)
-		o.bm.sXY(o.sc).XY(o.x, o.y).rt(o.r).al(o.al)
-		this.gx = this.gx || w.gx.ct();
-		this.gx.A(o.bm)
-	}
-	return this
-}
-
-b.bS= b.bindSprite  = function (img, scale, startingRotation) {
+ 
+b.bindSprite  = function (img, scale, startingRotation) {
 	var b = this, st = b.W().stage
 	//img is an image name
 	scale = N(scale, .4)
@@ -54,6 +21,7 @@ b.bS= b.bindSprite  = function (img, scale, startingRotation) {
 		bm.rotation = b.rt() + startingRotation
 	}
 }
+
 b.bindSprite2 = b.bS2 = function (obj, startingRotation, x, y) {
 	
 	//takes any display object.  right now, just used for shapes
@@ -88,6 +56,34 @@ b.bindSprite2 = b.bS2 = function (obj, startingRotation, x, y) {
 	return body
 }
 
+b.bS = function () {
+	var b = this, w = b.W(), g = G(arguments), o, i, a, sc
+	//pass it a display object (which i guess implies its already loaded)
+	o = cjs.iDO(g.f) ? {i: g.f, bm: g.f} :
+			g.O ? g.f :
+			{i: g.f, sc: g.s, x: g.t, y: g[3], r: g[4], al: g[5]}
+	if (S(o.i)) {
+		w.g.bm(o.i, function (bm) {
+			b.bS(_.x(o, {i: bm, bm: bm}))
+		})
+	}
+	//if not loaded, async loads and passes it back as a data object 
+	// next time, then, when loaded it can bypass async
+	else {
+		$df.xyr(o)
+		$df.sc(o)
+		$df.im(o)
+		//they can pass in a formed shapeer
+		if (cjs.hasDim(o.bm) && !g.n) {
+			o.bm.rC()
+		} //regCent //can not center things that dont have dimensions! 
+		// scale, position and place the bm in the ct (which is on the stage)
+		o.bm.sXY(o.sc).XY(o.x, o.y).rt(o.r).al(o.al)
+		this.gx = this.gx || w.gx.ct();
+		this.gx.A(o.bm)
+	}
+	return this
+}
 b.sp = function () {
 	var b = this, g = G(arguments), ch
 	if (b.gx && b.gx.children) {
@@ -103,13 +99,7 @@ b.sp = function () {
 		}
 	}
 }
-b.c = b.C = function (c) {
-	this.fs(function (f) {
-		f.C(c)
-	})
-	this._col = c
-	return this
-}
+ 
 b.c = b.C = function (c) {
 	this.fs(function (f) {
 		f.C(c)

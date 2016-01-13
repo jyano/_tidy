@@ -138,9 +138,4 @@ pS.ty = pS.type = function () {
 pD.ty = pD.type = function () {
 	return ('pD')
 }
-function bigEnough(f) {
-	//otionally put a min size to allow it to be replaced
-	//i guess if it's too small, don't bother
-	//but calculating area could also be bottleneck?
-	return M.p(f).getArea() > 2000
-} 
+ 

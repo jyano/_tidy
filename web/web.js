@@ -1794,7 +1794,10 @@ function jQAnimApps() {
 	}
 }
 function webEvents() {
-	$L('upStart', 'downEnd', 'move')
+	 
+	upStart()
+	downEnd()
+	move()
 	function upStart() {
 		$.mu = function (fn) {
 			$('body').on('mouseup', fn);

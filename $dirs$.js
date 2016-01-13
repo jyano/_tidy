@@ -29,14 +29,18 @@ $stc = function () {
 
 
 $stc('', '../art','_', 'web',
-		
-		'easel',
+		'_/deps',
+		'easel','anim','easelDraw','easelGrad','filter','bitmap',
 		'clipper',
 		'box','fiz','spaz',
 		'joints','controller',
 		'scroll',
 		'track',
 		'protos',
-		'arcade'
+		'arcade',
+		'bap0',
+		'bap1',
+		'bap2',
+		'box/bap1','box/bap2'
 
 )

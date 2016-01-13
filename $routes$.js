@@ -14,25 +14,7 @@ Stage = ['cjs', 'cjsMC',
 ]
 
 
-	Box = [
-		'bx', 'box0', 'boxPt', 'vec', 'mat',
-		'world', 'worldBod',
-		'worldFix',
-		'worldPol',
-		'debug',
-		'bodies', 'bodyDefs', 'fixtures', 'fixtureDefs',
-		'fixShapes',
-		'bodShapes',
-		'shapes',
-		'edges', 'walls',
-		'bodFix', 'forces',
-		'boxApps', 'bxMouseApps',
-		'bxShapeApps',
-		'edgeApps', 'controlApps', 'fixApps', 'boxBool',
-		'fizApps', 'forcesApps', 'mouseJtApps',
-		'worldApps', 'bxWebsiteEx1', 'bxWebsiteEx2',
-		'boxEach', 'queryAB', 'queryPoint',
-		'joints', 'distanceJt', 'mouseJt', 'boxKlas','spazMake']
+
 Graphics = [
 	'gpc', 'pureDa',
 	'jqGraphics', 'gpClipper', 'superCtx', 'superCan',
@@ -54,13 +36,44 @@ Wap = ['wappy', 'users', 'login', 'social', 'widUser']
 
 
 
-Web = ['both', 'jq','web','l', 'superCanvas'
+Web = ['both', 'jq','web','l', 'superCanvas','context'
+]
+
+
+
+Box = ['bx', 'boxBase', 'boxBool', 'boxMath', 'boxCan',
+'fixtPt','fixDefPt','bodyPt','bDefPt','boxShape',
+	'worldPrt', 'worldQuery','joints','mouseJt',
+		'debug', 'loop', 'superBox',
+	'boxApps','forcesApps', 'worldGravity','makeWorld',
+	
+	'bxWebsiteEx1',
+	'bxWebsiteEx2',
+	'bxMouseApps','collApps','mouseJtApps','watchKeysApps'
+]
+Easel = ['cjs','createBase','cjsEvents', 'cjsMouse', 'dobs', 'official','stage',
+
+'bitmap',
+'loader',
+'cjsShapes',
+'createDraw','createShape','shapeCurve','shapeGrad',
+	'bitmapApps','loaderApps',
+	'createDrawApps',
+	'cjsMouseApps','drawGrid',
+	'cirApps','circles','official','circle',
+	'filter','alphaMaskFilter','blurFlApps',
+	'cjsGradApps','radialApps','shapeGrad'
+	
+
 ]
 
 
 jsArrs= [
-  Web//,  Graphics, Stage, Box//, Front, Wap
+  Web,
+  Easel,
+  Box//, Front, Wap
 ]
+
 
 $a.get('/box/:app*', function (q, p) {
 	app = q.params.app.toUpperCase()
@@ -76,6 +89,7 @@ $a.get('/box/:app*', function (q, p) {
 	p.send(html)
 	
 })
+
 $l('no theme')
 //html += '<link rel="stylesheet" type="text/css"  href="/theme.css"></script>'
 	

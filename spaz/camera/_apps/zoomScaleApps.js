@@ -1,15 +1,36 @@
-function zoomScale() {
+ 
 	ZOM = function () {
-		W([1200, 600, 2400, 600], {g: 10})//.manyBalls(); //_.t(10, function (i) {w.D(100 + i * 100, 100, $r(), 35).de(.1)})
+
+		
+		W([1200, 600, 2400, 600], {g: 10})
+		
+		
+		// w.manyBalls(); 
+		
+		_.t(10, function (i) {w.D(100 + i * 100, 100, $r(), 35).de(.1)})
+
+
+
 		y = w.ship(50, 50).track()
+	
+		
 		_.in(2, function () {
+			
 			w.zoom(1.4)
+
 		})
+	
+		
 	}
+	
+	
+	
 	ZOOM = SCORE = ADV = ADVENTURE = function () {
 		W([1200, 600, 2400, 1200])//.P('+')
 		//$.test=true
+		
 		w.Z(.1)
+		
 		w.roof.kill()
 		w.S(100, 570, 'w', 200, 30).r(0).fr(0)
 		w.S(325, 570, 'g', 230, 30).r(.3).fr(10)
@@ -74,10 +95,13 @@ function zoomScale() {
 		}
 		w.dragScale()
 	}//fix
+	
+	
 	ZOOMSCALE = function () {
 		W([1000, 1000], {
 			g: 0, t: 0
 		})
+		
 		w.dragX = function () {
 			var w = this, d
 			w.i.c.m({
@@ -106,7 +130,8 @@ function zoomScale() {
 			return this.dragX().dragY()
 		}
 		// w.s.HUD.dot(500, 500)
-		y = w.ship(100, 100).rot(200)
+	
+			y = w.ship(100, 100).rot(200)
 		w.S(500, 500, 'o', 200)
 		w.S(500, 500, 'r', 10)
 		w.S(200, 200, 'm', 40)
@@ -117,10 +142,14 @@ function zoomScale() {
 		w.drag()
 		r = $.rg().A() //range
 		r.abs(775, 500)
+		
 		r.css('transform', 'rotate(90deg)')
+		
 		r.W(500).val(0)
-		T.t(function () {
+		
+
+		$t(function () {
 			w.Z(r.val() / 25 + 1)
 		})
 	}
-}
+ 
