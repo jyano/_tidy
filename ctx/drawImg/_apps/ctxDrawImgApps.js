@@ -1,17 +1,28 @@
+$.fn.ld = function(){
+	var q =this
+	q.load.apply(q, arguments)
+	return q
+} 
+
 DRI = DRAWIMAGE = function () {
+	
 	DRI.CSS()
-	d = $.d().A(
-			$cv = $.c(900, 400)
-	)
-	x = $cv.ctx()
-	$i = $.i('chicks')
-	$i.load(function () {
-		x.drawImage($i[0], 100, 100)
+	
+	x = $.c(900, 400).a2($.d()).ctx()
+	
+	$Im('chicks').ld(function () {
+		x.dI( this, 100, 100 )
 	})
-	$.i('me', function (i) {
-		x.drawImage(i, 400, 100, 500, 200)
+	
+	
+	$Im('me', function () {
+		x.dI(this, 400, 100, 500, 200)
 	})
 }
+
+
+
+
 DRI.CSS = function () {
 	$CSS({
 		body: {C: 'o'},
@@ -21,4 +32,21 @@ DRI.CSS = function () {
 		},
 		canvas: {outline: 'dashed yellow 20px'}
 	})
+}
+
+
+
+function AppLoader(appOb){
+	
+	
+}
+
+
+function AppLoaderApps(){
+	App = {
+		name: 'DIR',
+		js: function () {
+		},
+		css: {}
+	}
 }

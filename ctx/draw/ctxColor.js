@@ -1,22 +1,24 @@
-x.fS = x.f = x.c = x.fs = function (c, C, l) {
+x.C = x.c = x.fS = x.f = x.fs = function (c, C, l) {
+
 	var g = G(arguments)
+
 	if (g.u) {
 		this.fill()
-		if (g.p) {
-			this.s()
-		}
+		if (g.p) {this.s()}
 		return this
 	}
+	
 	this.fillStyle = oO('c', c)
-	if (C) {
-		this.C(C)
-	}
-	if (N(l)) {
-		this.l(l)
-	}
+	
+	if (C) {this.C(C)}
+
+	if (N(l)) {this.l(l)}
+
 	return this
 }
-x.sS = x.s = x.C = x.ss = function () {
+
+
+x.col = x.sS = x.s  = x.ss = function () {
 	var g = G(arguments), o
 	if (g.u) {
 		this.stroke();
@@ -34,7 +36,10 @@ x.sS = x.s = x.C = x.ss = function () {
 	}
 	return this
 }
+
 x.al = function (al) {
+	
 	this.globalAlpha = al;
+	
 	return this
 }

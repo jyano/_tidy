@@ -1,6 +1,8 @@
-  
-	x.clp = x.cl = function () {
+x.clp = x.cl = function () {
+	
+
 		this.clip();
+
 		return this
-	}
+}
  

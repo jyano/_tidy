@@ -6,7 +6,9 @@ x.Ds = x.dO = function () {
 	this.o('destination-out');
 	return this
 }
-x.dS = x.dI = function () {
+x.dS = function () {
+
+// = x.dI CLASH WITH DRAWIMAGE
 	return this.o('destination-in')
 }
 x.sD = x.sI = function () {

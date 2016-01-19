@@ -36,7 +36,7 @@ Wap = ['wappy', 'users', 'login', 'social', 'widUser']
 
 
 
-Web = ['both', 'jq','web','l', 'superCanvas','context'
+Web = ['both', 'jq','web','img','l', 'superCanvas','context'
 ]
 
 
@@ -109,6 +109,7 @@ Ctx = [
 ]
 
 CtxApps = [
+
 //drawImg
 'ctxDrawImgApps','ctxADB',
 //glob comp
@@ -122,7 +123,7 @@ CtxApps = [
 'ctxLdrApps',
 
 //draw
-'ctxPathApps',
+	'ctxDrawApps','ctxPathApps',
 
 //shadow
 'ctxShadApps',

@@ -611,13 +611,7 @@ function traverse() {
 			this.nm(nm || id)
 			return this
 		}
-		$.fn.i = $.fn.sr = $.fn.src = function (a) {
-			if (U(a)) {
-				return this.attr('src')
-			}
-			this.attr('src', _.src(a))
-			return this
-		}
+	 
 		$.fn.n = function (name) {
 			if (U(name)) {
 				return this.attr('name')
@@ -4505,19 +4499,7 @@ function html5(){
 			a.A()
 			return a
 		}
-		$.i = $.img = function () {
-			var g = G(arguments), o, i = new Image(), $i = $(i);
-			o = F(g.f) ? {fn: g.f} : O(g.f) ? g.f : {sr: g.f, fn: g.s};
-			if (F(o.fn)) {
-				$i.load(_.b(function (e) {
-					o.fn(e.target, e)
-				}, $i))
-			}
-			if (o.sr) {
-				$i.sr(o.sr)
-			}
-			return $i
-		}
+ 
 		$.c = $.can = $.canvas = $.cv = $.c2 = function (c, width, h, x, y) {
 			var g = G(arguments), o, q
 			o = g.S_ ?
@@ -4543,6 +4525,7 @@ function html5(){
 		$.cv0 = function () {
 			return $.c2.apply($, arguments)[0]
 		}
+		
 		function hTags() {
 			$.h1 = function () {
 				var h = $('<h1>');
