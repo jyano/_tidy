@@ -27,7 +27,9 @@ $stc = function () {
 }
 
 
-$stc('', '../art', '../imgFiles', 
+$stc('', '../art',
+		'../deps', '../data',
+		'../imgFiles', 
 		
 		//anim
 		'anim',
@@ -56,6 +58,7 @@ $stc('', '../art', '../imgFiles',
 		'fiz/box','fiz/spaz', 'fiz/clipperBox','fiz/collide',
 		'fiz/controller','fiz/edge','fiz/joints','fiz/query','fiz/arcade',
 		'fiz/makeWorkd',
+		'fiz/_',
 		
 		
 		//front

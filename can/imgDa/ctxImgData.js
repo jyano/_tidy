@@ -4,7 +4,7 @@ x.cID = function(){
 	 
 }
 
-x.gID =  = function () {
+x.gID =  function () {
 	var x = this
 	return x.getImageData.apply(x, arguments)
 }

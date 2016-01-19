@@ -1,4 +1,5 @@
-Anim = ['anim','tween','wapSprite', 'meSprite', 'shake']
+Anim = ['anim','tween','wapSprite', //'meSprite', 
+'shake']
 CtxCore = ['context', 'ctxCan', 'ctxDataURL', 'ctxSaveRestore', 'ctxWH', 'getCtx', 'makeCtx']
 Ctx = [
 //draw
@@ -41,7 +42,8 @@ CtxApps = [
 		'clipStars', 'ctxRtApps', 'ctxTfApps'
 	]
 Can = ['canText', 'canText', 'canPixel', 'canGrad', 'canApps']
-Clipper = ['clipper', 'clipperCanvas', 'operations', 'polyDefault', 'geoBool']
+Clipper = ['gpc','clipper', 'clipperCanvas', 'operations', 'polyDefault', 'geoBool']
+
 Easel = ['cjs','createBase','cjsEvents', 'cjsMouse', 'dobs', 'official','stage',
 
 'bitmap',
@@ -56,10 +58,11 @@ Easel = ['cjs','createBase','cjsEvents', 'cjsMouse', 'dobs', 'official','stage',
 	'cjsGradApps','radialApps','shapeGrad'
 		
 ]
+
 Fiz = [
-	'bx', 'boxBase', 'boxBool',
-	'boxMath', 'boxCan',
-	'fixtPt', 'fixDefPt', 'bodyPt',
+	'bx', 'boxBase',
+	 'boxBool',
+	'boxMath', 'boxCan', 'fixDefPt', 'bodyPt',
 	'bDefPt', 'boxShape',
 	'worldPrt', 'worldQuery', 'joints',
 	'mouseJt',
@@ -69,13 +72,14 @@ Fiz = [
 	'bxWebsiteEx1',
 	'bxWebsiteEx2',
 	'bxMouseApps', 'collApps',
-	'mouseJtApps', 'watchKeysApps'
+	'mouseJtApps', 'watchKeysApps',
+	'fixtPt'
 ]
 Front = [
 	'mock',
 	'jqui', 'uiWids', 'custWids', 'widLS', 'effects', 'interactions', 'dog', 'wid', 'widLS',
 	'bb', 'bone', 'bbColl', 'bbDirt', 'bbEvt', 'bbFiltColl', 'bbRtr', 'bbView', 'bbLS', 'bbServer', 'bbServerMore',
-	'ko', 'knock', 'koCustom', 'koMore'
+	'ko', 'knock', 'koCustom'//, 'koMore'
 ]
 Wapp = ['wapInit','cutouts', 'upload','uploads','sockStart',
 
@@ -85,15 +89,17 @@ Wapp = ['wapInit','cutouts', 'upload','uploads','sockStart',
 	'loginBar', 'social', 'widUser'
 
 ]
-Webb = ['both', 'jq', 'web', 'events', 'css', 'html', 'img', 'l']
+Webb = ['both', 'jq', 
+	'web', 'events', 'css', 'html', 'img', 'l','webApps','mock','shapeDefs']
+
 jsArrs= [
 	Webb,
 	Front,
-	Can, CtxCore, Ctx,CtxApps, 
+	Can, CtxCore, Ctx,CtxApps,
+	Fiz, 
 	Clipper, 
 	Easel,  Anim,
-	Wapp,
-	Fiz
+	Wapp
 ]
 
 
