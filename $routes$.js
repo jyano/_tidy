@@ -1,6 +1,6 @@
 Anim = ['anim','tween','wapSprite', //'meSprite', 
 'shake']
-CtxCore = ['context', 'ctxCan', 'ctxDataURL', 'ctxSaveRestore', 'ctxWH', 'getCtx', 'makeCtx']
+CtxCore = ['context', 'ctxCan', 'ctxDataURL', 'ctxSaveRestore', 'ctxWH', 'getCtx', 'makeCtx','canvas']
 Ctx = [
 //draw
 		'ctxColor', 'ctxCurve', 'ctxPattern', 'ctxPol', 'ctxRec',

@@ -62,21 +62,53 @@ CLIP = function () {
 }
 
 
-ALL=CUTS=ALLCUTOUTS=function(){
-	$a.get('/admin/allCutouts', function (cutouts) {
+ALL= ALLCUTOUTS=function(){$l('all cuts')
+$s({d: {C:'r', P:10, M:10}})
+	$.get('/admin/allCutouts', function (cutouts) {
 		 n= 0
+		
 		_.e(cutouts,function(cutout){
-		n++
-				$.i(cutout.dU)
+			n++
+			cut = cutout
+		  i =$.i(cutout.dU)
+			
+			i.WH(100,100)
+			
+			var d = $.d().A(
+					$.h5(cutout.un || 'anonymous'), 
+					i
+			)
+			
+
 		})
 		
 		$.h1('number of cutouts is ' + n)
 		
 	})
 }
-
-
+  CUTS  = MYCUTOUTS=function () {
+ 
+	$s({d: {C: 'r', P: 10, M: 10}})
+	
+	$.get('/cutout', function (cutouts) {
+	
+		n = 0
+		
+		_.e(cutouts, function (cutout) {
+			n++
+			cut = cutout
+			i = $.i(cutout.dU)
+			i.WH(100, 100)
+			var d = $.d().A(
+					$.h5(cutout.un || 'anonymous'),
+					i
+			)
+		})
+		$.h1('number of cutouts is ' + n)
+	})
+}
 CUTOUTS = function () {
+
 	$.bX = $.btX = function () {
 		var g = G(arguments), o = {url: g.f, data: g.s}
 		return $.bt('X', function () {

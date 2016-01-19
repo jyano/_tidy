@@ -36,12 +36,7 @@ $stc('', '../art',
 		
 		
 		//can
-		'can', 'can/can', 'can/draw', 'can/drawImg',
-		'can/globComp', 'can/grad', 'can/imgDa',
-		'can/ldr', 'can/line', 'can/path',
-		'can/shad', 'can/text',
-		'can/tf', 'can/tf/_apps',
-		
+		'can', 'can/can', 'can/_apps',
 		
 		//clipper
 		'clipper',

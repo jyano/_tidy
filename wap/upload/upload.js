@@ -51,6 +51,7 @@ $.pic = function (p) {
 				$.cut(fileN)
 			})
 }
+
 UPLOAD = function () {
 	$.fU = $.fileUpload = function (lb, t) {
 		var fG = $.d().K("form-group").A(

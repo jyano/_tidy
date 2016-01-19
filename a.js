@@ -53,17 +53,11 @@ $a.g('/', function (q, p) {$l('/')
 	)})
   
 //require('./server/serverWap/socialRts')
- require('./server/serverMug/fileImgRts')
- require('./server/serverMug/uplodLibRts')
- require('./server/serverUser/adminRts')
-  require('./server/serverUser/newUserRt')
- //require('./server/serverUser/userDeleteRt')
-  require('./server/serverUser/userMW')
- require('./server/serverUser/usernameRts')
- require('./server/serverUser/userPostRts')
- require('./server/serverUser/userRts')
-
-require('./server/$api$/$twitServer$')
+ require('./routes/imgRts') 
+ require('./routes/adminRts')
+ require('./routes/userRts')
+ 
+require('./api/$twitServer$')
 
 require('./$dirs$')
 require('./$routes$')
@@ -71,7 +65,7 @@ require('./$routes$')
 $htSv = httpServer = $h.createServer($a)
 $htSv.listen(80, lsFn)
 
-require('./server/$api$/$kets$')
+require('./sock/$kets$')
 
 function lsFn() {
 
