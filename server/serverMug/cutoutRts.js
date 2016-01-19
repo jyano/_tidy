@@ -2,32 +2,24 @@
 
 
 $a.post('/cutout', function (q, p) {// CREATE NEW CUTOUT
-	$cutout = function (q) {
-		return {
-			un: q.session.un,
-			dU: q.body.dU
-			//, /dats: q.body.dats, data: q.body.d
-			// ,physicsData: q.body.dats
-		}}
-	Cutout.create($cutout(q), function(x, da){p.send(da)})
+	Cutout.create({
+		un: q.session.un,
+		dU: q.body.dU
+		//, /dats: q.body.dats, data: q.body.d
+		// ,physicsData: q.body.dats
+	}, function(x, da){p.send(da)})
+	
 })
 
 
 
-//FIND ALL
 
-
-
-$a.get('/cutouts', function (q, p) {
-	//find all   images on site 
-	// good: $findAllP('cutout', p)
+$a.get('/cutouts', function (q, p) {//FIND ALL// good: $findAllP('cutout', p)
 	Cutout.find(function (x, da) {p.send(da)})
 })
 
-
-//FIND MY
 $a.get('/cutout', function (q, p) {
-	//find 'my'  cutouts//      /img
+//FIND MY
 	Cutout.find({un: q.un}, function (x, da) {
 		p.send(da)
 	})

@@ -1,4 +1,4 @@
-function posts() {
+ 
 	POSTS = function () {
 		$.fm()
 		s1.A(
@@ -204,15 +204,7 @@ function posts() {
 				t = $.tabs(tab1, tab2, tab3, tab4, tab5))
 		t.load()
 	}
-	BLOGX = function (u) {
-		z()
-		WAPNAV()
-		format()
-		s1(h1('user ' + u + ' blog'))
-		qG('/pstu', {u: u}, function (i) {
-			blp(i, s2, '+')
-		}, '+')
-	}
+ 
 	$postsButton = btPst = function () {
 		return $.button('see posts', function () {
 		})
@@ -285,24 +277,7 @@ function posts() {
 	}
 //avail=bbM({url:'/sts'})
 //avails=bbC({model:avail, url:'/sts'})
-	BLOGX = function (u) {
-		z()
-		WAPNAV()
-		format()
-		s1(h1('user ' + u + ' blog'))
-		qG('/pstu', {u: u}, function (i) {
-			blp(i, s2, '+')
-		}, '+')
-	}
-	BLOGX = function (u) {
-		z()
-		WAPNAV()
-		format()
-		s1(h1('user ' + u + ' blog'))
-		qG('/pstu', {u: u}, function (i) {
-			blp(i, s2, '+')
-		}, '+')
-	}
+ 
 	$postsButton = btPst = function () {
 		return $.button('see posts', function () {
 		})
@@ -376,6 +351,6 @@ function posts() {
 				t = $.tabs(tab1, tab2, tab3, tab4, tab5))
 		t.load()
 	}
-}
+ 
  
   

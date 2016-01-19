@@ -26,3 +26,17 @@ $a.get('/admin/addRndUser', function (q, p) {
 		p.send(user)
 	})
 })
+
+$a.get('/admin/allCutouts', function (q, p) {
+	Cutout.find(function (z, cutouts) {
+		if (z) {
+			$l('z')
+		}
+		else {
+			$l(JSON.stringify(cutouts))
+			p.send(cutouts)
+		}
+	})
+})
+
+
