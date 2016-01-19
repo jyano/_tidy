@@ -76,3 +76,7 @@ _.crs = function (a) {
 	return a.split('/').pop().split('.png')[0]
 }//it's the opposite of 'src' ! //it strips '/me.png' -> 'me'
 //_.url = function (a) {alert('S.url'); return 'url("' + a + '")'}
+$.fn.URL = function () {
+	return el[0].toDataURL()
+}
+  

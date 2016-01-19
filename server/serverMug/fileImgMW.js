@@ -1,3 +1,6 @@
+$picByUser = function (user, fn) {
+	$m.cutout.find({u: user}, fn)
+}
 $Mw.Pics = $Mw.P = function (q, p, nx) {
 //$m.pic.find({u: q.I},
 	//		function (z, pics) {
@@ -13,6 +16,7 @@ $Mw.Pics = $Mw.P = function (q, p, nx) {
 		nx()
 	})
 }
+
 $Mw.pic = $Mw.p = function (q, p, nx) {
 	
 	/*

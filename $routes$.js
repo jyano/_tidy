@@ -58,9 +58,6 @@ Box = [
 	'mouseJtApps','watchKeysApps'
 ]
 
-
-
-
 Easel = ['cjs','createBase','cjsEvents', 'cjsMouse', 'dobs', 'official','stage',
 
 'bitmap',

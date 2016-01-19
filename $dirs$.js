@@ -20,7 +20,6 @@ $stc = function () {
 		function name(dir) {
 			return __dirname + '/' + dir
 		}
-		
 		function use(dir) {
 			$a.use($e.static(dir))
 		}
@@ -28,30 +27,43 @@ $stc = function () {
 }
 
 
-$stc('', '../art',
-		'../imgFiles',
-
-'_', 'web',
-		'_/deps',
-		'easel','anim','easelDraw','easelGrad','filter','bitmap',
-		'clipper',
-		'box','fiz','spaz',
-		'joints','controller',
-		'scroll',
-		'track',
-		'protos',
-		'arcade',
-		'bap0',
-		'bap1',
-		'bap2',
-		'box/bap1','box/bap2',
-		'wappy',
-		'can',  
-		'ctx', 'ctx/bitmap', 'ctx/draw', 'ctx/drawImg',
-		'ctx/globComp', 'ctx/grad', 'ctx/imgData',
-		'ctx/ldr', 'ctx/line', 'ctx/path',
-		'ctx/shad', 'ctx/text',
+$stc('', '../art', '../imgFiles', 
 		
-		'ctx/transform',
-		'ctx/transform/_apps'
+		//anim
+		'anim',
+		
+		
+		//can
+		'can', 'can/can', 'can/draw', 'can/drawImg',
+		'can/globComp', 'can/grad', 'can/imgDa',
+		'can/ldr', 'can/line', 'can/path',
+		'can/shad', 'can/text',
+		'can/tf', 'can/tf/_apps',
+		
+		
+		//clipper
+		'clipper',
+		
+		
+		//easel
+		'easel', 'easel/draw','easel/grad','easel/filter','easel/bmap', 
+	
+	
+		//fiz
+		'box','fiz','spaz', 'joints','controller', 'scroll', 'track',
+		 'protos', 'arcade', 
+		'bap0', 'bap1', 'bap2', 'box/bap1','box/bap2',
+		'fiz/box','fiz/spaz', 'fiz/clipperBox','fiz/collide',
+		'fiz/controller','fiz/edge','fiz/joints','fiz/query','fiz/arcade',
+		'fiz/makeWorkd',
+		
+		
+		//front
+		'front', 'front/bone', 'front/nok', 'front/wid', 'front/sync',
+		
+		//wap
+		'wap', 'wap/mug','wap/sock','wap/waps', 'wap/upload','wap/login','wap/edit',
+		
+		//web
+		'web','web/_data','web/_apps'
 )
