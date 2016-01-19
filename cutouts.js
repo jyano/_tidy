@@ -169,10 +169,7 @@ function edit() {
 				imgHolder.A(can)
 			})
 		})
-		mug.js
-		:
-		2817
-//    return stage
+	 
 		container.dblclick(function () {
 			$.post(
 					'/img',

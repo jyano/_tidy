@@ -1,4 +1,4 @@
-$l('off,kicial')
+ 
 window.examples = window.examples||{}
 $L('distractor', 'promote', 'slider')
 
