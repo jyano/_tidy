@@ -173,37 +173,7 @@ function appyUI() {
 		d.pp(range)
 		return d
 	};
-	$.pic = function (pic) {
-		return $.i(pic._id + pic.ext).WH(120, 120)
-				.$(function () {
-					$.cut(pic._id + pic.ext)
-				})
-	}
-	$.picDiv = function (top) {
-		$l('in picDiv')
-		return $.dA('b', '+').WH('auto').XY(200, top).K('pic')
-				.pad(25)
-	}
-	$.iD = $.imgDiv = function (st) {
-		d = $.d('y', '+')
-		$.eGj('img', function (i) {
-			d.A($.c(100, 100).fit(i.d)
-					.$(function () {
-						st.bm(i.d, function (bm) {
-							bm.sXY(.4).dg()
-						})
-					}))
-		})
-	}
-	$.floatIp = function (t, fn) {
-		var g = G(arguments), f
-		f = $.f().K('text-center').C('o').fS(20).dg().minW(200)
-				.A($.sm(t), $.ip())
-		if (F(fn)) {
-			f.sm(fn)
-		}
-		return f
-	}
+ 
 	$.ipB = $.inputBox = function (ob) {
 		ob = ob || {}
 		var d, ip, fn = ob.func, url = ob.url || '/',

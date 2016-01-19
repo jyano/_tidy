@@ -1,23 +1,20 @@
 
-bitmap() 
-bmFill()
-function bitmap() {
 	_$Bm = function (i) {
 		return new cjs.Bitmap(i)
 	}
+	
 	$Bm = function () {
 		var g = G(arguments), i = g[0]
-		if (!O(i)) {
-			return _$Bm()
-		}
-		if ($.iI(i)) {
+	
+			if (!O(i)) {return _$Bm()}
+	
+			if ($.iI(i)) {
 			i = $(i)[0];
 			var bm = _$Bm(i)
-			if (g.p) {
-				bm.drag()
-			}
+			if (g.p) {bm.drag()}
 			return bm
 		}
+		
 		//return new cjs.Bitmap(i)
 		bm = $Bm(i.i)
 		if (i.al) {
@@ -37,30 +34,43 @@ function bitmap() {
 		}
 		return bm
 	}
-	SuperBitmap = SuperBitmapSync = bm = function (img, stage) {
-		cjs.BmSync = function (i, st) {
-			var bm = $Bm(src(i[0]))
-			if (O(st)) {
-				st.A(bm)
-			}
-			return bm
+	cjs.BmSync = function (i, st) {
+		var bm = $Bm(src(i[0]))
+		if (O(st)) {
+			st.A(bm)
 		}
-		var superBitmap = Do(new cjs.Bitmap(src(img)))
-		if (O(stage)) {
-			stage.a(superBitmap)
-		}
-		return superBitmap
+		return bm
 	}
-	SuperBitmapAsync = function (i, fn) {
+	
 
-//source obj can be:
-// Image|HTMLCanvasElement|HTMLVideoElement
-// |String URIto an image file to load and use.
-//If it is a URI, a new Image object will be constructed and assigned to the .image property.
+	SuperBitmap = SuperBitmapSync = bm = function (img, stage) {
+		
+		var superBitmap = Do(new cjs.Bitmap(src(img)))
+		
+		if (O(stage)) {stage.a(superBitmap)}
+		
+		return superBitmap
+	
+	}
+	
+	
+	
+	
+	
+	cjs.Bm = $bitmapAsync = Bm = function (img, fn) {
+		if (O(img) && S(img.d)) {img = img.d}
+		$.i(img, function (i) {bm = $Bm(i)
+			if (F(fn)) {fn(bm)}
+			if (S(fn)) {$w[fn] = bm}})
+		return img}
+		
+	//source obj can be:
+	// Image|HTMLCanvasElement|HTMLVideoElement
+	// |String URIto an image file to load and use.
+	//If it is a URI, a new Image object will be constructed and assigned to the .image property.
+	SuperBitmapAsync = function (i, fn) {
 		i = i[0]
-		if (O(i) && S(i.d)) {
-			i = i.d
-		}
+		if (O(i) && S(i.d)) {i = i.d}
 		$.i(i, function (img) {
 			bm = $Bm(img)
 			if (F(fn)) {
@@ -71,25 +81,14 @@ function bitmap() {
 			}
 		})
 		return i
-		cjs.Bm = $bitmapAsync = Bm = function (img, fn) {
-			if (O(img) && S(img.d)) {
-				img = img.d
-			}
-			$.i(img, function (i) {
-				bm = $Bm(i)
-				if (F(fn)) {
-					fn(bm)
-				}
-				if (S(fn)) {
-					$w[fn] = bm
-				}
-			})
-			return img
-		}
+	
 	}
+	
+	
 	ct.Bm = function (i) {
 		return $Bm(i).a2(this)
 	}
+	
 	ct._bm = function (i, fn) {
 		var ct = this
 		$.i(i, function (i) {
@@ -100,6 +99,7 @@ function bitmap() {
 		})
 		return ct
 	}
+	
 	ct.bm = function () {
 		var ct = this, g = G(arguments), o, bmp
 		o = N(g.s) ?
@@ -109,6 +109,7 @@ function bitmap() {
 		if (_.iDU(o.i)) {
 			o.i = $.i(o.i)
 		}
+		
 		if (O(o.i)) {
 			bmp = $Bm(o.i).a2(ct)
 			if (o.fn) {
@@ -116,6 +117,7 @@ function bitmap() {
 			}
 			return ct
 		}
+		
 		$.i(o.i, function (i) {
 			bmp = $Bm(i).a2(ct).rC().sXY(o.sc).a2(ct)
 			//bm.XY( that.W()/2, that.H()/2 )
@@ -129,6 +131,7 @@ function bitmap() {
 		})
 		return ct
 	}
+	
 	ct.bmR = function (i, fn) {
 		var ct = this, bm
 		$.i(i, function (i) {
@@ -143,11 +146,14 @@ function bitmap() {
 		})
 		return ct
 	}
-}
+	
+	
+bmFill()
 function bmFill(){
 	gx._bf = function (i, tf) {
 		return this.bf(i, null, tf)
 	}
+	
 	h.bf = function () {
 
 //calls bitmap fill and lets it load up the bitmap (my face)
@@ -156,20 +162,38 @@ function bmFill(){
 // the function draws a rectangle
 // (and the bitmap is automatically used as the fill)
 		var h = this, gx = h.graphics, g = G(arguments), o
-		o = O(g.f) && A(g.f.hs) ? g.f :
-				F(g.s) ? {i: g.f, fn: g.s, hs: g.t} :
+		o = O(g.f) && A(g.f.hs) ?
+				g.f :
+				F(g.s) ? 
+				{i: g.f, fn: g.s, hs: g.t} :
 				{i: g.f, mx: g.s, hs: g.t}
-		o.mx = A(o.mx) ? $Mx(o.mx) : o.mx
+		
+		
+		o.mx = A(o.mx) ?
+				$Mx(o.mx) :
+				 o.mx
+
 		o.fn = _.tFn(o.fn)
+
 		o.i = o.i || 'me'
+		
+		
 		if (S(o.i) && !Q.ran) {
 			$.i(o.i, function (i) {
 				_bf(i, o)
 			})
 		}
+		
+		
 		else {
-			_bf(S(o.i) ? Q.i(o.i) : o.i, o)
+			_bf(
+			S(o.i) ?
+			 Q.i(o.i) :
+			 o.i
+			 , o)
 		}
+		
+		
 		function _bf(i, o) {
 			gx._bf(i, o.mx);
 			o.hs ? _.e(o.hs, function (shp) {
@@ -317,6 +341,7 @@ function bmFill(){
 		return h
 	}
 	bmFillTf()
+	
 	function bmFillTf() {
 		h._bfT = function (i) {
 			var g = G(arguments)

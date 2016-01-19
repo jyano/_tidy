@@ -15,14 +15,17 @@ picSchema = new $mg.Schema({
 	name: String,
 	ext: String
 })
+
 imageSchema = new $mg.Schema({
 	username: String,
 	date: Date,
 	data: String,
 	name: String,
+	ext: String,
 	dats: [Number],
 	physicsData: [Number]
 })
+
 userSchema = new $mg.Schema({
 	un: {type: String, required: true},
 	pw: String,
@@ -32,6 +35,8 @@ userSchema = new $mg.Schema({
 	buds: [String]
 })
 User = $mg.model('User', userSchema)
+
+ImgFile = $mg.model('ImgFile', imageSchema)
 qp = qpn$ = function (fn, q, p, nx) {
 	 q = q$(q)
 	 q.ss = ss$(q.session)

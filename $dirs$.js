@@ -28,7 +28,10 @@ $stc = function () {
 }
 
 
-$stc('', '../art','_', 'web',
+$stc('', '../art',
+		'../imgFiles',
+
+'_', 'web',
 		'_/deps',
 		'easel','anim','easelDraw','easelGrad','filter','bitmap',
 		'clipper',
@@ -41,6 +44,14 @@ $stc('', '../art','_', 'web',
 		'bap0',
 		'bap1',
 		'bap2',
-		'box/bap1','box/bap2'
-
+		'box/bap1','box/bap2',
+		'wappy',
+		'can',  
+		'ctx', 'ctx/bitmap', 'ctx/draw', 'ctx/drawImg',
+		'ctx/globComp', 'ctx/grad', 'ctx/imgData',
+		'ctx/ldr', 'ctx/line', 'ctx/path',
+		'ctx/shad', 'ctx/text',
+		
+		'ctx/transform',
+		'ctx/transform/_apps'
 )

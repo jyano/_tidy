@@ -51,12 +51,18 @@ $a.g('/', function (q, p) {$l('/')
 	$l(q.session)
 	p.json(q.sesson // || 'it worked jason..'
 	)})
- 
-require('./server/userRtsMW')
-require('./server/socialRts')
-require('./server/mugRts')
-require('./server/picRtsMW')
-require('./server/adminRts')
+  
+//require('./server/serverWap/socialRts')
+ require('./server/serverMug/fileImgRts')
+ require('./server/serverMug/uplodLibRts')
+ require('./server/serverUser/adminRts')
+  require('./server/serverUser/newUserRt')
+ //require('./server/serverUser/userDeleteRt')
+  require('./server/serverUser/userMW')
+ require('./server/serverUser/usernameRts')
+ require('./server/serverUser/userPostRts')
+ require('./server/serverUser/userRts')
+
 require('./server/$api$/$twitServer$')
 
 require('./$dirs$')

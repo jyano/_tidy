@@ -1,11 +1,9 @@
 _.tFn = function (fn, fn2) {
 	return F(fn) ? fn :
 			fn2 ? fn2 : function () {
-				return
-			}
-}
+				return}}
+				
 BF4 = TFM = function () {$St()
-	
 	$.i('chicks', function (img) {
 	//stroke color
 		h.sC('b', 50)
@@ -15,25 +13,17 @@ BF4 = TFM = function () {$St()
 		h.dc(100, 100, 100)})}
 
 
-BF2 = LDB = function () {
-	$St()
-
+BF2 = LDB = function () {$St()
   	Q('me', function (q) {
 	    st.h('+').bf(q.get('me')).dc(100)
-		$h().a2(st).XY(500, 100).bf('me').dc(100) 
- 	 })
+		$h().a2(st).XY(500, 100).bf('me').dc(100)})
 }
-
 
 
 DRG = BF0 = HBF = function () {
-	
-	 $St().h(300, 300)
-			 .bf('me', function (h) {
-				 h.dc(300).dg()
-			 })
+	 $St().h(300, 300).bf('me', function (h) {
+				 h.dc(300).dg()})
 }
-
 
 
 h._bC = function (o) {
@@ -265,7 +255,10 @@ $Ldr('HBC', function (ld) {
 	}).dg()
 })
  
+
+
 	MX00 = M2D = CJSM2D = function () {
+
 		m = $Mx()
 		$l(m)
 		$St().bm('me', function (bm) {
