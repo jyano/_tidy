@@ -62,8 +62,10 @@ _.src = function (a) {
 	return S.startsWith(a, '/') ? a : '/' + a
 }
 _.iDU = function (a) {
-	return _.ct(a, 'data:')
-	return s$(a).contains('data:')
+	return S(a) && a.length > 1000
+
+//	return _.ct(a, 'data:')
+//	return s$(a).contains('data:')
 }
 
 $imgResource = function(){

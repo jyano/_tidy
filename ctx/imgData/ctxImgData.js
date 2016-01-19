@@ -1,8 +1,27 @@
+x.cID = function(){
+	var x = this
+	return x.createImageData.apply(x, arguments)
+	 
+}
+
+x.gID =  = function () {
+	var x = this
+	return x.getImageData.apply(x, arguments)
+}
+
+x.pID =   function () {
+	var x = this
+	x.putImageData .apply(x, arguments)
+	return x
+}
+ 
+ 
  
 x.cD = function () {
-	this.createImageData()
+	this.cID()
 	return this
 }
+
 x.gD = function () {
 	var g = G(arguments), o, d
 	o = {x: g.f, y: g.s, w: g.t, h: g[3]}
@@ -10,13 +29,14 @@ x.gD = function () {
 	o.y = N(o.y, 0)
 	o.w = N(o.w, this.W())
 	o.h = N(o.h, this.H())
-	d = this.getImageData(o.x, o.y, o.w, o.h)
+	d = this.gID(o.x, o.y, o.w, o.h)
 	d.h = d.height
 	d.w = d.width
 	d.d = d.data
 	return d
 }
+
+
 x.pD = function (d, x, y) {
-	this.putImageData(d, N(x, 0), N(y, 0))
-	return this
+	return this.pID(d, N(x, 0), N(y, 0))
 }

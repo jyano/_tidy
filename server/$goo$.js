@@ -35,6 +35,14 @@ userSchema = new $mg.Schema({
 	buds: [String]
 })
 User = $mg.model('User', userSchema)
+cutoutSchema = new $mg.Schema({
+	un: String,
+	date: Date,
+	dU: String,
+	name: String 
+	//, dats: [Number], physicsData: [Number]
+})
+Cutout  = $mg.model('Cutout', cutoutSchema)
 
 ImgFile = $mg.model('ImgFile', imageSchema)
 qp = qpn$ = function (fn, q, p, nx) {

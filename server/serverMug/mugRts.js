@@ -47,27 +47,7 @@ testChangeMug = function () {
 		TWEEN()
 	})
 }
- 
-//FIND ALL
-$a.G('/cutouts', function (q, p) {
-	//find all   images on site // good: $findAllP('cutout', p)
-	$findAll('cutout', _js(p))
-})
-//FIND MY
-$a.G('/cutout', function (q, p) {//find 'my'  cutouts//      /img
-	Cut.fi({un: q.un}, _js(p))
-})
- 
-// CREATE
-$a.PO('/cutout', function (q, p) {
-//img//new cutout (image)
-	Cut.cr($cutout(q), _js(p))
-})
-// DELETE
-$a.DEL('/cutout', function (q, p) {
-	Cut.rm(q.b, _js(p))
-})
-// DATA
+  
 $a.PO('/dat', function (q, p) {
 	Cut.fId(
 			q.b.dat,

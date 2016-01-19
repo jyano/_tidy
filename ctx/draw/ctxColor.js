@@ -18,21 +18,21 @@ x.C = x.c = x.fS = x.f = x.fs = function (c, C, l) {
 }
 
 
-x.col = x.sS = x.s  = x.ss = function () {
+x.col = x.sC= x.sS = x.s  = x.ss = function () {
 	var g = G(arguments), o
-	if (g.u) {
-		this.stroke();
-		if (g.p) {
-			this.f()
-		}
-		return this
-	}
-	o = g.N_ ? {l: g.f} : {C: g.f, l: g.s}
+ 
+	o = g.N_ ? {l: g.f} :
+	 {C: g.f, l: g.s}
+	
 	if (o.C) {
 		this.strokeStyle = oO('c', o.C)
 	}
 	if (N(o.l)) {
 		this.l(o.l)
+	}
+	this.stroke();
+	if (g.p) {
+		this.f()
 	}
 	return this
 }
