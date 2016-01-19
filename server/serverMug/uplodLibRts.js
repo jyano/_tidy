@@ -88,8 +88,6 @@ uplod =  multer({dest: '../tmpUploads/'})
 					 p.redirect('/wap/uploads')}})
 				 
 				 })
-									
-									 
 				 
 				 //<- $f.rF(i.path,  function(z, fileData){$f.wF(newPath(i, pic), fileData,  savedToFile)})
 		})

@@ -37,13 +37,19 @@ st.du = st.tDU = function (ms) {
 	st.toDataURL.apply(st, g)
 	return st
 }
-st.snap = function (f) {
-	$.post('/img', {
-		d: this.toDataURL()//, dats: o.x.dats
+
+st.snap = function (fn) {
+	
+	$.post('/cutout', {
+		dU: this.toDataURL()//, dats: o.x.dats
 	})
-	sec(f)
+	
+	_.in(fn)
+	
 	return this
 }
+
+
 st.cv = function () {
 	var st = this, g = G(arguments)
 	if (g.u) {

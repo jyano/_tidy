@@ -306,20 +306,21 @@ CUTOUTS = function () {
 	y = 80
 	
 	
-	$.eJ('/cutouts', function (img) {
-	
+	$.eJ('/cutouts', function (cutout) {
 		var i
-		i = $.i(img.d)
+		i = $.i(cutout.dU)
 		i.WH(100, 100)
 		i.$(function () {
-			$.po('/changeMug', {url: img.d}, function () {
+			$.post('/changeMug', {dU: cutout.dU},
+			function () {
 				i.selPic()
 			})
 		})
+		
 		$.dA('b', 100, 100, '+')
 				.left(y).top(200)
 				.K('pic')
-				.A(i, $.btX('/img', img))
+				.A(i, $.btX('/cutout', cutout))
 		y += 220
 	})
 	

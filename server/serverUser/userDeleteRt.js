@@ -1,16 +1,12 @@
-$a.delete('/user', function (q, p) {
-////delete user  
-// does this('del') work like post or get (in terms of express)?
-	User.remove(q.body, function (z, u) {
+$a.delete('/user', function (q, p, nx) {
+	User.remove(q.body, function (z, da) {
 		if (!z) {
-			p.send(q.body.un)
+			p.send(da)
 		}
 		else {
 			$l('z')
 		}
 	})
 })
-$a.de('/user', function (q, p) {
-	Ur.rm(q.b, _json(p))
-})
 
+ 

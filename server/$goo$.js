@@ -73,7 +73,9 @@ q$ = $Q = miniQ = req = function (q) {
 	 q.un = function () {
 		 return {un: this.un}
 	 }
-	 q.parUr = q.parseUser = function (ur) {
+	
+	
+	  q.parUr = q.parseUser = function (ur) {
 		 var q = this
 		 if (ur) {
 			 q.user = p.lc.user = ur   //res.locals.U = req.U =
@@ -81,6 +83,7 @@ q$ = $Q = miniQ = req = function (q) {
 			 q.uId = p.lc.urId = ur._id //res.locals.I = req.I =
 		 }
 	 }
+	 
 	 q.urs = q.users = function (fn) {
 		 Ur.fi(q.b, fn)
 	 } // q.users( wUrs )

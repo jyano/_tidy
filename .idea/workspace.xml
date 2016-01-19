@@ -21,104 +21,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mugRts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/serverMug/mugRts.js">
+      <file leaf-file-name="muggy.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/muggy/muggy.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
               <folding>
-                <element signature="e#726#896#0" expanded="true" />
+                <element signature="e#26#50#0" expanded="true" />
+                <element signature="e#76#188#0" expanded="true" />
+                <element signature="e#153#185#0" expanded="true" />
+                <element signature="e#211#271#0" expanded="true" />
+                <element signature="e#234#268#0" expanded="true" />
+                <element signature="e#307#386#0" expanded="true" />
+                <element signature="e#340#361#0" expanded="true" />
+                <element signature="e#414#542#0" expanded="true" />
+                <element signature="e#469#535#0" expanded="true" />
+                <element signature="e#579#610#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cutoutRts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/serverMug/cutoutRts.js">
+      <file leaf-file-name="ct_mug.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/muggy/ct_mug.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12899263">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#28#116#0" expanded="true" />
+                <element signature="e#77#102#0" expanded="true" />
+                <element signature="e#139#343#0" expanded="true" />
+                <element signature="e#275#279#0" expanded="true" />
+                <element signature="e#302#329#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="$.fit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/can/$.fit.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <element signature="e#138#176#0" expanded="false" />
-                <element signature="e#328#356#0" expanded="false" />
-                <element signature="e#631#693#0" expanded="true" />
-                <element signature="e#673#690#0" expanded="true" />
+                <element signature="e#33#102#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testMug.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/muggy/_apps/testMug.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+              <folding>
+                <element signature="e#24#124#0" expanded="true" />
+                <element signature="e#57#121#0" expanded="true" />
+                <element signature="e#153#323#0" expanded="true" />
+                <element signature="e#254#320#0" expanded="true" />
+                <element signature="e#405#541#0" expanded="true" />
+                <element signature="e#517#538#0" expanded="true" />
+                <element signature="e#565#641#0" expanded="true" />
+                <element signature="e#624#638#0" expanded="true" />
+                <element signature="e#662#810#0" expanded="true" />
+                <element signature="e#733#807#0" expanded="true" />
+                <element signature="e#843#1048#0" expanded="true" />
+                <element signature="e#971#1045#0" expanded="true" />
+                <element signature="e#1070#1099#0" expanded="true" />
+                <element signature="e#1120#1268#0" expanded="true" />
+                <element signature="e#1191#1265#0" expanded="true" />
+                <element signature="e#1301#1506#0" expanded="true" />
+                <element signature="e#1429#1503#0" expanded="true" />
+                <element signature="e#1528#1557#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="cutouts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/muggy/cutouts.js">
+        <entry file="file://$PROJECT_DIR$/muggy/_/cutouts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#26#99#0" expanded="true" />
-                <element signature="e#53#74#0" expanded="true" />
-                <element signature="e#121#146#0" expanded="true" />
-                <element signature="e#168#228#0" expanded="true" />
-                <element signature="e#191#225#0" expanded="true" />
-                <element signature="e#262#293#0" expanded="true" />
-              </folding>
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wappy/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17844523">
-              <caret line="308" column="18" selection-start-line="308" selection-start-column="18" selection-end-line="308" selection-end-column="18" />
-              <folding>
-                <element signature="e#221#293#0" expanded="false" />
-                <element signature="e#301#362#0" expanded="false" />
-                <element signature="e#1999#2071#0" expanded="false" />
-                <element signature="e#2079#2140#0" expanded="false" />
-                <element signature="e#2615#2640#0" expanded="false" />
-                <element signature="e#3874#3886#0" expanded="false" />
-                <element signature="e#4116#4134#0" expanded="false" />
-                <element signature="e#4656#4698#0" expanded="true" />
-                <element signature="e#4752#5046#0" expanded="true" />
-                <element signature="e#4835#5042#0" expanded="true" />
-                <element signature="e#4864#5037#0" expanded="true" />
-                <element signature="e#4945#5032#0" expanded="true" />
-                <element signature="e#4996#5026#0" expanded="true" />
-                <element signature="e#5186#5434#0" expanded="true" />
-                <element signature="e#5250#5326#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="img.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/img.js">
+      <file leaf-file-name="uploads.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wappy/uploads.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
               <folding>
-                <element signature="e#18#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ctxLdrApps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ctx/ldr/_apps/ctxLdrApps.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-              <folding>
-                <element signature="e#30#437#0" expanded="true" />
-                <element signature="e#1120#2118#0" expanded="true" />
-                <element signature="e#2183#2355#0" expanded="true" />
-                <element signature="e#2232#2349#0" expanded="true" />
-                <element signature="e#2485#2610#0" expanded="true" />
-                <element signature="e#2541#2606#0" expanded="true" />
-                <element signature="e#2633#3436#0" expanded="true" />
-                <element signature="e#3193#3432#0" expanded="true" />
-                <element signature="e#3460#3504#0" expanded="true" />
-                <element signature="e#3528#3565#0" expanded="true" />
+                <element signature="e#39#922#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,20 +125,20 @@
         <entry file="file://$PROJECT_DIR$/server/$goo$.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="84" selection-end-column="6" />
               <folding>
                 <element signature="e#167#414#0" expanded="true" />
                 <element signature="e#596#737#0" expanded="true" />
                 <element signature="e#806#906#0" expanded="true" />
                 <element signature="e#1287#1306#0" expanded="false" />
-                <element signature="e#1575#1743#0" expanded="false" />
-                <element signature="e#2076#2123#0" expanded="false" />
-                <element signature="e#2209#2246#0" expanded="false" />
-                <element signature="e#2249#2273#0" expanded="false" />
-                <element signature="e#2527#2557#0" expanded="false" />
-                <element signature="e#3347#3370#0" expanded="false" />
-                <element signature="e#4535#4561#0" expanded="false" />
-                <element signature="e#5466#5484#0" expanded="false" />
+                <element signature="e#1551#1752#0" expanded="true" />
+                <element signature="e#2084#2131#0" expanded="false" />
+                <element signature="e#2217#2254#0" expanded="false" />
+                <element signature="e#2257#2281#0" expanded="false" />
+                <element signature="e#2535#2565#0" expanded="false" />
+                <element signature="e#3355#3378#0" expanded="false" />
+                <element signature="e#4543#4569#0" expanded="false" />
+                <element signature="e#5474#5492#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -222,20 +219,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/muggy/cutoutSnapSave.js" />
-        <option value="$PROJECT_DIR$/server/serverMug/mugRts.js" />
-        <option value="$PROJECT_DIR$/server/$goo$.js" />
-        <option value="$PROJECT_DIR$/server/serverMug/cutoutRts.js" />
-        <option value="$PROJECT_DIR$/muggy/cutouts.js" />
-        <option value="$PROJECT_DIR$/wappy/login.js" />
+        <option value="$PROJECT_DIR$/muggy/TESTMUG.js" />
+        <option value="$PROJECT_DIR$/muggy/_apps/testMug.js" />
+        <option value="$PROJECT_DIR$/can/$.fit.js" />
+        <option value="$PROJECT_DIR$/muggy/muggy.js" />
+        <option value="$PROJECT_DIR$/muggy/ct_mug.css" />
+        <option value="$PROJECT_DIR$/muggy/ct_mug.js" />
       </list>
     </option>
   </component>
@@ -249,7 +246,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="702" />
     <option name="y" value="71" />
-    <option name="width" value="988" />
+    <option name="width" value="1180" />
     <option name="height" value="960" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -304,7 +301,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wappy" />
+              <option name="myItemId" value="muggy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_tidy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_tidy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="can" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,7 +327,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ctx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../guidebook" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
   </component>
@@ -326,11 +337,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ctx/drawImg/_apps" />
-      <recent name="$PROJECT_DIR$/ctx" />
-      <recent name="$PROJECT_DIR$/ctx/shad/_apps" />
-      <recent name="$PROJECT_DIR$/ctx/imgData/_apps" />
-      <recent name="$PROJECT_DIR$/ctx/ldr/_apps" />
+      <recent name="$PROJECT_DIR$/wappy" />
+      <recent name="$PROJECT_DIR$/muggy/_" />
+      <recent name="$PROJECT_DIR$/EDIT" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/muggy/_data" />
     </key>
   </component>
   <component name="RunManager">
@@ -355,16 +366,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="702" y="71" width="988" height="960" extended-state="0" />
+    <frame x="702" y="71" width="1180" height="960" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.049763035" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29453683" sideWeight="0.49224406" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29453683" sideWeight="0.48576358" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23267838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19413288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29453683" sideWeight="0.50775594" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37410927" sideWeight="0.5142364" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -410,98 +421,88 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/muggy/cut.js">
+    <entry file="file://$PROJECT_DIR$/muggy/_apps/testMug.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
           <folding>
-            <element signature="e#311#345#0" expanded="false" />
-            <element signature="e#395#412#0" expanded="false" />
-            <element signature="e#465#512#0" expanded="false" />
+            <element signature="e#24#124#0" expanded="true" />
+            <element signature="e#57#121#0" expanded="true" />
+            <element signature="e#153#323#0" expanded="true" />
+            <element signature="e#254#320#0" expanded="true" />
+            <element signature="e#405#541#0" expanded="true" />
+            <element signature="e#517#538#0" expanded="true" />
+            <element signature="e#565#641#0" expanded="true" />
+            <element signature="e#624#638#0" expanded="true" />
+            <element signature="e#662#810#0" expanded="true" />
+            <element signature="e#733#807#0" expanded="true" />
+            <element signature="e#843#1048#0" expanded="true" />
+            <element signature="e#971#1045#0" expanded="true" />
+            <element signature="e#1070#1099#0" expanded="true" />
+            <element signature="e#1120#1268#0" expanded="true" />
+            <element signature="e#1191#1265#0" expanded="true" />
+            <element signature="e#1301#1506#0" expanded="true" />
+            <element signature="e#1429#1503#0" expanded="true" />
+            <element signature="e#1528#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/$goo$.js">
+    <entry file="file://$PROJECT_DIR$/muggy/_/ct_mug.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/can/$.fit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#167#414#0" expanded="true" />
-            <element signature="e#596#737#0" expanded="true" />
-            <element signature="e#806#906#0" expanded="true" />
-            <element signature="e#1287#1306#0" expanded="false" />
-            <element signature="e#1575#1743#0" expanded="false" />
-            <element signature="e#2076#2123#0" expanded="false" />
-            <element signature="e#2209#2246#0" expanded="false" />
-            <element signature="e#2249#2273#0" expanded="false" />
-            <element signature="e#2527#2557#0" expanded="false" />
-            <element signature="e#3347#3370#0" expanded="false" />
-            <element signature="e#4535#4561#0" expanded="false" />
-            <element signature="e#5466#5484#0" expanded="false" />
+            <element signature="e#33#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/serverMug/cutoutRts.js">
+    <entry file="file://$PROJECT_DIR$/muggy/muggy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding>
-            <element signature="e#138#176#0" expanded="false" />
-            <element signature="e#328#356#0" expanded="false" />
-            <element signature="e#631#693#0" expanded="true" />
-            <element signature="e#673#690#0" expanded="true" />
+            <element signature="e#26#50#0" expanded="true" />
+            <element signature="e#76#188#0" expanded="true" />
+            <element signature="e#153#185#0" expanded="true" />
+            <element signature="e#211#271#0" expanded="true" />
+            <element signature="e#234#268#0" expanded="true" />
+            <element signature="e#307#386#0" expanded="true" />
+            <element signature="e#340#361#0" expanded="true" />
+            <element signature="e#414#542#0" expanded="true" />
+            <element signature="e#469#535#0" expanded="true" />
+            <element signature="e#579#610#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/muggy/cutouts.js">
+    <entry file="file://$PROJECT_DIR$/muggy/_/TESTMUG.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#99#0" expanded="true" />
-            <element signature="e#53#74#0" expanded="true" />
-            <element signature="e#121#146#0" expanded="true" />
-            <element signature="e#168#228#0" expanded="true" />
-            <element signature="e#191#225#0" expanded="true" />
-            <element signature="e#262#293#0" expanded="true" />
-          </folding>
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/muggy/cutoutSnapSave.js">
+    <entry file="file://$PROJECT_DIR$/muggy/ct_mug.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.12899263">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#30#163#0" expanded="true" />
-            <element signature="e#88#154#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wappy/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17844523">
-          <caret line="308" column="18" selection-start-line="308" selection-start-column="18" selection-end-line="308" selection-end-column="18" />
-          <folding>
-            <element signature="e#221#293#0" expanded="false" />
-            <element signature="e#301#362#0" expanded="false" />
-            <element signature="e#1999#2071#0" expanded="false" />
-            <element signature="e#2079#2140#0" expanded="false" />
-            <element signature="e#2615#2640#0" expanded="false" />
-            <element signature="e#3874#3886#0" expanded="false" />
-            <element signature="e#4116#4134#0" expanded="false" />
-            <element signature="e#4656#4698#0" expanded="true" />
-            <element signature="e#4752#5046#0" expanded="true" />
-            <element signature="e#4835#5042#0" expanded="true" />
-            <element signature="e#4864#5037#0" expanded="true" />
-            <element signature="e#4945#5032#0" expanded="true" />
-            <element signature="e#4996#5026#0" expanded="true" />
-            <element signature="e#5186#5434#0" expanded="true" />
-            <element signature="e#5250#5326#0" expanded="true" />
+            <element signature="e#28#116#0" expanded="true" />
+            <element signature="e#77#102#0" expanded="true" />
+            <element signature="e#139#343#0" expanded="true" />
+            <element signature="e#275#279#0" expanded="true" />
+            <element signature="e#302#329#0" expanded="true" />
           </folding>
         </state>
       </provider>

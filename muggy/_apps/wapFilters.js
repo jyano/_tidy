@@ -47,6 +47,7 @@ FILTERS = function () {
 		createjs.bindSlide(b)
 	})
 }
+
 FILTERS1 = function () {s = $St()
 	
 	s.mug(function (b) {
