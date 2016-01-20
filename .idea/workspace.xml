@@ -21,124 +21,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dobs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/easel/dobs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2545455">
-              <caret line="1747" column="29" selection-start-line="1747" selection-start-column="29" selection-end-line="1747" selection-end-column="29" />
-              <folding>
-                <element signature="n#!!block;n#dobs#0" expanded="true" />
-                <element signature="e#65#120#0" expanded="true" />
-                <element signature="e#34079#35249#0" expanded="true" />
-                <element signature="e#34121#35245#0" expanded="true" />
-                <element signature="e#34840#35240#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ghost.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mugGames/ghost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding>
-                <element signature="n#!!block;n#ghostMe#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="$goo$.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/$goo$.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selected.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selected.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding>
-                <element signature="e#430#512#0" expanded="true" />
-                <element signature="e#471#495#0" expanded="true" />
-                <element signature="e#539#670#0" expanded="true" />
-                <element signature="e#701#860#0" expanded="true" />
-                <element signature="e#718#857#0" expanded="true" />
-                <element signature="e#4179#5069#0" expanded="true" />
-                <element signature="e#4402#4673#0" expanded="true" />
-                <element signature="e#4740#5045#0" expanded="true" />
-                <element signature="e#4796#5042#0" expanded="true" />
-                <element signature="e#4836#5040#0" expanded="true" />
-                <element signature="e#4917#5039#0" expanded="true" />
-                <element signature="e#4949#5037#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="twBox.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/twBox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6955178">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-              <folding>
-                <element signature="e#92#482#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mugQueue.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mugGames/mugQueue.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="449" column="1" selection-start-line="449" selection-start-column="1" selection-end-line="449" selection-end-column="1" />
-              <folding>
-                <marker date="1453272429000" expanded="false" signature="10777:10778" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="a.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/a.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="106" column="18" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
-              <folding>
-                <element signature="e#2250#2336#0" expanded="true" />
-                <element signature="e#2348#2522#0" expanded="true" />
-                <element signature="e#2716#3006#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="easelMug.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="easelMug.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mug/easelMug.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.16178736">
               <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#ct_mug#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="canMug.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/can/canMug.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="e#39#128#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -216,12 +105,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mug/muggy.js" />
-        <option value="$PROJECT_DIR$/routes/imgRts.js" />
-        <option value="$PROJECT_DIR$/server/$goo$.js" />
-        <option value="$PROJECT_DIR$/selected.js" />
-        <option value="$PROJECT_DIR$/a.js" />
-        <option value="$PROJECT_DIR$/twBox.js" />
+        <option value="$PROJECT_DIR$/spriteSheet/proto/sp_next.js" />
+        <option value="$PROJECT_DIR$/spriteSheet/proto/playing.js" />
+        <option value="$PROJECT_DIR$/spriteSheet/proto/sprPt.js" />
+        <option value="$PROJECT_DIR$/spriteSheet/proto/frames.js" />
+        <option value="$PROJECT_DIR$/spriteSheet/sheetPtFrames.js" />
+        <option value="$PROJECT_DIR$/spriteSheets/pack.js" />
       </list>
     </option>
   </component>
@@ -261,7 +150,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -282,6 +170,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -299,11 +188,11 @@
       <recent name="$PROJECT_DIR$/bap2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spriteSheet/sheets/pack" />
+      <recent name="$PROJECT_DIR$/spriteSheet/proto" />
+      <recent name="$PROJECT_DIR$/spriteSheet/_apps" />
+      <recent name="$PROJECT_DIR$/spriteSheet/builder" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/mug/games" />
-      <recent name="$PROJECT_DIR$/can" />
-      <recent name="$PROJECT_DIR$/mug" />
-      <recent name="$PROJECT_DIR$/can/_" />
     </key>
   </component>
   <component name="RunManager">
@@ -332,21 +221,21 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.049763035" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32444444" sideWeight="0.4839389" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22522523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3203203" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24083333" sideWeight="0.51606107" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19836956" sideWeight="0.51816744" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27407408" sideWeight="0.48183253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -362,9 +251,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19694576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -381,98 +270,5 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mug/mugHit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5555556">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding>
-            <element signature="e#543#814#0" expanded="false" />
-            <element signature="e#936#1813#0" expanded="false" />
-            <element signature="e#2115#2157#0" expanded="false" />
-            <element signature="e#2190#2238#0" expanded="false" />
-            <element signature="e#2380#2444#0" expanded="false" />
-            <element signature="e#2454#2502#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mug/muggy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-            <element signature="e#151#183#0" expanded="true" />
-            <element signature="e#164#180#0" expanded="false" />
-            <element signature="e#275#601#0" expanded="true" />
-            <element signature="e#702#729#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selected.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#430#512#0" expanded="true" />
-            <element signature="e#471#495#0" expanded="true" />
-            <element signature="e#539#670#0" expanded="true" />
-            <element signature="e#701#860#0" expanded="true" />
-            <element signature="e#718#857#0" expanded="true" />
-            <element signature="e#4179#5069#0" expanded="true" />
-            <element signature="e#4402#4673#0" expanded="true" />
-            <element signature="e#4740#5045#0" expanded="true" />
-            <element signature="e#4796#5042#0" expanded="true" />
-            <element signature="e#4836#5040#0" expanded="true" />
-            <element signature="e#4917#5039#0" expanded="true" />
-            <element signature="e#4949#5037#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/imgRts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding>
-            <element signature="e#161#410#0" expanded="true" />
-            <element signature="e#224#244#0" expanded="false" />
-            <element signature="e#251#408#0" expanded="false" />
-            <element signature="e#457#568#0" expanded="true" />
-            <element signature="e#806#847#0" expanded="true" />
-            <element signature="e#1635#1666#0" expanded="false" />
-            <element signature="e#1815#1841#0" expanded="false" />
-            <element signature="e#2139#2176#0" expanded="false" />
-            <element signature="e#2188#2255#0" expanded="false" />
-            <element signature="e#3112#3141#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="18" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
-          <folding>
-            <element signature="e#2250#2336#0" expanded="true" />
-            <element signature="e#2348#2522#0" expanded="true" />
-            <element signature="e#2716#3006#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/twBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6955178">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding>
-            <element signature="e#92#482#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

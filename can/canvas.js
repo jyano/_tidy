@@ -899,4 +899,13 @@ function beta() {
 $.fit = fit = function (a, b, c) {
 	return $.canvas(c || 'r', b || 700, b || 700).A().fit(a || 'me')
 }
- 
+ function canMug(){
+	 $.fn.fitMug = $.fn.mug = function (ur) {
+		 var cv = this
+		 $.post('/mug', {u: ur}, function (mug) {
+			 cv.fit(mug)
+		 })
+		 return cv
+	 }
+ }
+ canMug()
