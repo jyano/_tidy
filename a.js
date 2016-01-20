@@ -86,7 +86,8 @@ function routes() {
 				//easel
 				'cjs', 'defaultMug',
 				'createBaseEvents', 'createDraw', 'dobs',
-				'gradFilterCache', 'loaderBitmap', 'official',
+				'gradFilterCache', 'loaderBitmap','ldrBmApps',
+				 'official',
 				'sprite', 'spriteSheet', 'tween','tweenApps'
 			]
 			  , [
