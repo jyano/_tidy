@@ -30,10 +30,14 @@ userSchema = new $mg.Schema({
 	un: {type: String, required: true},
 	pw: String,
 	pf: Object,
-	mug: {type: String, default: '/me.png'},
-	mugURL: String,
+	mug: {
+		type: String, 
+		default: '/me.png'
+	},// mugURL: String,
 	buds: [String]
 })
+
+
 User = $mg.model('User', userSchema)
 cutoutSchema = new $mg.Schema({
 	un: String,

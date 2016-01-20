@@ -77,10 +77,6 @@ function dirs() {
 			'fiz/_'
 	)
 }
-
-
-
-
 function routes() {
 	 
 	jsArrs = [
@@ -107,7 +103,9 @@ function routes() {
 		],
 		
 		Wapp = ['wappy', 'cutouts', 'muggy', 'home','dragFrame',
-				'canMug','easelMug','muggyMore','mugHit','mugTf'
+				'canMug',
+				'twBox',
+				'easelMug','muggyMore','mugHit','mugTf','selected'
 		]
 	]
 	
@@ -140,10 +138,6 @@ function routes() {
 	]
 	//html += '<link rel="stylesheet" type="text/css"  href="/theme.css"></script>'
 }
-
-
-
-
 function node() {
 	require('./server/$superNode$')
 	require('./server/$xap$')

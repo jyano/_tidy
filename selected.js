@@ -16,28 +16,8 @@ $.dragStage = function (x, y) {
 	$.dragFrame(c).A()
 	return s
 }
-TWEENBOX = DRAGSTAGE = function () {
-	stage = $.dragStage()
-	stage.bm('me', function (bm) {
-		SL(bm)
-		$Tw([bm, 'l'],
-				{x: 0, sxy: .7, r: 0},
-				[{x: 300, sxy: 2.3, r: 0}, 1000],
-				[{x: 0, sxy: .7, r: -30, a: .5}, 3000])
-		$Tw([bm, 'l'],
-				{x: 0, sxy: .7, r: 0},
-				[{x: 300, sxy: 2.3, r: 0}, 100], [{x: 0, sxy: .7, r: -30, a: .5}, 100]
-		)
-		//  cjs.tween(  [bm,'l'],  {x:0, sxy:.7,r:0},  [ {x:300,sxy:2.3,r:0}, 1000 ],  [ {x:0,sxy:.7,r:-30,a:.5},3000])
-	})
-	$.dragStage().t().bm('me', function (bm) {
-		b = bm
-		SL(bm)
-		bm.rgc('+')
-		scaleShake(bm)
-		rotateShake(bm)
-	})
-}
+
+ 
 IX1 = INDEX = DRAGSTAGETRANSFORM = function () {
 	s = $.dragStage().bm('me', function (bm) {
 		b = bm
@@ -48,6 +28,7 @@ IX1 = INDEX = DRAGSTAGETRANSFORM = function () {
 		s.ch(b, 3)
 	})
 }
+
 
 INDEXX = function () {
 	s = $.dragStage().bm('me', function (bm) {
@@ -287,29 +268,19 @@ SELECTED = function () {
 	$.eG('cutouts', function (cutout) {
 		
 		d.A($.imageSizeFuncCan(cutout.dU, 1, function () {
-					
-
+			
 			st.bm(cutout.dU, function (bm) {
-				
 				//SL(bm.sXY(.4)); bm.rgc('+')
-				
-				selected(bm)
-	
-			})
-				
-		}))
-		
-	})
+				//selected(bm)
+				function selected(bm) {//SL(bm)
+					bm.$(function () {
+						cjs.Tween.removeAllTweens()
+						bitmap = bm
+						cjs.scaleShake(bm.dO)
+					})}})}))})
  
 	d = YellowDiv()
 	
-	function selected(bm) {//SL(bm)
-		bm.$(function () {
-			cjs.Tween.removeAllTweens()
-			bitmap = bm
-			cjs.scaleShake(bm.dO)
-		})
-	}
 } 
  
   

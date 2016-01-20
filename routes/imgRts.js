@@ -27,20 +27,23 @@ $a.get('/mugByUsername/:un', function (q, p) {
 		p.send(u.mug)
 	})
 })
-$a.post('/changeMug', function (q, p) {
-	$l('POST CHANGEMUG!')
+
+$a.post('/changeMug', function (q, p) {$l('POST CHANGEMUG!')
 	User.findOne({un: q.session.un}, function (z, user) {
-		if (!user) {
-			return
-		}
-		q.session.mug = q.body.dU
-		$l(user.mug)
-		q.session.save(function () {
-			$l(q.session)
-			p.send(user)
-		})
-	})
+		if (!user) {return}
+		
+		q.session.mug =user.mug= q.body.dU
+		
+		user.save(function(){
+			q.session.save(function () {
+				$l(q.session);
+				p.send(user)
+		})})})
 })
+		
+
+
+
 $a.post('/cutout', function (q, p) {// CREATE NEW CUTOUT
 	$l('new coutout!')
 	Cutout.create({

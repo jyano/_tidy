@@ -146,6 +146,7 @@ SOLAR = function () {
 	})
 	st.bgImg('/space.jpg')
 }
+
 cjs.bulletHit = function (bu, inWhat) { //used in solar
 	var res
 	res = M.pointInCircle(bu.cX(), bu.cY(), {x: inWhat.x, y: inWhat.y, radius: inWhat.H() / 2})

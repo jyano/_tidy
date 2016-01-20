@@ -1662,11 +1662,11 @@ function dobProto(){
 				rotation = args[0]
 				if (args.p) {
 					rotation = N(rotation) ? rotation : 1
-					return this.rT(this.rotation + rotation)
+					return this.rt(this.rotation + rotation)
 				}
 				if (args.n) {
 					rotation = N(rotation) ? rotation : 1
-					return this.rT(this.rotation - rotation)
+					return this.rt(this.rotation - rotation)
 				}
 				if (U(rotation)) {
 					return this.rotation
@@ -1692,11 +1692,11 @@ function dobProto(){
 					rotation = args[0]
 					if (args.p) {
 						rotation = N(rotation) ? rotation : 1
-						return this.rT(this.rotation + rotation)
+						return this.rt(this.rotation + rotation)
 					}
 					if (args.n) {
 						rotation = N(rotation) ? rotation : 1
-						return this.rT(this.rotation - rotation)
+						return this.rt(this.rotation - rotation)
 					}
 					if (U(rotation)) {
 						return this.rotation
@@ -1711,11 +1711,11 @@ function dobProto(){
 		rotation = args[0]
 		if (args.p) {
 			rotation = N(rotation) ? rotation : 1
-			return this.rT(this.rotation + rotation)
+			return this.rt(this.rotation + rotation)
 		}
 		if (args.n) {
 			rotation = N(rotation) ? rotation : 1
-			return this.rT(this.rotation - rotation)
+			return this.rt(this.rotation - rotation)
 		}
 		if (U(rotation)) {
 			return this.rotation
@@ -1741,11 +1741,11 @@ function dobProto(){
 			rotation = args[0]
 			if (args.p) {
 				rotation = N(rotation) ? rotation : 1
-				return this.rT(this.rotation + rotation)
+				return this.rt(this.rotation + rotation)
 			}
 			if (args.n) {
 				rotation = N(rotation) ? rotation : 1
-				return this.rT(this.rotation - rotation)
+				return this.rt(this.rotation - rotation)
 			}
 			if (U(rotation)) {
 				return this.rotation
