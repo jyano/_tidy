@@ -36,5 +36,6 @@ EWTA= EDIT_WITH_TEXTADDER = function () {
 				)
 		)
 	})
+	
 	TextAdder2(st)
 }

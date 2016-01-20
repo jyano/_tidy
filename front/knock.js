@@ -812,3 +812,1238 @@ function _pre(){
 	ko.cm.iR = ko.cm.isRegistered
 	ko.o.prototype.rm = ko.o.prototype.remove
 }
+KOAT = function () {
+	_$({
+		// color
+		C: 'r',
+		// app hw title header 
+		t: 'attributes.. unlikely to use?',
+		vm: {
+			url: $o("year-end.html"),
+			tt: $o("stats report")
+		},
+		A: [
+			$.a('report').at$('{href:url,title:tt}')
+		]
+	})
+}
+KOBVS = function () {
+	_$({
+		C: 'o', t: 'bind -visibile- to a boolean -great', vm: 'vs',
+		el: [{ch: 'see me if true!', $vs: 'vs'}, {ch: 'if false!', $vs: '!vs()'}],     //   OK( 'vs'  )  // <- OK( 'vs', $o(1)  )  //  <-ok({ vs: $o(1)  })
+		_: function () {
+			vm.vs(0);
+			_.in(function () {
+				vm.vs(1)
+			})
+		}
+	})
+}
+$ok = function (vm, appCtn) {
+	$.app(appCtn)
+	ok(F(vm) ? vm() : vm)
+}
+FOCUS = function () {
+	_$({
+		C: 'u',
+		t: 'read&write els “focusedness”  by binding it to  obserb',
+		vm: {editingName: $o()},
+		A: [
+			$.ip().b("hasFocus: editingName"),
+			$.h1('editing..').bVs('editingName'),
+			$.bt('Edit').b("enable: !editingName(), click:function() { editingName(true) }")
+		]
+	})
+}
+VISABLE = function () {
+	_$({
+		C: 'o', t: 'bind -visibile- to a boolean -great', vm: 'vs',
+		el: [{ch: 'see me if true!', $vs: 'vs'}, {ch: 'if false!', $vs: '!vs()'}],     //   OK( 'vs'  )  // <- OK( 'vs', $o(1)  )  //  <-ok({ vs: $o(1)  })
+		_: function () {
+			vm.vs(0);
+			_.in(function () {
+				vm.vs(1)
+			})
+		}
+	})
+}
+ATTR = function () {
+	_$({
+		C: 'w',
+		t: 'attributes.. unlikely to use?',
+		vm: {url: $o("year-end.html"), tt: $o("stats report")},
+		A: [$.aA('{href:url,title:tt}', 'report')]
+	})
+}
+KOCSS = function () {
+	_$({
+		c: 'v', t: 'css example.. will i use it?', vm: {n: $o(1)},
+		A: $.d(['info']).b("style: {color: n()<0?'red':'black'}"),
+		_: function () {
+			vm.n(-5)
+		}
+	})
+}
+
+function koElsFancy(){
+	ENAB0 = function () {
+		$.mar().sp([
+			'phone #:', ip$({v: 'num', en: 'hasPhone'}),
+			ch$('hasPhone'), 'I have phone'])
+		ok({
+			hasPhone: $o(0), num: ''
+		})
+	}
+	TEXT0 = function () {
+		t$('textVal').C('p')
+		ok$o('textVal', 'startValue')
+		_.in(function () {
+			vm.textVal('changed the view model!')
+		})
+	}
+	CPD0 = function () {
+		$.A('F: ', t$('f'),
+				'L: ', t$('l'), 'F: ',
+				v$('f'), 'L: ', v$('l'),
+				'L: ', t$('fl'),
+				$.bt('caps').cl$('capL')
+		)
+		vm = {
+			f: $o('j'),
+			l: $o('y'),
+			capL: function () {
+				this.l(this.l().toUpperCase())
+			}
+		}
+		vm.fl = ko.c(function () {
+			return vm.f() + ' ' + vm.l()
+		})
+		ok(vm)
+	}
+	KNOCKS = function () {
+		$.A(pg('F: ', _B().b('t', 'f')),
+				pg('L: ', _B().b('t', 'l')),
+				pg('F: ', ip().b('V', 'f')),
+				pg('L: ', ip().b('V', 'l')).id('l'),
+				pg('L: ', _B().b('t', 'fl')),
+				bt('caps').b('$', 'capL'))
+		vm = {}
+		vm.f = $o('j')
+		vm.l = $o('y')
+		vm.fl = ko.c(function () {
+			return vm.f() + ' ' + vm.l()
+		})
+		vm.capL = function () {
+			vm.l(uC(vm.l()))
+		}
+		ok(vm)
+	}
+	KIP0 = function () {
+		$.A('Login name:', tI$('un'),
+				'Pw:', pw$('pw'),
+				'vm: ', $.pre().t$('ko.toJSON($root, null, 2)'))
+		creds = {un: $o(''), pw: $o('abc')}
+		ok(creds)
+	}
+	FOC0 = function () {
+//bind cb and bind ip to 'enable'
+		$.A('Name:',
+				ip$({vs: 'editing', hasFocus: 'editing', v: 'name'}),
+				d$({vs: '!editing()', t: 'name', cl: 'edit'})
+		)
+		$.p('Click the name to edit it; click elsewhere to apply changes')
+		function VM(n) {
+			var vm = this
+			vm.name = $o(n)
+			vm.editing = $o()
+			vm.edit = function () {
+				vm.editing(1)
+			}
+		}
+		
+		ok(new VM("Bert Bertington"))
+	}
+	K3 = VALUE = VAL = function () {
+		$.A('Name:',
+				ip$({v: 'editing', v: 'name', f: 'editing'}),
+				d$({v: '!editing()', t: 'name', $: 'edit'}),
+				$.p('Click the name to edit it; click elsewhere to apply changes'))
+		ok({
+			name: $o("Bert Bertington"),
+			editing: $o(),
+			edit: function () {
+				vm.editing(true)
+			}
+		})//KOFCC
+	}
+	K1 = KOO = function () {
+		$.A(
+				'Hello, ', t$('fullName'), '!',
+				'First name: ', v$('firstName'),
+				'Last name: ', v$('lastName')
+		)
+		VM = function (first, last) {
+			this.firstName = $o(first)
+			this.lastName = $o(last)
+			this.fullName = $cO(function () {
+				return this.firstName() + " " + this.lastName();
+			}, this)
+		}
+		ok(new VM("rigo", "ochoa"))
+	}
+	FOCUS = FCB = function () {//working!!!
+		_$({
+			C: 'u', t: 'read&write els “focusedness”  by binding it to  obserb',
+			vm: {editingName: $o()},
+			A: [
+				$.ip().fc$("editingName"),
+				$.h1('editing..').vs$('editingName'),
+				$.bt('Edit').b("enable: !editingName(), click:function() { editingName(true) }")]
+		})
+	}
+	SPAM0 = function () {
+		$.A('spam?', ch$('want'),
+				vs$('want', [
+					'flavs:', $.cKO('Cherry', 'flav', 'cherry'),
+					$.cKO('Almond', 'flav', 'almond'),
+					$.cKO('Glut', 'flav', 'glut')
+				])
+		)
+		ok(vm = {
+			want: $o(1),
+			flav: $oA(["cherry", "almond"])
+		})
+		_.in(2, function () {
+			vm.wantSpam(0)
+		})
+//bind cb 'checked' to boolean
+		//vm.spamFlavors.push("msg"); // Now additionally checks the Monosodium Glutamate checkbox
+	}
+	VIS0 = function () {
+		$.h1().A('ALWAYS HERE!', vs$('vs', 'see me if true!'))
+		ok(vm = {vs: $o(1)})
+		_.in(function () {
+			vm.vs(0);
+		})
+	}
+	CLC0 = SMCL0 = function () {
+		cl$('newDiv')
+		ok({
+			newDiv: function () {
+				cl$('name',
+						"i'm a freaking div").C($r())
+			},
+			name: function () {
+				alert(this)
+			}
+		})
+	}
+	WITH0 = function () {
+		w$('xy', [t$('city'), 'lat:', t$('lat'), 'lon:', t$('lon')])
+		ok({city: "London", xy: {lat: 51, lon: -0.1}})
+	}
+	ADD00 = EACHDIVADD = EDA = function () {
+		$.ip().tI$('name')
+		$.h1().t$('name')
+		$.ul().e$('arr').A($.li().t$())
+		$.sm().cl$('A')
+		_.in(1, function () {
+			vm.name('girf')
+			_.e(['a', 'b', 'c'], function (i) {
+				vm.arr.push(i)
+			})
+		})
+		e$('peep', t$('f'), ' ', t$('l'))
+		ok(vm = {
+			name: $o('zi'), arr: $oa(),
+			A: function () {
+				this.arr.push(this.name())
+			}, peep: $oA()
+		})
+		$.bt('push', function () {
+			vm.peep.push({f: 'j', l: 'y'})
+		})
+	}
+	ADD10 = ULA = BINDUL = BUL = MONK = function () {
+		$.h1('monkey').t$('monkey')
+		$.ip().v$('monkey')
+		$.sm('hello').cl$('A')
+		//  $.s$('a','play');
+//    $.U('cl',[            'my name is ',$.sT('n'),            ' and i like to play ', $.sT('c')])
+		e$('list', ['my name is ', t$('name'),
+			' and i like ', t$('color')])
+		vm = {
+			monkey: $o(), list: $oa(),
+			A: function () {
+				this.list.push({name: 'j', color: $r()})
+			}
+		}
+		vm.monkey('elephant')
+		ok(vm)
+		_.ev(8, function () {
+			vm.A()
+		})
+		//https://www.youtube.com/watch?v=JGwRIbWWqjE
+	}
+	ADD20 = ULADD = ULA = function () {
+		peep = Peep()
+		$.lb('Show time: ').A(ch$('showDT'))
+		e$('peep', [$.d([t$('n'), 'has',
+			t$('ch().length'),
+			'children &nbsp;',
+			ch$('New', 'A')]),
+			e$('ch', [t$(), vs$('$root.showDT').A(
+					' (child rendered at ',
+					t$('new Date().getSeconds()'), ')')])])
+		ok({
+			peep: peep,
+			showDT: $o()
+		})
+		//add, conditional el
+		//anonymous vm
+	}
+	DEL0 = ADD3 = ULP = function () {
+		$.ul().e$('people').A(
+				$.li().A(
+						$.sp('pos/name: '),
+						$.sp().t$('$index'),
+						$.sp().t$('name'),
+						$.a('X').cl$('$parent.rm'))
+		)
+		$.bt('add').cl$('add')
+		vm = function () {
+			var o = {}
+			o.people = $oA([{n: 'B'}, {n: 'Ch'}, {n: 'De'}])
+			o.add = function () {
+				o.people.push({n: "New at " + new Date().time})
+			}
+			o.remove = function () {
+				o.people.rm(this)
+			}
+			return o
+		}
+		ok(vm())
+	}
+	REMM = ULDEL = ULD = function () {
+		e$('peep', //bind bt 'click' to parent.rem
+				['pos/name: ', t$('$index'), t$('n')//, cl$('rm')
+				])
+		cl$('A')
+		ch$('rm')
+		ok(vm = {
+			peep: $oA({n: 'B'}, {n: 'Ch'}, {n: 'De'}),
+			A: function () {
+				this.peep.push({n: "New at " + new Date()})
+			},
+			rm: function (a) {
+				this.peep.remove(this)
+			}
+		})
+	}
+	ULINDEX = function () {
+		format()
+		s2(
+				h4('People'),
+				ul().b('E', 'people')(
+						li()(
+								sp('pos/name: '),
+								sp().b('t', '$index'),
+								sp().b('t', 'n'),
+								lk(' X').b('$', '$parent.rem')
+						)
+				),
+				bt('add').b('$', 'add')
+		)
+		vm = function () {
+			var o = {}
+			o.people = $oa([{n: 'B'}, {n: 'Ch'}, {n: 'De'}])
+			o.add = function () {
+				o.people.push({n: "New at " + new Date()})
+			}
+			o.rem = function () {
+				o.people.remove(this)
+			}
+			return o
+		}
+		ko.ab(vm()
+		)
+	}
+	$.tdT = function (a, b) {
+		var td = $.td()
+		td.bT(a)
+		if (A(b)) {
+			_.e(b, function (el) {
+				td.A(el)
+			})
+		}
+		return td
+	}
+	$d.cm$ = function (a) {
+//= $.dCm
+		return $.d().cm$(a)
+	}
+	ko.cb = $.cC = function (a) {
+		//$.cb_c =  $.cbC
+		return $.cb().ch$(a)
+	}
+	ko.sp = function (t) {
+		return $.sp().t$(t)
+	}
+	$.d_w = function (a, b) {
+		var d = $.d().bW(a)
+		if (A(b)) {
+			_.e(b, function (b) {
+				d.A(b)
+			})
+		}
+		return d
+		//= $.dW = $.dBw
+	}
+	$.aA = function (a, b, c, d) {
+		return $.a(b, c, d).bA(a)
+	}
+	$.d_h = $.dH = function (a) {
+		return $.d().bH(a)
+	}
+	$.d_cm = $.dCm = function (a) {
+		return $.d().bCm(a)
+	}
+	ko.d.if = $.d_if = $.dIf = function (a, b) {
+		var d = $.d().bI(a)
+		if (A(b)) {
+			_.e(b, function (b) {
+				d.A(b)
+			})
+		}
+		return d
+	}
+	$.sp_t = $.spT = $.spBt = function (a, b) {
+		return $.sp(b).bT(a)
+	}
+	$.sp_t = $.sT = $.spT = function (a, b) {
+		a = a || '$data'
+		return $.sp(b).bT(a)
+	}
+	$.h1_bt = $.h1T = $.h1Bt = function (a, b) {
+		var h1 = $.h1(a)
+		h1.bT(b || a)
+		return h1
+	}
+	$.li_t = $.liT = $.liBt = function (a) {
+		return $.li().bT(a)
+	}
+	$.td_t = $.tdT = function (a, b) {
+		var td = $.td()
+		td.bT(a)
+		if (A(b)) {
+			_.e(b, function (el) {
+				td.A(el)
+			})
+		}
+		return td
+	}
+	$.h1T = $.h1Bt = function (a, b) {
+		var h1 = $.h1(a)
+		h1.bT(b || a)
+		return h1
+	}
+	$.p_i = $.pI = function (a, b, c, d) {
+		var p = $.p(b, c, d).bI(a)
+	}
+	$.p_t = $.pT = function (a) {
+		var p = $.p()
+		p.bT(a)
+		return p
+	}
+	$.sT = $.spT = function (a, b) {
+		return $.sp(b)
+				.bT(a || '$data')
+	}
+	$.spVs = function (a) {
+		return $.sp().bVs(a)
+		return $.sp().b('vs', a)
+	}
+	$.dV = $.dVs = function () {
+		var g = G(arguments),
+				d = $.d().bVs(g.f)
+		_.e(g.r, function (q) {
+			d.A(q)
+		})
+		return d
+	}
+	$.dCm = function (a) {
+		return $.d().bCm(a)
+	}
+	$.dIf = function (a, b) {
+		var d = $.d().bI(a)
+		if (A(b)) {
+			_.e(b, function (b) {
+				d.A(b)
+			})
+		}
+		return d//$.dI=
+	}
+	$.dW = $.dBw = function (a, b) {
+		var d = $.d()
+				.bW(a)
+		if (A(b)) {
+			_.e(b, function (b) {
+				d.A(b)
+			})
+		}
+		return d
+	}
+	$.dT = function (a) {
+		return $.d().bT(a)
+	}
+	$.dH = function (a) {
+		return $.d().bH(a)
+	}
+	$.dCm = function (a) {
+		return $.d().bCm(a)
+	}
+	$.dT = function (a) {
+		return $.d().bT(a)
+	}
+	$.dIf = function (a, b) {
+		var d = $.d().bI(a)
+		if (A(b)) {
+			_.e(b, function (b) {
+				d.A(b)
+			})
+		}
+		return d
+	}
+	$.sT = $.spT = function (a, b) {
+		return $.sp(b).bT(a || '$data')
+	}
+	$.ST = function (t) {
+		return $.S().bT(t)
+	}
+	$.pT = function (a) {
+		var p = $.p()
+		p.bT(a);
+		return p
+	}
+	$.h1T = function (a, b) {
+		var h1 = $.h1(a)
+		h1.bT(b || a)
+		return h1
+	}
+	$.liT = function (a) {
+		return $.li().bT(a)
+	}
+	$.tdT = function (a, b) {
+		var td = $.td().bT(a)
+		if (A(b)) {
+			_.e(b, function (el) {
+				td.A(el)
+			})
+		}
+		return td
+	}
+	$.pI = function (a, b, c, d) {
+		return $.p(b, c, d).if$(a)
+	}
+///
+	$.ip.v$ = ValueBoundTextInput = function () {
+		//= $.iV = $.ipV = $.ipBv = $.ip_v
+		var g = G(arguments), ip
+		ip = $.ip()
+		ip.v$.apply(ip, g)
+		return ip
+	}
+	TextInputBoundTextInput = $.ipTi = $.ip_tI = $.ip_ti = function (a) {
+		return $.ip().tI$(a)
+	}
+	TextBoundPasswordInput = $.pwTi = $.pw_tI = $.pw_ti = function (a) {
+		return $.pw().tI$(a)
+	}
+	EnableBoundSubmitButton = $.smEn = function (a) {
+		return $.sm().en$(a)
+	}
+	EnableBoundSpan = $.b$ = $.bt$ = $.btB$ = function (a, b, c) {
+		var bt = $.bt(a)
+		bt.cl$(b || a)
+		if (c) {
+			bt.en$(c)
+		}
+		return bt
+	}
+	$.bt.cl$ = ClickBoundButton = $.$bt = function (a, b) {
+		var g = G(arguments)
+		b = b || a
+		if (g.n) {
+			b = '$parent.' + b
+		}
+		return $.bt(a).cl$(b)
+	}
+	$.cl$ = $.c$cl = $.c$ = function (fn) {
+		return $.cb().ch$(fn)
+	}
+	ClickBoundSubmitButton = $.s$ = function (a, b, c, d) {
+		return $.sm(b, c, d).cl$(a)
+	}
+	$.sp.cl$ = ClickBoundSpan = $.b$$ = function () {
+		var sp = $.sp()
+		_.e(arguments, function (a) {
+			sp.A($.cl$(a))
+		})
+		return sp
+	}
+	$.sm.cl$ = ClickBoundSubmitButton = $sb_$ = $.s$ = function (a, b, c, d) {
+		return $.sb(b, c, d).cl$(a)
+	}
+	$.cb.ch$ = CheckedBoundCheckbox = $.cC = $.cbC = function (a, val) {
+		//if (U(a)) {a = '$'}
+		var cb = $.cb().ch$(a)
+		cb.val(val)
+		return cb
+	}
+	$.p.ch.ch$ = CheckedBoundCheckboxInParagraph = cbKO = cb2 = function (m, binding, val) {
+		var cb = CheckedBoundCheckbox(binding, val)
+		var ch = [$.sp().A(m), cb]
+		return $.p(ch)
+	}
+	$.p.sp.ch$ = CheckBoundSpanInP = $.cKO = function (m, b, v) {
+		var cb = $.cb()
+		cb.v(v)
+		cb.ch$(b)
+		return $.p().A(
+				$.sp().A(m),
+				cb
+		)
+		//=cbKO=cb2
+	}
+	$.a$ = function (t, fn) {
+		return $.a(t).b('$', fn)
+	}
+	$.aA = function (a, b, c, d) {
+		return $.a(b, c, d).at$(a)
+	}
+	$.t.vs$ = $.tVs = function (a) {
+		return $.t().vs$(a)
+	}
+	$.em.t$ = function (t) {
+//em_t = em$t = t$Em = $.emT = $.eT
+		return $.em().t$(t)
+	}
+	$.sl._$ = SelectBound_ = $sl$ = _selectBind = $.slB = function (a) {
+		var q = $.sl()
+		q.b.apply(q, arguments)
+		return q
+	}
+	sm$f = $.fSb = $.fBsb = function (a, b) {
+		var f = $.f()
+		f.b({sb: a})
+		//f.bSb(a)
+		if (A(b)) {
+			_.e(b, function (el) {
+				f.A(el)
+			})
+		}
+		return f
+	}
+	SubmitBoundForm = $.f_sb = $.fSb = $.fBsb = $.fSm = $.fBSm = function (a, b) {
+		var f = $.f()
+		f.sm$(a)//f.b({sb: a})
+		if (A(b)) {
+			_.e(b, function (b) {
+				f.A(b)
+			})
+		}
+		return f
+		$.fSbold = function (a, b) {
+			var f = $.f();
+			f.b({sb: a})
+			if (A(b)) {
+				_.e(b, function (el) {
+					f.A(el)
+				})
+			}
+			return f
+		}
+	}
+}
+function selectMisc(){
+	KOLST = EACHS = SELLISTMISC = function () {
+		$.d().A(
+				$.f().b('S', 'addItem').A(
+						$.sp('add item'),
+						$.ip().b({
+							v: 'itemToAdd'//,vu:'afterkeydown'
+						}),
+						$.sm('add').e$('itemToAdd().length>0')),
+				$.d().A($.sp('Your values:'),
+						$.sl().h(5).b({
+							o: 'allItems',
+							sO: 'selectedItems'
+						})
+				),
+				$.d().A(
+						$.bt('remove').b({
+							c: 'removeSelected',
+							e: 'selectedItems().length>0'
+						}),
+						$.bt('sort').b({
+							c: 'sortItems',
+							e: 'allItems().length>1'
+						}))
+		)
+		ok(o = BLM())
+		form = f = $.f()
+		form.sm$('addItem').A(
+				$.sp('add item'),
+				$.ip().b({v: 'itemToAdd', V: 'afterkeydown'}),
+				$.sb('add').en$('itemToAdd().length>0'))
+		$.d().A(form,
+				$.d().A(
+						$.sp('Your values:'),
+						$.sl().h(5).b({
+							o: 'allItems', sO: 'selectedItems'
+						})
+				),
+				$.d().A(
+						$.bt('remove').b({
+							c: 'removeSelected',
+							e: 'selectedItems().length>0'
+						}),
+						$.bt('sort').b({
+							c: 'sortItems',
+							e: 'allItems().length>1'
+						}))
+		)
+		$.f().b({sb: 'A'}).A('Add item:',
+				$.ip().b({v: 'tA', vU: 'afterkeydown'}),
+				$.sb('Add').b('en', 'tA().length > 0')
+		)
+		$.p('Your values:')
+		$.sl().mlt().b({o: 'all', so: 'sl'})
+		$.d([
+			$.bt('Rem').b({$: 'xSl', en: 'sl().length > 0'}),
+			$.bt('Srt').b({$: 'srt', en: 'all().length > 1'})
+		])
+		ok(new Lst())
+		ok({
+			itemToAdd: $o(''),
+			allItems: $oa(['a', 'b', 'c']),
+			selectedItems: $oa(['d']),
+			addItem: function () {
+				$l('addItem')
+				if (vm.itemToAdd() != '' && vm.allItems.indexOf(vm.itemToAdd()) < 0) {
+					vm.allItems.push(vm.itemToAdd());
+					vm.itemToAdd('')
+				}
+			},
+			removeSelected: function () {
+				allItems.removeAll(o.selectedItems())
+				selectedItems([])
+			},
+			sortItems: function () {
+				o.allItems.sort()
+			}
+		})
+		f = $.f().A(
+				$.sp('add item'),
+				$.ip().b({v: 'itemToAdd', V: 'afterkeydown'}),
+				$.sm('add').en$('itemToAdd().length>0')
+		)
+		f.sm$('addItem')
+		$.d().A(f, $.d().A(
+						$.sp('Your values:'),
+						$.sl().h(5).b({
+							o: 'allItems',
+							sO: 'selectedItems'
+						})
+				),
+				$.d().A(
+						$.bt('remove').b({
+							c: 'removeSelected',
+							e: 'selectedItems().length>0'
+						}),
+						$.bt('sort').b({
+							c: 'sortItems',
+							e: 'allItems().length>1'
+						}))
+		)
+		ok({
+			itemToAdd: $o(''),
+			allItems: $oa(['a', 'b', 'c']),
+			selectedItems: $oa(['d']),
+			addItem: function () {
+				$l('addItem')
+				if (vm.itemToAdd() != '' && vm.allItems.indexOf(vm.itemToAdd()) < 0) {
+					vm.allItems.push(vm.itemToAdd());
+					vm.itemToAdd('')
+				}
+			},
+			removeSelected: function () {
+				allItems.removeAll(o.selectedItems())
+				selectedItems([])
+			},
+			sortItems: function () {
+				o.allItems.sort()
+			}
+		})
+		f = $.fo().sm$('A', ['Add:',
+			$.ip().v$('tA'),
+			$.sb('Add').en$('tA().length>0')
+		])
+		$.p('Your values:')
+		$.sl().mlt().b({
+			o: 'all',
+			so: 'sl'
+		})
+		$.d([
+			$.bt('Rem').b({
+				$: 'xSl',
+				en: 'sl().length > 0'
+			}),
+			$.bt('Srt').b({
+				$: 'srt',
+				en: 'all().length > 1'
+			})
+		])
+		ok(new Lst())
+		//sort, remove
+		$.f().b({sb: 'A'}).A('Add item:',
+				$.ip().b({v: 'tA', vU: 'afterkeydown'}),
+				$.sb('Add').b('en', 'tA().length > 0')
+		)
+		$.p('Your values:')
+		$.sl().mlt().b({o: 'all', so: 'sl'})
+		$.d([
+			$.bt('Rem').b({$: 'xSl', en: 'sl().length > 0'}),
+			$.bt('Srt').b({$: 'srt', en: 'all().length > 1'})
+		])
+		ok(new Lst())
+		f = $.fSm('A', ['Add:',
+			$.ipV('tA'),
+			$.sb('Add').en$('tA().length>0')
+		])
+		$.p('Your values:')
+		$.sl().mlt().b({
+			o: 'all',
+			so: 'sl'
+		})
+		$.d([
+			$.bt('Rem').b({
+				$: 'xSl',
+				en: 'sl().length > 0'
+			}),
+			$.bt('Srt').b({$: 'srt', en: 'all().length > 1'})
+		])
+		$.f().b({sb: 'A'}).A('Add item:',
+				$.ip().b({v: 'tA', vU: 'afterkeydown'}),
+				$.sb('Add').b('en', 'tA().length > 0')
+		)
+		$.p('Your values:')
+		$.sl().mlt().b({o: 'all', so: 'sl'})
+		$.d([
+			$.bt('Rem').b({$: 'xSl', en: 'sl().length > 0'}),
+			$.bt('Srt').b({$: 'srt', en: 'all().length > 1'})
+		])
+		ok(new Lst())
+		f = $.f()
+		f.bSb('addItem').A(
+				$.sp('add item'),
+				$.ip().b({v: 'itemToAdd', V: 'afterkeydown'}),
+				$.sb('add').e$('itemToAdd().length>0')
+		)
+		$.d().A(f,
+				$.d().A(
+						$.sp('Your values:'),
+						$.sl().h(5).b({
+							o: 'allItems',
+							so: 'selectedItems'
+						})
+				),
+				$.d().A(
+						$.bt('remove').b({
+							c: 'removeSelected',
+							e: 'selectedItems().length>0'
+						}),
+						$.bt('sort').b({
+							c: 'sortItems',
+							e: 'allItems().length>1'
+						}))
+		)
+		ok({
+			itemToAdd: $o(''),
+			allItems: $oa(['a', 'b', 'c']),
+			selectedItems: $oa(['d']),
+			addItem: function () {
+				$l('addItem')
+				if (vm.itemToAdd() != '' && vm.allItems.indexOf(vm.itemToAdd()) < 0) {
+					vm.allItems.push(vm.itemToAdd());
+					vm.itemToAdd('')
+				}
+			},
+			removeSelected: function () {
+				allItems.removeAll(o.selectedItems())
+				selectedItems([])
+			},
+			sortItems: function () {
+				o.allItems.sort()
+			}
+		})
+		ok(new Lst())
+	}
+	REMOVE1 = EACH = function () {
+		$.fo({submit$: 'aT'},
+				"Add task: ",
+				$.ip("What?").v$('nT'),
+				$.bt('Add').at('t', 's')
+				//alt = $.fo.sm$("aT").A("Add task: ", $.ip("What?").v$('nT'), $.bt('Add').at('t', 's')),
+		)
+		$.ul({
+			enable$: 'ts',
+			visible$: 'ts().length>0',
+			child: $.li([
+				$.cb.checked$('iD'),
+				$.ip({value$: 't', disable$: 'iD'}),
+				$.a({checked$: '$parent.rmT'}, 'Del')
+			])  //alt = $.ul().A($.li().A($.cb().ch$('iD'), ip().b("value:t, disable:iD"), lk('Del').b('ch', '$parent.rmT'))).b("foreach:ts, visible:ts().length>0"),
+		})
+		$.d([
+			"You have",
+			$.B({text$: "inc().length"}, "&nbsp;"),
+			$.sp({vs$: "inc().length==0"}, "inc task(s)   - beer!")
+		])
+		tlVM = function () {
+			var o = {}
+			o.itemToAdd = $o('')
+			o.allItems = $oa(['a', 'b', 'c'])
+			o.selectedItems = $oa(['d'])
+			o.addItem = function () {
+				if (o.itemToAdd() != ''//&& o.allItems.indexOf(o.itemToAdd())<0
+				) {
+					o.allItems.push(o.itemToAdd());
+					o.itemToAdd('')
+				}
+			}
+			o.removeSelected = function () {
+				o.allItems.removeAll(
+						o.selectedItems())
+				o.selectedItems([])
+			}
+			o.sortItems = function () {
+				o.allItems.sort()
+			}
+			return o
+		}
+		tlVM = function () {
+			var o = {
+				ts: $oa([]),
+				nT: $o()
+			}
+			o.inc = $c(function () {
+				return ko.ut.af(
+						o.ts(),
+						function (t) {
+							return !t.iD()
+						}
+				)
+			})
+			o.aT = function () {
+				o.ts.push(Task({t: o.nT()}))
+				o.nT("")
+			}
+			o.rmT = function (t) {
+				o.ts.remove(t)
+			}
+			$.gJ('/ts', function (d) {
+				o.ts(_.m(d, function (i) {
+					return Task(i)
+				}))
+			})
+			return o
+		}
+		ok(tlVM())
+	}
+	REMOVE = TASKS = function () {
+		$.f().sm$('aT').A().A("Add task: ",
+				$.ip().v$('nT').ph("What?"),
+				$.bt('Add')//.bS('s') // ??
+		)
+		$.ul().b({
+			e: 'ts',
+			vs: 'visible:ts().length>0'
+		}).A(
+				$.li().A(
+						$.cb().bC('iD'),
+						$.ip().b("value:t, disable:iD"),
+						$.bt('Del').bC('$parent.rmT')))
+		$.sp("You have").A()
+		$.B("&nbsp;").t$("inc().length").A()
+		$.sp("inc task(s)").A()
+		$.sp("- beer!").v$("inc().length==0").A()
+		ok({
+			itemToAdd: $o(''),
+			allItems: $oA(['a', 'b', 'c']),
+			selectedItems: ko.oa(['d']),
+			addItem: function () {
+				if (vm.itemToAdd() != '' && vm.allItems.indexOf(vm.itemToAdd()) < 0) {
+					vm.allItems.push(vm.itemToAdd());
+					vm.itemToAdd('')
+				}
+			},
+			removeSelected: function () {
+				allItems.removeAll(vm.selectedItems())
+				selectedItems([])
+			},
+			sortItems: function () {
+				vm.allItems.sort()
+			}
+		})
+		vm2 = {
+			ts: ko.oa(),
+			nT: ko.o(),
+			inc: ko.c(function () {
+						var vm = this
+						return ko.ut.af(
+								vm.ts(), function (t) {
+									return !t.iD()
+								})
+					}
+			),
+			aT: function () {
+				this.ts.push({t: ko.o(o.nT()), iD: ko.o()});
+				this.nT('')
+			},
+			rmT: function () {
+				o.ts.remove(this)
+			}
+		}
+		/*
+		 ko.b(vm2)
+		 //  $.Gj('ts', function(d){  o.ts($.map(d, function(i){return  { t: ko.o(i.t), iD: ko.o(i.iD) }}))})
+		 */
+	}
+	BLM = function () {
+		var o = {}
+		o.itemToAdd = $o('')
+		o.allItems = $oa(['a', 'b', 'c'])
+		o.selectedItems = $oa(['d'])
+		o.addItem = function () {
+			if (o.itemToAdd() != ''//&& o.allItems.indexOf(o.itemToAdd())<0
+			) {
+				o.allItems.push(o.itemToAdd());
+				o.itemToAdd('')
+			}
+		}
+		o.removeSelected = function () {
+			o.allItems.removeAll(o.selectedItems())
+			o.selectedItems([])
+		}
+		o.sortItems = function () {
+			o.allItems.sort()
+		}
+		return o
+	}
+	TSK = FILTERBYPROPERT = FILTERTASKSPLUGIN = function () {
+		Task = koTask = function (title, done) {
+//return {tt: ko.o(title), done: ko.o(done)}
+			this.title = $o(title)
+			this.done = $o(done)
+			Task_ = function (d) {
+				return {
+					title: $o(d.t),
+					done: $o(d.iD)
+				}
+			}
+		}
+//FILTERBYPROP IN ADDINGCUSTOM FNS http://knockoutjs.com/documentation/fn.html
+		ko.oA.fn.filterByProperty = function (propName, matchValue) {
+			return ko.pC(function () {
+				var allItems = this(),
+						matchingItems = [];
+				for (var i = 0; i < allItems.length; i++) {
+					var current = allItems[i];
+					if (ko.unwrap(current[propName]) === matchValue)
+						matchingItems.push(current)
+				}
+				return matchingItems
+			}, this)
+		}
+		function VM(p) {
+			this.tasks = ko.oa([
+				Task('Find new desktop background', true),
+				Task('Put shiny stickers on laptop', false),
+				Task('Request more reggae music in the office', true)
+			])
+			this.doneTasks = this.tasks.filterByProperty("done", true)
+			this.prods = $oA()
+			this.somePop = p.smKey
+			this.tasks = $oA([
+				new Task('Find new desktop background', 1),
+				new Task('Put shiny stickers on laptop', false),
+				new Task('Request more reggae music in the office', 1)
+			])
+			// Here's where we use the custom function
+			this.doneTasks = this.tasks.filterByProperty("done", 1)
+		}
+
+//filter the items using the filter text
+		vm.filteredItems = ko.c(function () {
+			var t = this, fl
+			fl = t.filter().toLowerCase()
+			if (!fl) {
+				return t.items()
+			}
+			else {
+				return ko.utils.arrayFilter(t.items(), function (it) {
+					return ko.utils.stringStartsWith(
+							it.name().toLowerCase(), fl)
+				})
+			}
+		}, vm)
+		$.h3('All tasks').A(t$('tasks().length'))
+		$.ulE('tasks', [
+			$.lL([$.cb().ch$('done'), t$('tt')])
+		])
+		$.h3('Done tasks').A($.spT('doneTasks().length'))
+		$.ulE('doneTasks', [$.liT('tt')])
+		tasks = $oA(
+				Task('new background', 1), Task('stickers'), Task('reggae', 1)
+		)
+		ok({
+			tasks: tasks,
+			doneTasks: tasks.filterByProperty("done", 1)
+		})
+		/*alt:
+		 this.doneTasks = ko.pureComputed(function() {
+		 var all = this.tasks(), done = [];
+		 for (var i = 0; i < all.length; i++)
+		 if (all[i].done())
+		 done.push(all[i]);
+		 return done;
+		 }, this);
+		 */
+		function alt() {
+			FLVIEWPLG = function () {
+				tasks = $oA(
+						Task('Find new desktop background', 1),
+						Task('Put shiny stickers on laptop'),
+						Task('Request more reggae music in the office', 1))
+				//$.h3('All tasks').A($.spT('tasks().length'))
+				$.h3('All tasks').A($.sp().t$('tasks().length'))
+				$.h3('All tasks').A($.sp().t$('tasks().length'))
+				$.ulE('tasks', [
+					$.lL([
+						$.cb().ch$('done'), $.sp().t$('tt')
+					])
+				])
+				$.h3('Done tasks').A($.sp().t$('doneTasks().length'))
+				$.ulE('doneTasks', [$.li().t$('tt')])
+				$.ulE('tasks', [$.lL([$.cb().ch$('done'), $.sp().t$('tt')])])
+				$.h3('All tasks').A($.sp().bT('tasks().length'))
+				$.ul().bE('tasks').A($.li().A(
+						$.lb().A($.cb().ch$('done'), $.sp().t$('title'))))
+				$.h3('Done tasks').A($.sp().bT('doneTasks().length'))
+				$.ul().e$('doneTasks').A($.li().bT('text'))
+				ko.b(new AppViewModel())
+				/*alt:
+				 this.doneTasks = ko.pureComputed(function() {
+				 var all = this.tasks(), done = [];
+				 for (var i = 0; i < all.length; i++)
+				 if (all[i].done())
+				 done.push(all[i]);
+				 return done;
+				 }, this);
+				 */
+				// $.ul().bE('tasks').A($.li().A($.lb().A($.cb().bC('done'), $.sp().bT('title'))))
+				$.h3('Done tasks').A($.sp().t$('doneTasks().length'))
+				// $.h3('Done tasks').A($.sp().bT('doneTasks().length'))
+				$.ul([$.li().t$('tt')]).e$('doneTasks')
+				//$.ul().bE('doneTasks').A( $.li().bT('text') )
+				ok({
+					tasks: tasks,
+					doneTasks: tasks.filterByProperty("done", 1)
+				})
+				/*alt:
+				 this.doneTasks = ko.pureComputed(function() {
+				 var all = this.tasks(), done = [];
+				 for (var i = 0; i < all.length; i++)
+				 if (all[i].done())
+				 done.push(all[i]);
+				 return done;
+				 }, this);
+				 */
+			}
+			tasks = $oA([
+				new Task('Find new desktop background', true),
+				new Task('Put shiny stickers on laptop', false),
+				new Task('Request more reggae music in the office', true)
+			])
+		}
+	}
+	BTRLST = function () {
+//http://knockoutjs.com/documentation/unobtrusive-event-handling.html
+		f = $.fSb('A', ['Add:',
+			v$('tA'),
+			$.sb('Add').en$('tA().length>0')
+		])
+		$.p('Your values:')
+		$.sl().mlt().b({
+			o: 'all',
+			so: 'sl'
+		})
+		$.d([
+			$.bt('Rem').b({
+				$: 'xSl',
+				en: 'sl().length > 0'
+			}),
+			$.bt('Srt').b({$: 'srt', en: 'all().length > 1'})
+		])
+		ok(new Lst())
+		function more() {
+			BTRLST1 = function () {
+				$.f().b({sb: 'A'}).A('Add item:',
+						$.ip().b({v: 'tA', vU: 'afterkeydown'}),
+						$.sb('Add').b('en', 'tA().length > 0')
+				)
+				$.p('Your values:')
+				$.sl().mlt().b({o: 'all', so: 'sl'})
+				$.d([
+					$.bt('Rem').b({$: 'xSl', en: 'sl().length > 0'}),
+					$.bt('Srt').b({$: 'srt', en: 'all().length > 1'})
+				])
+				$b(new Lst())
+			}
+			Lst = function () {
+				this.tA = $o('')
+				this.all = $oa(['Eg', 'Hm', 'Ch', 'J', 'r', 30])
+				this.sl = $oa(['Hm'])
+				this.A = function () {
+					if (this.tA() != '' && this.all.indexOf(this.tA()) < 0) {
+						this.all.push(this.tA())
+						this.tA('')
+					}
+				}
+				this.A = function () {
+					if (this.tA() &&
+							this.all.indexOf(this.tA()) < 0
+					) {
+						this.all.push(this.tA())
+						this.tA('')
+					}
+				}
+				this.xSl = function () {
+					this.all.removeAll(this.sl())
+					this.sl([])
+				}
+				this.srt = function () {
+					this.all.sort()
+				}
+				this.xSl = function () {
+					this.all.removeAll(this.sl())
+					this.sl([])
+				}
+				this.srt = function () {
+					this.all.sort()
+				}
+			}
+		}
+	}
+}

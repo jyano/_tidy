@@ -18,130 +18,140 @@ x._ = x.temp = function (fn) {
 	_.b(fn, this)();
 	return this.R()
 }
-  ctxCan()
-  color()
-  imgDa()
-  shad()
-function ctxCan(){
-	  x.cv = x.cv0 = function () {
-		  return this.canvas
-	  }
-	  x.$cv = x.$ = function () {
-		  return $(this.cv())
-	  }
-	  x.dU = x.tDU = x.u = function () {
-		  return this.cv().toDataURL()
-	  }
-	  x.H = function () {
-		  return this.cv().height
-	  }
-	  x.W = function () {
-		  return this.cv().width
-	  }
-  }
-function color(){
-	  x.C = x.c = x.fS = x.f = x.fs = function (c, C, l) {
-		  var g = G(arguments)
-		  if (g.u) {
-			  this.fill()
-			  if (g.p) {
-				  this.s()
-			  }
-			  return this
-		  }
-		  this.fillStyle = oO('c', c)
-		  if (C) {
-			  this.C(C)
-		  }
-		  if (N(l)) {
-			  this.l(l)
-		  }
-		  return this
-	  }
-	  x.col = x.sC = x.sS = x.s = x.ss = function () {
-		  var g = G(arguments), o
-		  o = g.N_ ? {l: g.f} :
-		  {C: g.f, l: g.s}
-		  if (o.C) {
-			  this.strokeStyle = oO('c', o.C)
-		  }
-		  if (N(o.l)) {
-			  this.l(o.l)
-		  }
-		  this.stroke();
-		  if (g.p) {
-			  this.f()
-		  }
-		  return this
-	  }
-	  x.al = function (al) {
-		  this.globalAlpha = al;
-		  return this
-	  }
-	  x.pt = x.Pt = function () {
-		  return this.createPattern()
-	  }}
-function imgDa(){
-		  x.cID = function () {
-			  var x = this
-			  return x.createImageData.apply(x, arguments)
-		  }
-		  x.gID = function () {
-			  var x = this
-			  return x.getImageData.apply(x, arguments)
-		  }
-		  x.pID = function () {
-			  var x = this
-			  x.putImageData.apply(x, arguments)
-			  return x
-		  }
-		  x.cD = function () {
-			  this.cID()
-			  return this
-		  }
-		  x.gD = function () {
-			  var g = G(arguments), o, d
-			  o = {x: g.f, y: g.s, w: g.t, h: g[3]}
-			  o.x = N(o.x, 0)
-			  o.y = N(o.y, 0)
-			  o.w = N(o.w, this.W())
-			  o.h = N(o.h, this.H())
-			  d = this.gID(o.x, o.y, o.w, o.h)
-			  d.h = d.height
-			  d.w = d.width
-			  d.d = d.data
-			  return d
-		  }
-		  x.pD = function (d, x, y) {
-			  return this.pID(d, N(x, 0), N(y, 0))
-		  }}
-function shad(){
-			  x.shC = function (c) {
-				  this.shadowColor = oO('c', c)
-				  return this
-			  }
-			  x.shX = function (c) {
-				  this.shadowOffsetX = c
-				  return this
-			  }
-			  x.shY = function (c) {
-				  this.shadowOffsetY = c
-				  return this
-			  }
-			  x.shB = function (c) {
-				  this.shadowBlur = c
-				  return this
-			  }
-			  CTXSHAD = function () {
-				  __C()
-				  x.xShadow = 3
-				  x.yShadow = 3
-				  x.shadowBlur = 10
-				  x.shadowStyle = 'red'
-				  x.r(188, 40, 200, 100).f('r')
-						  .shC('#999').shB(20).shX(15).shY(15).f()
-			  }
-		  }
+ctxCan()
+color()
+imgDa()
+shad()
+drawImg()
+globComp()
+text()
+transf()
+grad()
+path()
+loadr()
+
+function ctxCan() {
+	x.cv = x.cv0 = function () {
+		return this.canvas
+	}
+	x.$cv = x.$ = function () {
+		return $(this.cv())
+	}
+	x.dU = x.tDU = x.u = function () {
+		return this.cv().toDataURL()
+	}
+	x.H = function () {
+		return this.cv().height
+	}
+	x.W = function () {
+		return this.cv().width
+	}
+}
+function color() {
+	x.C = x.c = x.fS = x.f = x.fs = function (c, C, l) {
+		var g = G(arguments)
+		if (g.u) {
+			this.fill()
+			if (g.p) {
+				this.s()
+			}
+			return this
+		}
+		this.fillStyle = oO('c', c)
+		if (C) {
+			this.C(C)
+		}
+		if (N(l)) {
+			this.l(l)
+		}
+		return this
+	}
+	x.col = x.sC = x.sS = x.s = x.ss = function () {
+		var g = G(arguments), o
+		o = g.N_ ? {l: g.f} :
+		{C: g.f, l: g.s}
+		if (o.C) {
+			this.strokeStyle = oO('c', o.C)
+		}
+		if (N(o.l)) {
+			this.l(o.l)
+		}
+		this.stroke();
+		if (g.p) {
+			this.f()
+		}
+		return this
+	}
+	x.al = function (al) {
+		this.globalAlpha = al;
+		return this
+	}
+	x.pt = x.Pt = function () {
+		return this.createPattern()
+	}
+}
+function imgDa() {
+	x.cID = function () {
+		var x = this
+		return x.createImageData.apply(x, arguments)
+	}
+	x.gID = function () {
+		var x = this
+		return x.getImageData.apply(x, arguments)
+	}
+	x.pID = function () {
+		var x = this
+		x.putImageData.apply(x, arguments)
+		return x
+	}
+	x.cD = function () {
+		this.cID()
+		return this
+	}
+	x.gD = function () {
+		var g = G(arguments), o, d
+		o = {x: g.f, y: g.s, w: g.t, h: g[3]}
+		o.x = N(o.x, 0)
+		o.y = N(o.y, 0)
+		o.w = N(o.w, this.W())
+		o.h = N(o.h, this.H())
+		d = this.gID(o.x, o.y, o.w, o.h)
+		d.h = d.height
+		d.w = d.width
+		d.d = d.data
+		return d
+	}
+	x.pD = function (d, x, y) {
+		return this.pID(d, N(x, 0), N(y, 0))
+	}
+}
+function shad() {
+	x.shC = function (c) {
+		this.shadowColor = oO('c', c)
+		return this
+	}
+	x.shX = function (c) {
+		this.shadowOffsetX = c
+		return this
+	}
+	x.shY = function (c) {
+		this.shadowOffsetY = c
+		return this
+	}
+	x.shB = function (c) {
+		this.shadowBlur = c
+		return this
+	}
+	CTXSHAD = function () {
+		__C()
+		x.xShadow = 3
+		x.yShadow = 3
+		x.shadowBlur = 10
+		x.shadowStyle = 'red'
+		x.r(188, 40, 200, 100).f('r')
+				.shC('#999').shB(20).shX(15).shY(15).f()
+	}
+}
 function drawImg() {
 	x.dI = function () {
 		var g = G(arguments)
@@ -622,6 +632,7 @@ function grad() {
 			d.A(GR11(), GR2(), Z2W(), RGSAMP())
 		}
 	}
+	
 	_canGrad = function (el) {
 		el.cLG = el.lG = function (a, b, c, d) {
 			// =el.linearGradient =  el.createLinearGradient
@@ -965,23 +976,6 @@ function path() {
 		x.cp().s().f()
 	}
 }
-FIDL = function () {
-//http://jsfiddle.net/jimrhoskins/dDUC3/1/
-	x = $.c().C('b').gC()
-	// Create an image element
-	img = Im()
-	img.onload = function () {
-		x.S()	// Save the state, so we can undo the clipping
-		x.b()
-		x.mt([[10, 10], [100, 30], [180, 10], [200, 60]])
-				.ac2(160, 70, 120, 0, 10)
-				.lt([200, 180], [100, 150], [70, 180], [[20, 130], [50, 70]])
-				.cP()
-		x.clp().d(img)
-		x.R()	// Undo the clipping
-	}
-	img.src = "http://i.imgur.com/gwlPu.jpg"
-}
 function pix() {
 	XX7 = INVERSE = RAW = PX = function () {
 		__C()
@@ -1011,9 +1005,7 @@ function pix() {
 		})
 	}
 }
- 
- 
-loadr()
+
 function loadr() {
 	$.fn.ld = function () {
 		var q = this
@@ -1180,7 +1172,24 @@ function loadr() {
 	FIDLFLIP = function () {
 //http://jsfiddle.net/yong/ZJQX5/
 	}
-} 
+}
+FIDL = function () {
+//http://jsfiddle.net/jimrhoskins/dDUC3/1/
+	x = $.c().C('b').gC()
+	// Create an image element
+	img = Im()
+	img.onload = function () {
+		x.S()	// Save the state, so we can undo the clipping
+		x.b()
+		x.mt([[10, 10], [100, 30], [180, 10], [200, 60]])
+				.ac2(160, 70, 120, 0, 10)
+				.lt([200, 180], [100, 150], [70, 180], [[20, 130], [50, 70]])
+				.cP()
+		x.clp().d(img)
+		x.R()	// Undo the clipping
+	}
+	img.src = "http://i.imgur.com/gwlPu.jpg"
+}
 //MOUSE http://www.html5canvastutorials.com/advanced/html5-canvas-mouse-coordinates/}
 x.dc = function (xx, y, rad) {
 	var x = this
@@ -1202,55 +1211,7 @@ x.cvC = function (c) {
 	$(this.canvas).C(c)
 	return this
 }
-ADB2 = function () {
-	$Ld(function () {
-		__C().$(function (xx, y) {
-			x.dc(xx, y, 10, 'y').col('r')
-		})
-		x.d('chicks', 600, 300)
-	})
-}
-ADB1 = function () {
-	$Ld(function () {
-		__C().$(function (xx, y) {
-			x.dc(xx, y, 10, 'y').C('o').col('r').C()
-		})
-		x.d('chicks', 600, 300)
-	})
-}
-ADB = function () {
-	$Ld(function () {
-		ptsArr = []
-		onCl = function (xx, y) {
-			ptsArr.push([xx, y])
-			x.d('chicks', 600, 300)
-			x.dc(xx, y, 10, 'y')
-					.C('o').col('r').C()
-		}
-		__C().$(onCl)
-		c.dblclick(function () {
-			c.off('click')
-			x.cP().C().col()
-			x.cP()
-			x.b()
-			x.clR()
-			x.mt(ptsArr[0][0], ptsArr[0][1])
-			_.e(_.r(ptsArr), function (pt) {
-				x.lt(pt[0], pt[1])
-			})
-			x.cvC('z').cP().C().col().cl().d(
-					'chicks', 600, 300)
-			$Im(x.tDU(), function () {
-				x1.d(this, 100, 100)
-			})
-		})
-		x.d('chicks', 600, 300)
-		x1 = $.c().abs().ctx()
-		$.bt('snap', function () {
-			$.post('/cutout', {dU: x1.dU()})
-		})
-	})
-}
+ 
 x.Star = function (r) {
 	var ctx = this
 	r = N(r, R(4, 2))

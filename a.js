@@ -84,31 +84,33 @@ function dirs() {
 function routes() {
 	 
 	jsArrs = [
-			
-			
 		Webb = ['both', 'jq', 'web', 'events', 'css', 'html', 'img',
 			'l', 'webApps', 'mock', 'shapeDefs'],
-
-		Bone = ['bb', 'bone', 'bbColl', 'bbDirt', 'bbEvt',
-			'bbFiltColl', 'bbRtr', 'bbView',
-			'bbLS', 'bbServer', 'bbServerMore'],
-
-		Front = ['jqui',  'widLS', 'wid', 'widLS', 'ko', 'knock', 'koCustom'],
-
-		Graphics = ['gpc', 'clipper', 'context', 'canvas'],
+		Front = [
+				//deps
+			'bb', 'ko', 'jqui',
+			//bone
+			'bone', 'bbServer', 'bbColl',
+				//jqui
+			'jquiWids', 'wid',
+				//ko
+			'knock', 'koCustom'
+		],
+		Graphics = ['gpc', 'clipper', 'context', 'canvas','defaultMug'],
+		Easel = ['cjs', 'createBase',
+			'bitmap', 'circle', 'cjsEvents', 'createDraw',
+			  'dobs', 'filter', 'loader', 'official',
+			   'shapeGrad', 'sprite', 'stage', 'tween'
+		],
 		
-		Easel = ['cjs', 'createBase','bitmap', 'circle', 'cjsEvents', 'createDraw', 'dobs', 'filter', 'loader',
-			'official', 'shapeGrad', 'sprite', 'stage', 'tween'], 
-		
-				
-		Wapp = ['wappy', 'cutouts', 'muggy']
+		Wapp = ['wappy', 'cutouts', 'muggy', 'home','dragFrame']
 	]
 	
 
 	$a.get('/box/:app*', function (q, p) {
 		app = q.params.app.toUpperCase()
 		html = ''//' - '
-		html += '<h1>hello</h1>'
+		html += ''//'<h1>hello</h1>'
 		html += '<link rel="stylesheet" type="text/css"  href="/jqui.css"></script>'
 		html += $js(jsArrs)
 		html += '<script> $(function(){ $l("app:  ' + app + '"); ' + app + '()})</script>'

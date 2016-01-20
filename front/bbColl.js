@@ -447,7 +447,6 @@ BB7 = BBSORT = function () {
 			new Chapter({page: 1, title: "The Beginning"}))
 	$.h1(chapters.pluck('title'))
 }
-
 BB13 = ACE = ADDCHICKEVENT = function () {
 	$s({i: {w: 50, h: 50}})
 	_.x({}, Bb.E).on('yo', function () {
