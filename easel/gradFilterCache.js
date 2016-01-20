@@ -1,21 +1,90 @@
+cjs.Filter.prototype.bd = cjs.Filter.prototype.b = function () {
+	var bd = this.getBounds()
+	bd.w = bd.width
+	bd.h = bd.height
+	return bd
+}
+/*
+
+ AlphaMapFilter : Map a greyscale image to the alpha channel of a display object
+ AlphaMaskFilter: Map an image's alpha channel to the alpha channel of a display object
+ BlurFilter: Apply vertical and horizontal blur to a display object
+ ColorFilter: Color transform a display object
+ ColorMatrixFilter: Transform an image using a ColorMatrix
+
+ */
+dO.aFl = function (fl) {
+	var dO = this
+	dO.filters = dO.filters || []
+	dO.filters.push(fl)
+	return dO
+}
+dO.gFl = function () {
+	this.filters = this.filters || []
+	return _.l(this.filters)
+}
+dO.fl = dO.Fl = function (fl, i) {
+	var dO = this, g = G(arguments)
+	if (g.A) {
+		return dO.fl.apply(dO, g.f)
+	}
+	dO.filters = dO.filters || []
+	if (U(fl)) {
+		return _.l(dO.filters)
+	}
+	if (N(fl)) {
+		return dO.filters[fl]
+	} // filters are only displayed when the display object is cached
+	// later, you can call updateCache() to update changes to your filters
+	//	_.e(g, function (fl) {dO._fl(fl)}) 
+	if (O(fl)) {
+		dO.filters.push(fl)
+	} //if (O(i)) {dO.ca(i)}
+	//if (!g.n) {i = dO.image;dO.ca(0, 0, i.width, i.height)}
+	return dO
+}
+dO.flBds = function () {
+	return this.gFl().getBounds()
+}
+passTest = function (g) {
+	return (!g.p && dO.caCv()) || g.n || g.S_ || g.u
+}
+toObImg = function (i) {
+	return $(i.image ? i.image : i)[0]
+}
+toImg = function (i) {
+	return i.image ? i.image : $(i)[0];
+}
+updateCacheImage = function (upd) {
+	if (upd) {
+		h.updateCache()
+	}
+	else {
+		h.ca(0, 0, i.width, i.height)
+	}
+	mskF = new cjs.AlphaMaskFilter(st.cacheCanvas)
+	bm.filters = [mskF]
+	if (upd) {
+		bm.ca(i)
+	}
+	else {
+		bm.ca(i)
+	}
+	st.u()
+}
 $L('alphaMapFilter', 'alphaMaskFilter', 'colorMatrixFilter', 
 'colorFilter', 'blurFilter', 'cache', 'grad')
-
 function alphaMapFilter() {
-
-	dO.alMapFl=dO.aMF = function (a, b, c, d, e, f, g, h) {
+	dO.alMapFl = dO.aMF = function (a, b, c, d, e, f, g, h) {
 		var bf = new cjs.AlphaMapFilter(a, b, c, d, e, f, g, h)
 		this.filters = this.filters || []
 		this.filters.push(bf)
 		return bf
 	}
-	
 	$AlMapFl = function (a, b, c, d, e) {
 //Map a greyscale image to the alpha channel of a display object
 		return new cjs.AlphaMapFilter(a, b, c, d, e)
 	}
-	
-	 
 }
 function alphaMaskFilter() {
 	$AlMaskFl = function (a, b, c, d, e) {
@@ -120,17 +189,18 @@ function colorMatrixFilter() {
 		}
 		//$ColMx = function (a, b, c, d) {return _$ColMxFl(O(a) ? a : $ColMx(a, b, c, d))}
 	}
+	
 	$ColMxFl = function (m) {
 		var g = G(arguments)
-		var colMxFl= new cjs.ColorMatrixFilter(m)
-		return colMxFl}
+		var colMxFl = new cjs.ColorMatrixFilter(m)
+		return colMxFl
+	}
 	dO.colMxFl = function (cM) {
 		this.filters = this.filters || []
 		var cf = $ColMxFl(cM)
 		this.filters.push(cf)
 		return cf
 	}
-	
 }
 function cache() {
 	dO.uCx = dO.updateContext
@@ -193,52 +263,348 @@ function cache() {
 		return dO._ca(o.x, o.y, o.w, o.h)
 	}
 }
+function mugFl() {
+	MUGFL1 = function () {
+		s = $St()
+		s.mug(function (b) {
+			b.XY(-100, -50)
+			b.cc()
+			b.clMF('a', '+')
+			b.clMF('w', '+')
+			cjs.bindSlide(b)
+		})
+		wMb(function (b) {
+			b.xy(400, 0).cc()
+			SL(b)
+			b.fl([aMF(Gx().lf(trx(1, 0), [0, 1], 0, 0, 300, 300)
+					.dr0(400).H().cc(400).cc('*'))
+			]).cc(400)
+		}, s)
+		wMb(function (b) {
+			b.xy(100, 300).cc()
+			SL(b)
+			b.cc().fl([
+				clF(.3, 1, .3, 1, 0, 0, 0, 0)
+			]).cc('+')
+		}, s)
+		wMb(function (b) {
+			var ag = 0, rg = 20, sp = 0.04;
+			b.xy(500, 300).cc();
+			SL(b)
+			//this has gotta just mean 'on tick'
+			tt(function (e) {
+				v = sin(ag += sp) * rg;
+				b.cc('+').fl([blF(v, v, 2)])
+			})
+		}, s)
+	}
+	MUGFL = function () {
+		$St()
+		s.mug(function (b) {
+			bb = b
+			b.XY(-100, -50)
+			b.cache(0, 0, b.W(), b.H())
+			cM = new cjs.ColorMatrix()
+			cM.adjustHue(-180)
+			cM.adjustSaturation(100)
+			cM.adjustBrightness(300)
+			cM.adjustContrast(-600)
+			b.filters = cM
+			b.updateCache()
+			cjs.bindSlide(b)
+		})
+	}
+}
+manyFilters = BLOB = function () {//https://www.youtube.com/watch?v=mU1JcPikdMs
+	img = new Image();
+	img.onload = handleImageLoad;
+	img.src = "/me.png";
+	function handleImageLoad() {
+		$.c().id('testCanvas')
+		var canvas = document.getElementById("testCanvas");
+		// create a new stage and point it at our canvas:
+		stage = new createjs.Stage(canvas);
+		var bmp = new createjs.Bitmap(img).set({scaleX: 0.5, scaleY: 0.5});
+		stage.addChild(bmp);
+		var colorMatrix = new createjs.ColorMatrix();
+		colorMatrix.adjustSaturation(-100);
+		colorMatrix.adjustContrast(50);
+		var blackAndWhiteFilter = new createjs.ColorMatrixFilter(colorMatrix);
+		bmp = bmp.clone();
+		// filters are only displayed when the display object is cached
+		// later, you can call updateCache() to update changes to your filters
+		bmp.filters = [blackAndWhiteFilter];
+		bmp.cache(0, 0, img.width, img.height);
+		bmp.x = 480;
+		stage.addChild(bmp);
+		var blurFilter = new createjs.BlurFilter(64, 0, 1);
+		bmp = bmp.clone();
+		bmp.filters = [blurFilter];
+		bmp.cache(0, 0, img.width, img.height);
+		bmp.y = 200;
+		stage.addChild(bmp);
+		var removeRedFilter = new createjs.ColorFilter(0.25, 0.75, 1, 1); // red, green, blue, alpha
+		bmp = bmp.clone();
+		bmp.filters = [removeRedFilter];
+		bmp.cache(0, 0, img.width, img.height);
+		bmp.x = 0;
+		stage.addChild(bmp);
+		var frame = new createjs.Shape();
+		frame.graphics.setStrokeStyle(10).beginStroke("#000")
+				.moveTo(480, 0).lineTo(480, 400)
+				.moveTo(0, 200).lineTo(960, 200);
+		frame.compositeOperation = "destination-out"; // punch the frame out.
+		stage.addChild(frame);
+		// draw to the canvas:
+		stage.update();
+	}
+}
+blurFilter = BLR = BLFL = function () {//http://jsfiddle.net/lannymcnie/BRrm5/
+	BLRFL1 = BLURFILT = function () {
+		st = $St('z', 800)
+		h = $H().XY(100).a2(st).f('r').dc(50)
+		fl = h.fl($BlurFl(50, 50, 10))
+		bd = fl.getBounds()
+		h.ca(-50 + bd.x, -50 + bd.y, 100 + bd.width, 100 + bd.height)
+		/*
+		 h.startMoving()
+		 h.vx = 1
+		 h.vy = 1
+		 */
+	}
+	BLRFL2 = function () {
+		Q(function () {
+			st = $St().t()
+			h = st.h(100, 100, 'r').cir(50)
+			_.in(1, function () {
+				h.colFl(0, 0, 0, 1, 0, 0, 255, 0)
+				h.ca(-50, -50, 100, 150)
+			})
+			_.in(2, function () {
+				f = h.blFl(59, 59, 1)
+				bd = f.b()
+				h.ca(-50 + bd.x,
+						-50 + bd.y,
+						100 + bd.w,
+						100 + bd.h)
+			})
+		})
+	}
+	BLRFL3 = function () {
+		$St().bm('me', function (bm) {
+			bm.dg()
+			bm.alMapFl(_$BlurFl(20, 10))
+			var b = bm.flBds()
+			bm.cache(b.x - 50, b.y - 50, b.width + 400, b.height + 400)
+		})
+	}
+	$.c().id('test').C('z')
+	var stage = new createjs.Stage("test");
+	var s = new createjs.Shape();
+	var g = s.graphics;
+	g.f("#FF0000").dc(0, 0, 75);
+	s.x = 100;
+	s.y = 100;
+	s.filters = [new createjs.BlurFilter(65, 25, 3)];
+	stage.addChild(s);
+	s.cache(-100, -100, 200, 200);
+	s.alpha = 0.5;
+	stage.update();
+}
+blurFilter = ANIMBLUR = function () {
+//http://www.olivierpons.fr/createjs/EaselJS-master/examples/Filters_simple.html
+	var img;
+	var stage;
+	var angle;
+	var canvas;
+	var range;
+	var speed;
+	angle = 0;
+	range = 30;
+	speed = 0.1;
+	img = new Image();
+	img.onload = handleImageLoad;
+	img.src = "/me.png";
+	function handleImageLoad() {
+		$.c().id('testCanvas')
+		canvas = document.getElementById("testCanvas");
+		stage = new createjs.Stage(canvas);
+		bmp = new createjs.Bitmap(img);
+		bmp.cache(0, 0, img.width, img.height);
+		stage.addChild(bmp);
+		createjs.Ticker.setFPS(15);
+		createjs.Ticker.addEventListener("tick", tick);
+	}
+	
+	function tick(event) {
+		angle += speed;
+		var value = Math.sin(angle) * range;
+		bmp.updateCache();
+		bmp.filters = [new createjs.BlurFilter(value, value, 2)];
+		stage.update(event);
+	}
+}
+colorFilter = CLFL = function () {
+	COLF1 = function () {
+		shape = new cjs.Shape().set({x: 100, y: 100});
+		shape.graphics.beginFill("#ff0000").drawCircle(0, 0, 50);
+		shape.filters = [$ColFl(0, 0, 0, 1, 0, 0, 255, 0)]
+		shape.cache(-50, -50, 100, 100);
+		$St().A(shape)
+	}
+//https://jsfiddle.net/mcfarljw/J4S3Z/
+	$.c().id('demo').C('y')
+	st = stage = new createjs.Stage("demo");
+	$.i('me', function (i) {
+		
+		// shape.cache(-50, -50, 100, 100)
+		var bmp = new cjs.Bitmap(i).X(100).Y(100)
+		bmp.filters = [
+			$ColFl(0, 0, 0, 1, 0, 0, 255, 0)
+		]
+		bmp.dg()
+		bmp.cache(-200, -250, 600, 600)
+		st.addChild(bmp);
+	})
+	createjs.Ticker.addEventListener('tick', tick);
+	var container = new createjs.Container();
+	var stroke = new createjs.Shape();
+	stroke.graphics.f("black").p("AAeAKYgeAUAAAAAAAoYAAAoAKAeAoA8YAyBaAeBGAeBuYAUBGAAA8AKFKYAADcAKDSAAAoYAAAyAAD6gKD6YAAD6gKFeAAC0YAAH0geEOhkFKYgoCWAABkAyCCYBQDSAoA8AyAAYAyAABaigAKhaYAKgoAAqoAAsqYAKsgAAraAAhaYAKkYAyk2Ayh4YAKgeAKgoAAgUYAAgegKgKgygoYhQg8i+h4gogKYgygKgoAAgoAK").cp().ef();
+	container.addChild(stroke);
+	stage.addChild(container);
+	stage.update();
+	createjs.Tween.get(stroke).to({
+		x: 500
+	}, 2000).addEventListener("change", handleChange);
+	function handleChange() {
+		console.log('changing');
+		if (container.cacheCanvas)
+			container.updateCache();
+	}
+	
+	setTimeout(function () {
+		container.filters = [new createjs.ColorFilter(0, 0, 0, 1, 230, 142, 142, 1)];
+		container.cache(0, 0, 600, 600);
+	}, 1000);
+	console.log(container);
+	function tick() {
+		stage.update();
+	}
+}
+colorMatrixFilter = GREY = CLMXFL = function () {
+	$St().bm('me', function (bm) {
+		bm.dg()
+		var matrix = $ColMx()
+				.adjustHue(180)
+				.adjustSaturation(-100);
+		bm.filters = [
+			$ColMxFl(matrix)
+		]
+		bm.cache(-200, -200, 800, 800);
+	})
+}
+alphaMapFIlter = MAPF = ALMAPFL = function () {
+	$St()
+	$.i('me', function (i) {
+		var box = new cjs.Shape();
+		box.graphics.beginLinearGradientFill(["#ff0000", "#0000ff"], [0, 1], 0, 0, 0, 100)
+		box.graphics.drawRect(0, 0, 100, 100);
+		box.cache(0, 0, 100, 100);
+		var bmp = new cjs.Bitmap(i);
+		bmp.filters = [
+			$AlMapFl(box.cacheCanvas)
+		]
+		bmp.cache(0, 0, 100, 100);
+		st.addChild(bmp)
+	})
+}
+alphaMaskFilter = AMR = ALMSFL = ALPHAMASKREVEAL = function () {
+	/*This example demonstrates revealing an image using another image as the
+	 mask. The mask is created by drawing a
+	 shape, and then caching the shape to make an image with an alpha
+	 channel. It is then applied to the image as
+	 an mask using the <code>AlphaMaskFilter</code> filter. Another copy of
+	 */
+	cjs.testCanvas()//  cjs.sharedCode()
+	var stage, isDrawing, drawingCanvas, oldPt, oldMidPt, displayCanvas,
+			image, bitmap, maskFilter, cursor, text, blur
+	examples.showDistractor()
+	image = new Image();
+	image.onload = handleComplete
+	image.src = "/chicks.png"
+	stage = new createjs.Stage("testCanvas");
+	text = new createjs.Text("Loading...", "20px Arial", "#FFF");
+	text.set({x: stage.canvas.width / 2, y: stage.canvas.height - 40});
+	text.textAlign = "center"
+	function handleComplete() {
+		examples.hideDistractor();
+		createjs.Touch.enable(stage);
+		stage.enableMouseOver();
+		stage.addEventListener("stagemousedown", handleMouseDown);
+		stage.addEventListener("stagemouseup", handleMouseUp);
+		stage.addEventListener("stagemousemove", handleMouseMove);
+		drawingCanvas = new createjs.Shape();
+		bitmap = new createjs.Bitmap(image);
+		blur = new createjs.Bitmap(image);
+		blur.filters = [new createjs.BlurFilter(24, 24, 2), new createjs.ColorMatrixFilter(new createjs.ColorMatrix(60))];
+		blur.cache(0, 0, 960, 400);
+		text.text = "Click and Drag to Reveal the Image.";
+		stage.addChild(blur, text, bitmap);
+		updateCacheImage(false);
+		cursor = new createjs.Shape(new createjs.Graphics().beginFill("#FFFFFF").drawCircle(0, 0, 25));
+		cursor.cursor = "pointer";
+		stage.addChild(cursor);
+	}
+	
+	function handleMouseDown(event) {
+		oldPt = new createjs.Point(stage.mouseX, stage.mouseY);
+		oldMidPt = oldPt;
+		isDrawing = true;
+	}
+	
+	function handleMouseMove(event) {
+		cursor.x = stage.mouseX;
+		cursor.y = stage.mouseY;
+		if (!isDrawing) {
+			stage.update();
+			return;
+		}
+		var midPoint = new createjs.Point(oldPt.x + stage.mouseX >> 1, oldPt.y + stage.mouseY >> 1);
+		drawingCanvas.graphics.setStrokeStyle(40, "round", "round")
+				.beginStroke("rgba(0,0,0,0.2)")
+				.moveTo(midPoint.x, midPoint.y)
+				.curveTo(oldPt.x, oldPt.y, oldMidPt.x, oldMidPt.y);
+		oldPt.x = stage.mouseX;
+		oldPt.y = stage.mouseY;
+		oldMidPt.x = midPoint.x;
+		oldMidPt.y = midPoint.y;
+		updateCacheImage(true);
+	}
+	
+	function handleMouseUp(event) {
+		updateCacheImage(true);
+		isDrawing = false;
+	}
+	
+	function updateCacheImage(update) {
+		if (update) {
+			drawingCanvas.updateCache();
+		} else {
+			drawingCanvas.cache(0, 0, image.width, image.height);
+		}
+		maskFilter = new createjs.AlphaMaskFilter(drawingCanvas.cacheCanvas);
+		bitmap.filters = [maskFilter];
+		if (update) {
+			bitmap.updateCache(0, 0, image.width, image.height);
+		} else {
+			bitmap.cache(0, 0, image.width, image.height);
+		}
+		stage.update();
+	}
+}
 function grad() {
 	radial()
 	stroke()
-	function linNeedsFixin() {
-		LR0 = LINGRAD = function () {
-			c = $.c('y').drag()
-			x = c.ctx()
-			x = c.ctx()
-			x.lg({
-				x1: 50, y1: 500, y2: 100,
-				cS: {o: .2, r: .6, g: .8}
-			})
-			x.fr(0, 0, 100, 100)
-		}
-		OVALS8 = GRADS2 = SETTRANSFORM = function () {
-			s = $St(800).bm('me', function (me) {
-				b = me
-				b.setTransform(0, 0, 2, .5, 0, 40, 4, 2, 3)
-				m = b.getMatrix()
-				function tf(a, b, c, d, e, f, g, h, i) {
-					return this.x = a || 0,
-							this.y = b || 0,
-							this.scaleX = null == c ? 1 : c,
-							this.scaleY = null == d ? 1 : d,
-							this.rotation = e || 0,
-							this.skewX = f || 0,
-							this.skewY = g || 0,
-							this.regX = h || 0,
-							this.regY = i || 0,
-							this
-				}
-			})
-			//////
-			h = s.h(40, 10, 'b', 16).drag()
-			h.c({C: ['o', 5], lf: {c1: 'g', c2: 'r', x2: 100, y2: 400}}).de(100, 400)
-			h.c({
-				C: 'b', lf: {c1: 'g', c2: 'r', x2: 400, y2: 100}
-			}).de(400, 100)
-			h.l(30).lf({c1: 'b', c2: 'y', x1: 100, y1: 100, x2: 500, y2: 400})
-					.de(100, 200, 500, 300)
-			h.ls('r', 'w', 300, 100, 400, 140)
-					.de(300, 0, 300, 500)
-			//B+
-		}
-	}
-	
 	function radial() {
 		gx.bRGF = function () {
 			return this.beginRadialGradientFill.apply(this, arguments)
@@ -376,14 +742,6 @@ function grad() {
 			gx.rs([o.c1, o.c2], [o.s1, o.s2], o.x1, o.y1, o.r1, o.x2, o.y2, o.r2)
 			return h
 		}
-		LINSTROKE = DRAGST = GRADOVALS = function () {
-			setup()
-			h = s.h(40, 10, 'b', 16).drag()
-			h.c({C: ['o', 5], lf: {c1: 'g', c2: 'r', x2: 100, y2: 400}}).de(100, 400)
-			h.c({C: 'b', lf: {c1: 'g', c2: 'r', x2: 400, y2: 100}}).de(400, 100)
-			h.l(30).lf({c1: 'b', c2: 'y', x1: 100, y1: 100, x2: 500, y2: 400}).de(100, 200, 500, 300)
-			h.ls('r', 'w', 300, 100, 400, 140).de(300, 0, 300, 500)
-		}//B
 	}
 	
 	setup = function () {
@@ -445,6 +803,51 @@ function grad() {
 				.dc([50], [200, 0, 100], [100, 100, 100])
 		return h
 	}
+}
+function bad() {
+	function linGradNeedsFixin() {
+		LR0 = LINGRAD = function () {
+			c = $.c('y').drag()
+			x = c.ctx()
+			x = c.ctx()
+			x.lg({
+				x1: 50, y1: 500, y2: 100,
+				cS: {o: .2, r: .6, g: .8}
+			})
+			x.fr(0, 0, 100, 100)
+		}
+		OVALS8 = GRADS2 = SETTRANSFORM = function () {
+			s = $St(800).bm('me', function (me) {
+				b = me
+				b.setTransform(0, 0, 2, .5, 0, 40, 4, 2, 3)
+				m = b.getMatrix()
+				function tf(a, b, c, d, e, f, g, h, i) {
+					return this.x = a || 0,
+							this.y = b || 0,
+							this.scaleX = null == c ? 1 : c,
+							this.scaleY = null == d ? 1 : d,
+							this.rotation = e || 0,
+							this.skewX = f || 0,
+							this.skewY = g || 0,
+							this.regX = h || 0,
+							this.regY = i || 0,
+							this
+				}
+			})
+			//////
+			h = s.h(40, 10, 'b', 16).drag()
+			h.c({C: ['o', 5], lf: {c1: 'g', c2: 'r', x2: 100, y2: 400}}).de(100, 400)
+			h.c({
+				C: 'b', lf: {c1: 'g', c2: 'r', x2: 400, y2: 100}
+			}).de(400, 100)
+			h.l(30).lf({c1: 'b', c2: 'y', x1: 100, y1: 100, x2: 500, y2: 400})
+					.de(100, 200, 500, 300)
+			h.ls('r', 'w', 300, 100, 400, 140)
+					.de(300, 0, 300, 500)
+			//B+
+		}
+	}
+	
 	MICK = function () {
 		$St()
 		s.mick(500, 200)
@@ -453,81 +856,6 @@ function grad() {
 		s.mick(100, 100, {y2: 10})
 		s.mick(100, 200, {y2: 200})
 		s.mick(100, 300, {x2: 100})
-	}
-	NIP = CIRCRG8 = GRADS = function () {
-		s = St()
-		nip = function () {
-			x1 = 0
-			y1 = 0
-			r1 = 10
-			x2 = 0
-			y2 = 0
-			r2 = 100
-			var h = $h(10, 10).a2(s).drag().al(.8)
-			h.graphics.beginRadialGradientFill(['blue', "orange"], [0, 1],
-					x1, y1, r1, x2, y2, r2)
-					.dc(0, 0, 100)
-					.endFill()
-			return h
-		}
-		x1 = 0
-		y1 = 0
-		r1 = 10
-		x2 = 0
-		y2 = 0
-		r2 = 100
-		h = $h(10, 10).a2(s).drag()
-		change = function () {
-			//  h.remove()
-			// h=cjs.h(10, 10).a2(s).drag()
-			h.graphics.rf(['blue', "orange"], [0, 1], x1, y1, r1, x2, y2, r2).dc(0, 0, 100).endFill()
-			// x--
-			// r1++
-			// r2++
-		}
-		setInterval(change, 1000)
-		change()
-		n = nip()
-		h2 = $h(500, 100).a2(s);
-		h2.graphics.beginRadialGradientFill(["red", "yellow"], [0, 1], 100, 100, 0, 100, 100, 50).dc(50, 50, 100)
-		////////
-		s.h(600, 300).graphics.rf(
-				['blue', "orange"], [0, 1], 0, 0, 10, 0, 0, 100
-		).dc(0, 0, 100).ef()
-		s.h(600, 100).graphics.rf(
-				['CornflowerBlue', "orange"], [0, 1], 0, 0, 10, 0, 0, 100
-		).dc(0, 0, 100).ef()
-		s.h(800, 300).rf(
-				['blue', "orange"], [0, 1], 0, 0, 10, 0, 0, 100
-		).dc(0, 0, 100).ef()
-		s.h(400, 300).rf(
-				['b', 'o'], [0, 1], 0, 0, 10, 0, 0, 100
-		).dc(0, 0, 100).ef()
-		s.h().cir(0, 0, 10)
-	}//C
-	DRAWCAR = function () {
-//http://www.createjs.com/tutorials/Animation%20and%20Ticker/
-//http://www.createjs.com/tutorials/Animation%20and%20Ticker/timeBased.htmlLAYYS = USINGLAYERSINEASEL9 = function () {
-		s = St(500).A()
-		s.bm('me', function (bm) {
-			b = bm
-			bm.sXY(3)
-			drawCar()
-			s.tick(function () {
-				b.x(-1 * (g.x() * 2))
-				b.y(-1 * (g.y() * 2))
-			})
-		})
-		bt = $.bt('safd', function () {
-			s.sXY(2)
-		}).A()
-		function drawCar() {
-			s.bm('guy', function (bm) {
-				g = bm
-				bm.sXY(.5)
-				SL(bm)
-			})
-		}
 	}
 	DRAWSCIRCLESWORKS = RGB = function () {
 		gx = $Gx().f(cjs.rgb(255, 0, 0)
@@ -607,6 +935,64 @@ function grad() {
 		).drawCircle(100, 100, 50)
 		st.update()
 	}
+	RG151 = RADIALGRADFILL = function () {
+		setup()
+// 2 colors
+		h.x = 20
+		h.y = 20
+		h.graphics.beginRadialGradientFill(
+				[oC('b'), oC('r')],
+				[.1, 1], 50, 50, 0, 50, 50, 50
+		)
+		h.graphics.drawRect(0, 0, 100, 100)
+		h.graphics.endFill()
+		st.addChild(h)
+// 3 colors
+		h = new cjs.Shape();
+		h.x = 20;
+		h.y = 140;
+		h.graphics.beginRadialGradientFill([oC('b'), oC('r'), oC('y')], [.1, .5, 1], 50, 50, 0, 50, 50, 50);
+		h.graphics.drawRect(0, 0, 100, 100);
+		st.addChild(h);
+// alpha
+		h = new cjs.Shape();
+		h.x = 20;
+		h.y = 260;
+		h.graphics.beginRadialGradientFill([oC('b'), oC('r')], [1, 0], 50, 50, 0, 50, 50, 50);
+		h.graphics.drawRect(0, 0, 100, 100);
+		h.graphics.endFill();
+		st.addChild(h);
+	}
+}
+LGR = LINSTROKE = GRADOVALS = function () {
+	setup()
+	h = s.h(40, 10, 'b', 16).drag()
+	h.c({C: ['o', 5], lf: {c1: 'g', c2: 'r', x2: 100, y2: 400}}).de(100, 400)
+	h.c({C: 'b', lf: {c1: 'g', c2: 'r', x2: 400, y2: 100}}).de(400, 100)
+	h.l(30).lf({c1: 'b', c2: 'y', x1: 100, y1: 100, x2: 500, y2: 400}).de(100, 200, 500, 300)
+	h.ls('r', 'w', 300, 100, 400, 140).de(300, 0, 300, 500)
+}//B 
+RGR = $$TWOEXAMPLES$$ = function () {
+	var RG1 = function () {
+		var cv = $.c().W(500).H(400)
+		$H().a2($St(cv)).graphics
+				.bRGF(["orange", "blue"], [0, 1], 100, 100, 0, 100, 100, 350)
+				.dr(0, 0, 500, 500)
+		return $.d($.h1('radial grad'), cv)
+	}
+	var RG2 = function () {
+		var cv = $.c().W(500).H(400)
+		st = $St(cv)
+		st.A(h = $H())
+		gx = h.graphics
+		gx.bRGF(["#F00", "#00F"], [0, 1], 100, 100, 0, 100, 100, 50).dc(100, 100, 50)
+		return $.d($.h1('radial grad fill'), cv)
+	}
+	$s({$flexDiv: {dp: 'fl', wr: 'wr'}})
+	var d = $.d().id('flexDiv')
+	d.A(RG1(), RG2())
+}
+NIP = function () {
 	REC8 = GRADS1 = function () {
 		s = $St()
 		s.h(600, 300).graphics.rf(
@@ -649,467 +1035,78 @@ function grad() {
 				{w: 300, h: 100, x: 0, y: -100},
 				{w: 100, h: 300})
 	}//B+ 
-	RG151 = RADIALGRADFILL = function () {
-		setup()
-// 2 colors
-		h.x = 20
-		h.y = 20
-		h.graphics.beginRadialGradientFill(
-				[oC('b'), oC('r')],
-				[.1, 1], 50, 50, 0, 50, 50, 50
-		)
-		h.graphics.drawRect(0, 0, 100, 100)
-		h.graphics.endFill()
-		st.addChild(h)
-// 3 colors
-		h = new cjs.Shape();
-		h.x = 20;
-		h.y = 140;
-		h.graphics.beginRadialGradientFill([oC('b'), oC('r'), oC('y')], [.1, .5, 1], 50, 50, 0, 50, 50, 50);
-		h.graphics.drawRect(0, 0, 100, 100);
-		st.addChild(h);
-// alpha
-		h = new cjs.Shape();
-		h.x = 20;
-		h.y = 260;
-		h.graphics.beginRadialGradientFill([oC('b'), oC('r')], [1, 0], 50, 50, 0, 50, 50, 50);
-		h.graphics.drawRect(0, 0, 100, 100);
-		h.graphics.endFill();
-		st.addChild(h);
+	s = St()
+	nip = function () {
+		x1 = 0
+		y1 = 0
+		r1 = 10
+		x2 = 0
+		y2 = 0
+		r2 = 100
+		var h = $h(10, 10).a2(s).drag().al(.8)
+		h.graphics.beginRadialGradientFill(['blue', "orange"], [0, 1],
+				x1, y1, r1, x2, y2, r2)
+				.dc(0, 0, 100)
+				.endFill()
+		return h
 	}
-	RGS = $$TWOEXAMPLES$$ = function () {
-		var RG1 = function () {
-			var cv = $.c().W(500).H(400)
-			$H().a2($St(cv)).graphics
-					.bRGF(["orange", "blue"], [0, 1], 100, 100, 0, 100, 100, 350)
-					.dr(0, 0, 500, 500)
-			return $.d($.h1('radial grad'), cv)
-		}
-		var RG2 = function () {
-			var cv = $.c().W(500).H(400)
-			st = $St(cv)
-			st.A(h = $H())
-			gx = h.graphics
-			gx.bRGF(["#F00", "#00F"], [0, 1], 100, 100, 0, 100, 100, 50).dc(100, 100, 50)
-			return $.d($.h1('radial grad fill'), cv)
-		}
-		$s({$flexDiv: {dp: 'fl', wr: 'wr'}})
-		var d = $.d().id('flexDiv')
-		d.A(RG1(), RG2())
+	x1 = 0
+	y1 = 0
+	r1 = 10
+	x2 = 0
+	y2 = 0
+	r2 = 100
+	h = $h(10, 10).a2(s).drag()
+	change = function () {
+		//  h.remove()
+		// h=cjs.h(10, 10).a2(s).drag()
+		h.graphics.rf(['blue', "orange"], [0, 1], x1, y1, r1, x2, y2, r2).dc(0, 0, 100).endFill()
+		// x--
+		// r1++
+		// r2++
 	}
-}
-function _pre() {
-	
-	cjs.Filter.prototype.bd =	cjs.Filter.prototype.b = function () {
-		var bd = this.getBounds()
-		bd.w = bd.width
-		bd.h = bd.height
-		return bd
-	}
-	/*
-	
-	 AlphaMapFilter : Map a greyscale image to the alpha channel of a display object
-	 AlphaMaskFilter: Map an image's alpha channel to the alpha channel of a display object
-	 BlurFilter: Apply vertical and horizontal blur to a display object
-	 ColorFilter: Color transform a display object
-	 ColorMatrixFilter: Transform an image using a ColorMatrix
-	
-	 */
-	dO.aFl = function (fl) {
-		var dO = this
-		dO.filters = dO.filters || []
-		dO.filters.push(fl)
-		return dO
-	}
-	dO.gFl = function () {
-		this.filters = this.filters || []
-		return _.l(this.filters)
-	}
-	dO.fl = dO.Fl = function (fl, i) {
-		var dO = this, g = G(arguments)
-		if (g.A) {
-			return dO.fl.apply(dO, g.f)
-		}
-		dO.filters = dO.filters || []
-		if (U(fl)) {
-			return _.l(dO.filters)
-		}
-		if (N(fl)) {
-			return dO.filters[fl]
-		} // filters are only displayed when the display object is cached
-		// later, you can call updateCache() to update changes to your filters
-		//	_.e(g, function (fl) {dO._fl(fl)}) 
-		if (O(fl)) {
-			dO.filters.push(fl)
-		} //if (O(i)) {dO.ca(i)}
-		//if (!g.n) {i = dO.image;dO.ca(0, 0, i.width, i.height)}
-		return dO
-	}
-	dO.flBds = function () {
-		return this.gFl().getBounds()
-	}
-	passTest = function (g) {
-		return (!g.p && dO.caCv()) || g.n || g.S_ || g.u
-	}
-	toObImg = function (i) {
-		return $(i.image ? i.image : i)[0]
-	}
-	toImg = function (i) {
-		return i.image ? i.image : $(i)[0];
-	}
-	updateCacheImage = function (upd) {
-		if (upd) {
-			h.updateCache()
-		}
-		else {
-			h.ca(0, 0, i.width, i.height)
-		}
-		mskF = new cjs.AlphaMaskFilter(st.cacheCanvas)
-		bm.filters = [mskF]
-		if (upd) {
-			bm.ca(i)
-		}
-		else {
-			bm.ca(i)
-		}
-		st.u()
-	}
-}
-function mugFl(){
-	MUGFL1 = function () {
-		s = $St()
-		s.mug(function (b) {
-			b.XY(-100, -50)
-			b.cc()
-			b.clMF('a', '+')
-			b.clMF('w', '+')
-			cjs.bindSlide(b)
+	setInterval(change, 1000)
+	change()
+	n = nip()
+	h2 = $h(500, 100).a2(s);
+	h2.graphics.beginRadialGradientFill(["red", "yellow"], [0, 1], 100, 100, 0, 100, 100, 50).dc(50, 50, 100)
+	////////
+	s.h(600, 300).graphics.rf(
+			['blue', "orange"], [0, 1], 0, 0, 10, 0, 0, 100
+	).dc(0, 0, 100).ef()
+	s.h(600, 100).graphics.rf(
+			['CornflowerBlue', "orange"], [0, 1], 0, 0, 10, 0, 0, 100
+	).dc(0, 0, 100).ef()
+	s.h(800, 300).rf(
+			['blue', "orange"], [0, 1], 0, 0, 10, 0, 0, 100
+	).dc(0, 0, 100).ef()
+	s.h(400, 300).rf(
+			['b', 'o'], [0, 1], 0, 0, 10, 0, 0, 100
+	).dc(0, 0, 100).ef()
+	s.h().cir(0, 0, 10)
+}//C
+DRAWCAR = function () {
+//http://www.createjs.com/tutorials/Animation%20and%20Ticker/
+//http://www.createjs.com/tutorials/Animation%20and%20Ticker/timeBased.htmlLAYYS = USINGLAYERSINEASEL9 = function () {
+	s = St(500).A()
+	s.bm('me', function (bm) {
+		b = bm
+		bm.sXY(3)
+		drawCar()
+		s.tick(function () {
+			b.x(-1 * (g.x() * 2))
+			b.y(-1 * (g.y() * 2))
 		})
-		wMb(function (b) {
-			b.xy(400, 0).cc()
-			SL(b)
-			b.fl([aMF(Gx().lf(trx(1, 0), [0, 1], 0, 0, 300, 300)
-					.dr0(400).H().cc(400).cc('*'))
-			]).cc(400)
-		}, s)
-		wMb(function (b) {
-			b.xy(100, 300).cc()
-			SL(b)
-			b.cc().fl([
-				clF(.3, 1, .3, 1, 0, 0, 0, 0)
-			]).cc('+')
-		}, s)
-		wMb(function (b) {
-			var ag = 0, rg = 20, sp = 0.04;
-			b.xy(500, 300).cc();
-			SL(b)
-			//this has gotta just mean 'on tick'
-			tt(function (e) {
-				v = sin(ag += sp) * rg;
-				b.cc('+').fl([blF(v, v, 2)])
-			})
-		}, s)
-	}
-	MUGFL = function () {
-		$St()
-		s.mug(function (b) {
-			bb = b
-			b.XY(-100, -50)
-			b.cache(0, 0, b.W(), b.H())
-			cM = new cjs.ColorMatrix()
-			cM.adjustHue(-180)
-			cM.adjustSaturation(100)
-			cM.adjustBrightness(300)
-			cM.adjustContrast(-600)
-			b.filters = cM
-			b.updateCache()
-			cjs.bindSlide(b)
-		})
-	}}
-GREY = CLMXFL = function () {
-	$St().bm('me', function (bm) {
-		bm.dg()
-		var matrix = $ColMx()
-				.adjustHue(180)
-				.adjustSaturation(-100);
-		bm.filters = [
-			$ColMxFl(matrix)
-		]
-		bm.cache(-200, -200, 800, 800);
 	})
-}
-MAPF = ALMAPFL = function () {
-	$St()
-	$.i('me', function (i) {
-		var box = new cjs.Shape();
-		box.graphics.beginLinearGradientFill(["#ff0000", "#0000ff"], [0, 1], 0, 0, 0, 100)
-		box.graphics.drawRect(0, 0, 100, 100);
-		box.cache(0, 0, 100, 100);
-		var bmp = new cjs.Bitmap(i);
-		bmp.filters = [
-			$AlMapFl(box.cacheCanvas)
-		]
-		bmp.cache(0, 0, 100, 100);
-		st.addChild(bmp)
-	})
-}
-AMR = ALMSFL = ALPHAMASKREVEAL = function () {
-	/*This example demonstrates revealing an image using another image as the
-	 mask. The mask is created by drawing a
-	 shape, and then caching the shape to make an image with an alpha
-	 channel. It is then applied to the image as
-	 an mask using the <code>AlphaMaskFilter</code> filter. Another copy of
-	 */
-	cjs.testCanvas()//  cjs.sharedCode()
-	var stage, isDrawing, drawingCanvas, oldPt, oldMidPt, displayCanvas,
-			image, bitmap, maskFilter, cursor, text, blur
-	examples.showDistractor()
-	image = new Image();
-	image.onload = handleComplete
-	image.src = "/chicks.png"
-	stage = new createjs.Stage("testCanvas");
-	text = new createjs.Text("Loading...", "20px Arial", "#FFF");
-	text.set({x: stage.canvas.width / 2, y: stage.canvas.height - 40});
-	text.textAlign = "center"
-	function handleComplete() {
-		examples.hideDistractor();
-		createjs.Touch.enable(stage);
-		stage.enableMouseOver();
-		stage.addEventListener("stagemousedown", handleMouseDown);
-		stage.addEventListener("stagemouseup", handleMouseUp);
-		stage.addEventListener("stagemousemove", handleMouseMove);
-		drawingCanvas = new createjs.Shape();
-		bitmap = new createjs.Bitmap(image);
-		blur = new createjs.Bitmap(image);
-		blur.filters = [new createjs.BlurFilter(24, 24, 2), new createjs.ColorMatrixFilter(new createjs.ColorMatrix(60))];
-		blur.cache(0, 0, 960, 400);
-		text.text = "Click and Drag to Reveal the Image.";
-		stage.addChild(blur, text, bitmap);
-		updateCacheImage(false);
-		cursor = new createjs.Shape(new createjs.Graphics().beginFill("#FFFFFF").drawCircle(0, 0, 25));
-		cursor.cursor = "pointer";
-		stage.addChild(cursor);
-	}
-	
-	function handleMouseDown(event) {
-		oldPt = new createjs.Point(stage.mouseX, stage.mouseY);
-		oldMidPt = oldPt;
-		isDrawing = true;
-	}
-	
-	function handleMouseMove(event) {
-		cursor.x = stage.mouseX;
-		cursor.y = stage.mouseY;
-		if (!isDrawing) {
-			stage.update();
-			return;
-		}
-		var midPoint = new createjs.Point(oldPt.x + stage.mouseX >> 1, oldPt.y + stage.mouseY >> 1);
-		drawingCanvas.graphics.setStrokeStyle(40, "round", "round")
-				.beginStroke("rgba(0,0,0,0.2)")
-				.moveTo(midPoint.x, midPoint.y)
-				.curveTo(oldPt.x, oldPt.y, oldMidPt.x, oldMidPt.y);
-		oldPt.x = stage.mouseX;
-		oldPt.y = stage.mouseY;
-		oldMidPt.x = midPoint.x;
-		oldMidPt.y = midPoint.y;
-		updateCacheImage(true);
-	}
-	
-	function handleMouseUp(event) {
-		updateCacheImage(true);
-		isDrawing = false;
-	}
-	
-	function updateCacheImage(update) {
-		if (update) {
-			drawingCanvas.updateCache();
-		} else {
-			drawingCanvas.cache(0, 0, image.width, image.height);
-		}
-		maskFilter = new createjs.AlphaMaskFilter(drawingCanvas.cacheCanvas);
-		bitmap.filters = [maskFilter];
-		if (update) {
-			bitmap.updateCache(0, 0, image.width, image.height);
-		} else {
-			bitmap.cache(0, 0, image.width, image.height);
-		}
-		stage.update();
-	}
-}
-CLFL = function () {
-	COLF1 = function () {
-		shape = new cjs.Shape().set({x: 100, y: 100});
-		shape.graphics.beginFill("#ff0000").drawCircle(0, 0, 50);
-		shape.filters = [$ColFl(0, 0, 0, 1, 0, 0, 255, 0)]
-		shape.cache(-50, -50, 100, 100);
-		$St().A(shape)
-	}
-//https://jsfiddle.net/mcfarljw/J4S3Z/
-	$.c().id('demo').C('y')
-	st = stage = new createjs.Stage("demo");
-	$.i('me', function (i) {
-		
-		// shape.cache(-50, -50, 100, 100)
-		var bmp = new cjs.Bitmap(i).X(100).Y(100)
-		bmp.filters = [
-			$ColFl(0, 0, 0, 1, 0, 0, 255, 0)
-		]
-		bmp.dg()
-		bmp.cache(-200, -250, 600, 600)
-		st.addChild(bmp);
-	})
-	createjs.Ticker.addEventListener('tick', tick);
-	var container = new createjs.Container();
-	var stroke = new createjs.Shape();
-	stroke.graphics.f("black").p("AAeAKYgeAUAAAAAAAoYAAAoAKAeAoA8YAyBaAeBGAeBuYAUBGAAA8AKFKYAADcAKDSAAAoYAAAyAAD6gKD6YAAD6gKFeAAC0YAAH0geEOhkFKYgoCWAABkAyCCYBQDSAoA8AyAAYAyAABaigAKhaYAKgoAAqoAAsqYAKsgAAraAAhaYAKkYAyk2Ayh4YAKgeAKgoAAgUYAAgegKgKgygoYhQg8i+h4gogKYgygKgoAAgoAK").cp().ef();
-	container.addChild(stroke);
-	stage.addChild(container);
-	stage.update();
-	createjs.Tween.get(stroke).to({
-		x: 500
-	}, 2000).addEventListener("change", handleChange);
-	function handleChange() {
-		console.log('changing');
-		if (container.cacheCanvas)
-			container.updateCache();
-	}
-	
-	setTimeout(function () {
-		container.filters = [new createjs.ColorFilter(0, 0, 0, 1, 230, 142, 142, 1)];
-		container.cache(0, 0, 600, 600);
-	}, 1000);
-	console.log(container);
-	function tick() {
-		stage.update();
-	}
-}
-BLR = BLFL = function () {//http://jsfiddle.net/lannymcnie/BRrm5/
-	BLRFL1 = BLURFILT = function () {
-		st = $St('z', 800)
-		h = $H().XY(100).a2(st).f('r').dc(50)
-		fl = h.fl($BlurFl(50, 50, 10))
-		bd = fl.getBounds()
-		h.ca(-50 + bd.x, -50 + bd.y, 100 + bd.width, 100 + bd.height)
-		/*
-		 h.startMoving()
-		 h.vx = 1
-		 h.vy = 1
-		 */
-	}
-	BLRFL2 = function () {
-		Q(function () {
-			st = $St().t()
-			h = st.h(100, 100, 'r').cir(50)
-			_.in(1, function () {
-				h.colFl(0, 0, 0, 1, 0, 0, 255, 0)
-				h.ca(-50, -50, 100, 150)
-			})
-			_.in(2, function () {
-				f = h.blFl(59, 59, 1)
-				bd = f.b()
-				h.ca(-50 + bd.x,
-						-50 + bd.y,
-						100 + bd.w,
-						100 + bd.h)
-			})
+	bt = $.bt('safd', function () {
+		s.sXY(2)
+	}).A()
+	function drawCar() {
+		s.bm('guy', function (bm) {
+			g = bm
+			bm.sXY(.5)
+			SL(bm)
 		})
 	}
-	BLRFL3 = function () {
-		$St().bm('me', function (bm) {
-			bm.dg()
-			bm.alMapFl(_$BlurFl(20, 10))
-			var b = bm.flBds()
-			bm.cache(b.x - 50, b.y - 50, b.width + 400, b.height + 400)
-		})
-	}
-	$.c().id('test').C('z')
-	var stage = new createjs.Stage("test");
-	var s = new createjs.Shape();
-	var g = s.graphics;
-	g.f("#FF0000").dc(0, 0, 75);
-	s.x = 100;
-	s.y = 100;
-	s.filters = [new createjs.BlurFilter(65, 25, 3)];
-	stage.addChild(s);
-	s.cache(-100, -100, 200, 200);
-	s.alpha = 0.5;
-	stage.update();
 }
-ANIMBLUR = function () {
-//http://www.olivierpons.fr/createjs/EaselJS-master/examples/Filters_simple.html
-	var img;
-	var stage;
-	var angle;
-	var canvas;
-	var range;
-	var speed;
-	angle = 0;
-	range = 30;
-	speed = 0.1;
-	img = new Image();
-	img.onload = handleImageLoad;
-	img.src = "/me.png";
-	function handleImageLoad() {
-		$.c().id('testCanvas')
-		canvas = document.getElementById("testCanvas");
-		stage = new createjs.Stage(canvas);
-		bmp = new createjs.Bitmap(img);
-		bmp.cache(0, 0, img.width, img.height);
-		stage.addChild(bmp);
-		createjs.Ticker.setFPS(15);
-		createjs.Ticker.addEventListener("tick", tick);
-	}
-	
-	function tick(event) {
-		angle += speed;
-		var value = Math.sin(angle) * range;
-		bmp.updateCache();
-		bmp.filters = [new createjs.BlurFilter(value, value, 2)];
-		stage.update(event);
-	}
-}
-BLOB = function () {//https://www.youtube.com/watch?v=mU1JcPikdMs
-	img = new Image();
-	img.onload = handleImageLoad;
-	img.src = "/me.png";
-	function handleImageLoad() {
-		$.c().id('testCanvas')
-		var canvas = document.getElementById("testCanvas");
-		// create a new stage and point it at our canvas:
-		stage = new createjs.Stage(canvas);
-		var bmp = new createjs.Bitmap(img).set({scaleX: 0.5, scaleY: 0.5});
-		stage.addChild(bmp);
-		var colorMatrix = new createjs.ColorMatrix();
-		colorMatrix.adjustSaturation(-100);
-		colorMatrix.adjustContrast(50);
-		var blackAndWhiteFilter = new createjs.ColorMatrixFilter(colorMatrix);
-		bmp = bmp.clone();
-		// filters are only displayed when the display object is cached
-		// later, you can call updateCache() to update changes to your filters
-		bmp.filters = [blackAndWhiteFilter];
-		bmp.cache(0, 0, img.width, img.height);
-		bmp.x = 480;
-		stage.addChild(bmp);
-		var blurFilter = new createjs.BlurFilter(64, 0, 1);
-		bmp = bmp.clone();
-		bmp.filters = [blurFilter];
-		bmp.cache(0, 0, img.width, img.height);
-		bmp.y = 200;
-		stage.addChild(bmp);
-		var removeRedFilter = new createjs.ColorFilter(0.25, 0.75, 1, 1); // red, green, blue, alpha
-		bmp = bmp.clone();
-		bmp.filters = [removeRedFilter];
-		bmp.cache(0, 0, img.width, img.height);
-		bmp.x = 0;
-		stage.addChild(bmp);
-		var frame = new createjs.Shape();
-		frame.graphics.setStrokeStyle(10).beginStroke("#000")
-				.moveTo(480, 0).lineTo(480, 400)
-				.moveTo(0, 200).lineTo(960, 200);
-		frame.compositeOperation = "destination-out"; // punch the frame out.
-		stage.addChild(frame);
-		// draw to the canvas:
-		stage.update();
-	}
-}
+ 

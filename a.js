@@ -87,7 +87,7 @@ function routes() {
 				'cjs', 'defaultMug',
 				'createBaseEvents', 'createDraw', 'dobs',
 				'gradFilterCache', 'loaderBitmap', 'official',
-				'sprite', 'spriteSheet', 'tween'
+				'sprite', 'spriteSheet', 'tween','tweenApps'
 			]
 			  , [
 			
