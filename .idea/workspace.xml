@@ -21,22 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="easelMug.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mug/easelMug.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16178736">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!block;n#ct_mug#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="knock.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="knock.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front/knock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.7457627">
               <caret line="1691" column="17" selection-start-line="1691" selection-start-column="17" selection-end-line="1691" selection-end-column="17" />
               <folding>
                 <element signature="e#337#386#0" expanded="false" />
@@ -105,12 +93,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spriteSheet/proto/sp_next.js" />
-        <option value="$PROJECT_DIR$/spriteSheet/proto/playing.js" />
         <option value="$PROJECT_DIR$/spriteSheet/proto/sprPt.js" />
         <option value="$PROJECT_DIR$/spriteSheet/proto/frames.js" />
         <option value="$PROJECT_DIR$/spriteSheet/sheetPtFrames.js" />
         <option value="$PROJECT_DIR$/spriteSheets/pack.js" />
+        <option value="$PROJECT_DIR$/mug/easelMug.js" />
+        <option value="$PROJECT_DIR$/mug/mugApps.js" />
       </list>
     </option>
   </component>

@@ -3,16 +3,15 @@ node()
 dirs()
 routes()
 listen()
-
-function intro(){
+function intro() {
 	console.log('.\n\n\n\n\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n\n\n')
 	require('./web/both');
 	$l(' - tidy - \n')
 }
-function listen(){
+function listen() {
 	$htSv = httpServer = $h.createServer($a)
 	$htSv.listen(80, lsFn)
-	require('./sock/$kets$')
+	require('./server/$kets$')
 	function lsFn() {
 		$l('\nserver listening on port 80 \n')
 	}
@@ -66,60 +65,43 @@ function dirs() {
 		}
 	}
 	$stc('', '../art', '../deps', '../data', '../imgFiles',
-			'bone', 'easel', 'front','web','mug','mugAnim', 'mugGames','can',
-			//fiz
-			'box', 'fiz', 'spaz', 'joints', 'controller', 'scroll', 'track',
-			'protos', 'arcade',
-			'bap0', 'bap1', 'bap2', 'box/bap1', 'box/bap2',
-			'fiz/box', 'fiz/spaz', 'fiz/clipperBox', 'fiz/collide',
-			'fiz/controller', 'fiz/edge', 'fiz/joints', 'fiz/query', 'fiz/arcade',
-			'fiz/makeWorkd',
-			'fiz/_'
+			'easel', 'front', 'web'
+			//, 'box', 'fiz', 'spaz', 'joints', 'controller', 'scroll', 'track', 'protos', 'arcade', 'bap0', 'bap1', 'bap2', 'box/bap1', 'box/bap2', 'fiz/box', 'fiz/spaz', 'fiz/clipperBox', 'fiz/collide', 'fiz/controller', 'fiz/edge', 'fiz/joints', 'fiz/query', 'fiz/arcade', 'fiz/makeWorkd', 'fiz/_'
 	)
 }
 function routes() {
-	 
-	jsArrs = [
-		Webb = ['both', 'jq', 'web', 'events', 'css', 'html', 'img',
-			'l', 'webApps', 'mock', 'shapeDefs'],
-		Front = [
-				//deps
-			'bb', 'ko', 'jqui',
-			//bone
-			'bone', 'bbServer', 'bbColl',
-				//jqui
-			'jquiWids', 'wid',
-				//ko
-			'knock', 'koCustom'
-		],
-		Graphics = ['gpc', 'clipper',
-			'context', 'canvas',
-		'ctxApps', 'clipApps',
-		   'defaultMug'],
-		Easel = ['cjs', 'createBase',
-			'bitmap', 'circle', 'cjsEvents', 'createDraw',
-			  'dobs', 'filter', 'loader', 'official',
-			   'shapeGrad', 'sprite', 'stage', 'tween', 'snap'
-		],
-		
-		Wapp = ['wappy', 'cutouts', 'muggy', 'home','dragFrame',
-				'canMug',
-				'twBox',
-				'easelMug','muggyMore','mugHit','mugTf','selected'
-		]
-	]
-	
-
 	$a.get('/box/:app*', function (q, p) {
 		app = q.params.app.toUpperCase()
 		html = ''//' - '
 		html += ''//'<h1>hello</h1>'
 		html += '<link rel="stylesheet" type="text/css"  href="/jqui.css"></script>'
-		html += $js(jsArrs)
+		html += $js([[
+		
+		
+			//web
+			'both', 'jq', 'web', 'events', 'css', 'html', 'img',
+			'l', 'webApps', 'mock', 'gpc', 'clipper',
+			'context', 'canvas', 'ctxApps', 'clipApps', 'shapeDefs'], [
+			
+			//front
+			'bb', 'ko', 'jqui',
+			'bone', 'bbServer', 'bbColl',
+			'jquiWids', 'wid',
+			'knock', 'koCustom',
+			'wappy', 'cutouts', 'muggy', 'home'], [
+			
+			//easel
+			'cjs', 'defaultMug', 'official',
+			'createBaseEvents', 'createDraw', 'dobs',
+			'gradFilterCache', 'loaderBitmap',
+			'sprite', 'spriteSheet', 'tween'
+			
+		
+		]])
+		
 		html += '<script> $(function(){ $l("app:  ' + app + '"); ' + app + '()})</script>'
 		p.send(html)
 	})
- 
 	Fiz = [
 		'bx', 'boxBase',
 		'boxBool',
@@ -186,5 +168,6 @@ function node() {
 	require('./routes/imgRts')
 	require('./routes/adminRts')
 	require('./routes/userRts')
-	require('./api/$twitServer$')
+	require('./server/$twitServer$')
 }
+
