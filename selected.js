@@ -1,11 +1,87 @@
+$.dragStage = function (x, y) {
+	$.dragStage1 = function (x, y) {
+		$.dragStage = function (x, y) {
+			c = $.canvas('g', 400)
+			s = new cjs.Stage(c[0]).tick()
+			dragFrame(c).A()
+			return s
+		}
+		var can = $.c('g', 400)
+		$St(can[0])
+		$.dragFrame(can)
+		return st
+	}
+	c = $.c('g', 400)
+	s = $St(c[0])
+	$.dragFrame(c).A()
+	return s
+}
+TWEENBOX = DRAGSTAGE = function () {
+	stage = $.dragStage()
+	stage.bm('me', function (bm) {
+		SL(bm)
+		$Tw([bm, 'l'],
+				{x: 0, sxy: .7, r: 0},
+				[{x: 300, sxy: 2.3, r: 0}, 1000],
+				[{x: 0, sxy: .7, r: -30, a: .5}, 3000])
+		$Tw([bm, 'l'],
+				{x: 0, sxy: .7, r: 0},
+				[{x: 300, sxy: 2.3, r: 0}, 100], [{x: 0, sxy: .7, r: -30, a: .5}, 100]
+		)
+		//  cjs.tween(  [bm,'l'],  {x:0, sxy:.7,r:0},  [ {x:300,sxy:2.3,r:0}, 1000 ],  [ {x:0,sxy:.7,r:-30,a:.5},3000])
+	})
+	$.dragStage().t().bm('me', function (bm) {
+		b = bm
+		SL(bm)
+		bm.rgc('+')
+		scaleShake(bm)
+		rotateShake(bm)
+	})
+}
+IX1 = INDEX = DRAGSTAGETRANSFORM = function () {
+	s = $.dragStage().bm('me', function (bm) {
+		b = bm
+		SL(b)
+		_.t(10, function () {
+			s.bm('guy', SL)
+		})
+		s.ch(b, 3)
+	})
+}
+
+INDEXX = function () {
+	s = $.dragStage().bm('me', function (bm) {
+		
+		 bm.dg()
+		_.t(10, function () {
+			s.bm('guy', cjs.SL)
+		})
+		s.ix(bm, 3)
+	})
+}
+
+CV20 = DRAGSTG = function () {
+	Q(function () {
+		c = $.c('g', 600, 300)
+		f = $.dragFrame(c)
+		x = c.ctx()
+		x.d('me', 100, 100)
+		c.$(function (x1, y1) {
+			x.a(x1, y1, 2).s()
+		})
+	})
+}
+ 
 $.fn.selectCutout = function () {
 	$('.cutout').each(function () {
 		$(this).C('b')
 	})
 	this.parent().C('y')
 }
+
 YellowDif=function(){
-var d= $divA(500).c('y')(
+
+var d= $.divA(500).C('y')(
 		$.bt('freeze', createjs.Tween.removeAllTweens),
 		$.bt('right', function () {
 			bitmap.x(bitmap.x() + 10)
@@ -166,7 +242,7 @@ return d
 
 
 SELECTED = function () {
-	z()
+	 
 	st = $.dragStage()
 	
 	/*

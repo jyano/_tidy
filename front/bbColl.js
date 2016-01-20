@@ -190,6 +190,29 @@ cl.f = function () {
 	return this.find.apply(this, arguments)
 }
  
+$RenClFn = function (Vw) {
+	return function () {
+		return this.renCl(Vw)
+	}
+}
+_c = $$c = function () {
+	var Cl = C$()
+	return new Cl(Bb.C.ob(ob))
+}
+Cl$Ul = function (cl) {
+	return new Ul_({collection: cl})
+}
+C$.f = function (docs, key, val) {
+	return docs.find(function (doc) {
+		return doc.g(key) == val
+	})
+	//docs.find(function (doc) {return doc.g('title') == title}) -->  C$.f(docs, 'title', title)
+}
+Cl$Ul$Li = $LIs = function (docs, $q) {
+	$q = $q || $.bd()
+	$q.E(Cl$Ul(docs).rEl())
+	//$.E(Cl$Ul(docs).rEl()) --> Cl$Ul$Li($.bd(), docs)
+}
 BB2 = ADD2 = function () {
 	ADDD = function () {
 		App = {Models: {}, Views: {}, Collections: {}}
@@ -504,26 +527,3 @@ BB20 = USM = USMETS = function () {
 	//  invert() creates ob where vals are keys, atts are vals
 	Td({tt: 'go to Austria.'}).invert()  // {'go to Austria.': 'tt', 'false': 'completed'}
 } //er
-$RenClFn = function (Vw) {
-	return function () {
-		return this.renCl(Vw)
-	}
-}
-_c = $$c = function () {
-	var Cl = C$()
-	return new Cl(Bb.C.ob(ob))
-}
-Cl$Ul = function (cl) {
-	return new Ul_({collection: cl})
-}
-C$.f = function (docs, key, val) {
-	return docs.find(function (doc) {
-		return doc.g(key) == val
-	})
-	//docs.find(function (doc) {return doc.g('title') == title}) -->  C$.f(docs, 'title', title)
-}
-Cl$Ul$Li = $LIs = function (docs, $q) {
-	$q = $q || $.bd()
-	$q.E(Cl$Ul(docs).rEl())
-	//$.E(Cl$Ul(docs).rEl()) --> Cl$Ul$Li($.bd(), docs)
-}

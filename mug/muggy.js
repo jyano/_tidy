@@ -24,4 +24,15 @@ MYMUG=function(){
 		$i.A()
 		i.src = mg
 	})
+}
+CHANGEMUGTX = function () {
+	//it automatically changes your userMug to the defaultMug
+	$.post('/changeMug',
+			{url: defaultMug},
+			function () {
+				z()
+				TWEEN()
+			})
 } 
+
+  

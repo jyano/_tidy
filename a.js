@@ -66,7 +66,7 @@ function dirs() {
 		}
 	}
 	$stc('', '../art', '../deps', '../data', '../imgFiles',
-			'bone', 'easel', 'front','web',
+			'bone', 'easel', 'front','web','mug','mugAnim', 'mugGames','can',
 			//fiz
 			'box', 'fiz', 'spaz', 'joints', 'controller', 'scroll', 'track',
 			'protos', 'arcade',
@@ -96,14 +96,19 @@ function routes() {
 				//ko
 			'knock', 'koCustom'
 		],
-		Graphics = ['gpc', 'clipper', 'context', 'canvas','defaultMug'],
+		Graphics = ['gpc', 'clipper',
+			'context', 'canvas',
+		'ctxApps', 'clipApps',
+		   'defaultMug'],
 		Easel = ['cjs', 'createBase',
 			'bitmap', 'circle', 'cjsEvents', 'createDraw',
 			  'dobs', 'filter', 'loader', 'official',
-			   'shapeGrad', 'sprite', 'stage', 'tween'
+			   'shapeGrad', 'sprite', 'stage', 'tween', 'snap'
 		],
 		
-		Wapp = ['wappy', 'cutouts', 'muggy', 'home','dragFrame']
+		Wapp = ['wappy', 'cutouts', 'muggy', 'home','dragFrame',
+				'canMug','easelMug','muggyMore','mugHit','mugTf'
+		]
 	]
 	
 

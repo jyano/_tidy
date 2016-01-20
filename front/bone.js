@@ -299,114 +299,7 @@ md._s = function (a, b, c) {
 	}
 	return m.set(a, b, c)
 }
-BB15 = XCHANGECOL = PROMPTCOLOR = function () {
-	z()
-	d = $.dA(400, 400, 300, 200)
-	Md = $$M({
-		promptColor: function () {
-			this.s({
-				co: prompt('color:')
-			})
-		}
-	})
-	sb = Md()
-	sb.on('change:co', function (mod, col, ops) {
-		$l('new color!: ' + col);
-		d.C(col)
-	})
-	sb.s({co: 'g'})
-	_.in(2, function () {
-		sb.promptColor()
-	})
-}
-BB18 = XDEFAULT = function () {
-	Md = _M({defaults: {n: 'j', a: 20, o: 'p'}})
-	Vw = _V({
-		tagName: 'li',
-		R: function () {
-			this.$el.A('n: ' + this.g('n'))
-		},
-		I: function () {
-			this.$el.A().C('r').col('b').fS(149);
-			this.R()
-		}
-	})
-	md = Md()
-	vw = Vw({m: md})
-}
-BB19 = MDG = function () {
-	$.h3('p: ' + M_({name: 'jay'}).g('name'))
-}
-BB9 = VD1 = BB7 = BVD = MVD = function () {
-	VD2 = XBACKVALL = function () {
-		$l('backvall')
-		Md = $$M({
-			defaults: {lame: true},
-			validate: function (at) {
-				$l('in validate')
-				_at = at
-				if (!at) {
-					return false
-				}
-				if (at.n == 'rigo') {
-					return "name can't be rigo!"
-				}
-			},
-			i: function () {
-				var t = this
-				t.on('error', function (m, e) {
-					alert(3);
-					$l(e)
-				})
-				t.on('change:n', function (m, e) {
-					alert(3);
-					$l(e)
-				})
-			}
-		})
-		md = Md({n: "migo", a: 7})
-		_.in(3, function () {
-			$.C('r')
-			md.oIv(function (m, er) {
-				$Ms('...');
-				$Ms('er: ' + er);
-				$Ms('...')
-			})
-			md.s({n: 'rigo'}, {validate: true})
-		})
-	}
-	Md = _M({
-		defaults: {lame: true},
-		validate: function (at) {
-			if (!at) {
-				return false
-			}
-			if (at.n == 'rigo') {
-				return "name can't be rigo!"
-			}
-		},
-		i: function () {
-			this.on('error', function (m, e) {
-				alert(3);
-				$l(e)
-			})
-			this.on('change:n', function (m, e) {
-				alert(3);
-				$l(e)
-			})
-		}
-	})
-	md = Md({n: "migo", a: 7})
-	_.in(1, function () {
-		$.C('r')
-		md.oIv(function (m, er) {
-			$Ms('...');
-			$Ms('er: ' + er);
-			$Ms('...')
-		})
-		md.s({n: 'rigo'}, {validate: true})
-	})
-}
+ 
 $Df = function (ob) {
 	return $M({df: ob})
 }
@@ -415,89 +308,7 @@ router()
 bbView()
 bbLStore()
 function bbEvents(){
-	BB5 = SAMP = function () {
-		$.x('b', 'bbsamp', '+')
-		d = $.d()
-		Rec = bb.M.x()
-		RecV = bb.V.x({
-			tagName: 'div', className: 'rec',
-			events: {'click': 'move'},
-			move: function () {
-				this.$el.css('left', this.$el.position().left + 10)
-			},
-			rr: function () {
-				return this.sDims().sPos().sCol()
-			},
-			sDims: function () {
-				this.$el.WH(this.model.get('w'), this.model.get('h'))
-				return this
-			},
-			sPos: function () {
-				this.$el.ab()
-						.LR(
-						this.model.get('pos').x, this.model.get('pos').y)
-				return this
-			},
-			sCol: function () {
-				this.$el.C(this.model.get('C'))
-				return this
-			}
-		})
-		_.e([
-			new Rec({w: 100, h: 30, pos: {x: 300, y: 400}, C: 'o'}),
-			new Rec({w: 100, h: 20, pos: {x: 400, y: 400}, C: 'g'}),
-			new Rec({w: 100, h: 200, pos: {x: 0, y: 100}, C: 'y'})
-		], function (md) {
-			var r = new RecV({
-				model: md
-			})
-			r.rr().$el.a2(d)
-		})
-	}
-	BB6 = MCH = CHG = ONCHANGE = SIDEBAR = function () {
-		$('body').fS(30).A(ip = $.ip())
-		md = M_({rx: 'antibiotic'})
-		_V({
-			ren: function () {
-				return this.h(this.g('rx'))
-			},
-			initialize: function () {
-				var vw = this;
-				this.ren()
-				this.model.on('change', function () {
-					vw.ren()
-				})
-			}
-		})({
-			el: $.dA('o', 300, 400).XY(200, 200),
-			model: md
-		})
-		$.bt('submit input val', function () {
-			md.set('rx', ip.v())
-		})
-	}
-	BB8 = EVENTS = BEAUTY = function () {
-		dv = $.d('r', 200).A($.h1('hello'),
-				bt = $.bt('-------'))
-		Vw = Bb.V.x({
-			events: {
-				'click button': function () {
-					bt.C($r())
-				},
-				'dblclick': 'R',
-				'mouseover': function () {
-					dv.C($r())
-				}
-			},
-			R: function () {
-				$.C($r())
-			}
-		})
-		new Vw({
-			I: 1,
-			el: dv
-		})
-	}
+ 
 	clEvents()
 	function clEvents() {
 		cl.V = function (Vw, ob) {
@@ -586,7 +397,7 @@ function router(){
 		//looks for clicks on any anchor els where
 		//href starts with '/' (no domain) and stop
 		//bw from nv to it
-		$.bd().on('click', 'a[href^="/"]', function (ev) {
+		$('body').on('click', 'a[href^="/"]', function (ev) {
 			$l('wow')
 			ev.preventDefault()
 			r.n($(this).attr('href', {trigger: true}))
@@ -722,30 +533,7 @@ function router(){
 			return sRtr(new Rtr(ob))
 		}
 	}
-	BB4 = ROUT = function () {
-		ct = $.d()
-		_.e(['home', 'about'], function (o) {
-			ct.A($nav(o))
-			$mockPage(o)
-			$('.' + o + '-nav').$(function () {
-				rtr.N(o)
-			})
-		})
-		$Rt({
-			'': sh('home'), home: sh('home'),
-			about: sh('about')
-		}, '/box/rout')
-		function sh(o) {
-			return function () {
-				$('.pg').hd()
-				$('*').rmK('A')
-				$('#' + o + '-pg').sh()
-				$('.' + o + '-nav').K('A')
-			}
-		}
-		
-		$s({_A: {C: 'y', c: 'z'}})
-	}
+	 
 }
 function bbView(){
 	$.fn.$V = function (ob) {
@@ -984,101 +772,7 @@ function bbView(){
 			this.model.destroy()
 		}
 	}
-	BB16 = VIEW = function () {
-		$.fn.V = function (ob) {
-			ob = ob || {};
-			ob.el = this
-			return $V(ob)
-		}
-		$V({
-			el: $.dA('g', 400, 400, 200, 200),
-			R: function () {
-				var vw = this
-				vw.A($.ul().fS(40).A('hello'))
-				_.in(function () {
-					vw.R()
-				})
-			},
-			I: function () {
-				this.R()
-			}
-		})
-		Vw = _V({
-			R: function () {
-				this.A($.ul(['hello']).fZ(30))
-			},
-			I: function () {
-				this.R()
-			}
-		})
-		Vw = V$({
-			el: q = $.dA('g', 400, 400, 200, 200),
-			R: function () {
-				var vw = this
-				vw.A($.ul().fS(40).A('hello'))
-				_.in(function () {
-					vw.R()
-				})
-			},
-			I: function () {
-				this.R()
-			}
-		})
-		Vw2 = V$({
-			R: function () {
-				this.A($.ul(['hello']).fZ(30))
-			},
-			I: function () {
-				this.R()
-			}
-		})
-		new Vw()
-		$.bt('orange', function () {
-			new Vw2({el: $.d('O', 500, 500)})
-			Vw({el: $.d('O', 500, 500)})
-		})
-	}
-	BB17 = NJA = MDV = MVW = BMV = XMDVW = function () {
-		Md = _M({d: {n: 'j', a: 20, o: 'p'}})
-		Vw = _V({
-			tagName: 'li',
-			_: 'some-per', k: 'per',
-			R: function () {
-				this.$el.A('n').A()
-			},
-			I: function () {
-				this.R()
-			}
-		})
-		md = Md()
-		md.V = function (Vw, ob) {
-			ob = ob || {}
-			ob.md = ob.m = this
-			return Vw(ob)
-		}
-		md.V(Vw)
-		_.in(1, function () {
-			$.C('R')
-			md.l()
-			$Ms(J.s(md.J()))
-		})
-	}
-	BB12 = PVR = PER = function () {
-		pV = _V({
-			t: 'li', k: 'per',
-			r: function () {
-				this.$el.A('n').A()
-			},
-			i: function () {
-				this.r()
-			}
-		})({
-			m: $M({d: {n: 'j', a: 20, o: 'p'}})
-		})
-		_.ev(.5, function () {
-			pV.r()
-		})
-	}
+ 
 	function ach$$$() {
 		V$i = function (ob) {
 			if (F(ob)) {
@@ -1567,3 +1261,318 @@ function bbLStore(){
 	}
 // extending Bb? -> https://coderwall.com/p/xj81ua/a-better-way-of-extending-backbone-models-and-views
 }
+//view
+BB16 = VIEW = function () {
+	$.fn.V = function (ob) {
+		ob = ob || {};
+		ob.el = this
+		return $V(ob)
+	}
+	$V({
+		el: $.dA('g', 400, 400, 200, 200),
+		R: function () {
+			var vw = this
+			vw.A($.ul().fS(40).A('hello'))
+			_.in(function () {
+				vw.R()
+			})
+		},
+		I: function () {
+			this.R()
+		}
+	})
+	Vw = _V({
+		R: function () {
+			this.A($.ul(['hello']).fZ(30))
+		},
+		I: function () {
+			this.R()
+		}
+	})
+	Vw = V$({
+		el: q = $.dA('g', 400, 400, 200, 200),
+		R: function () {
+			var vw = this
+			vw.A($.ul().fS(40).A('hello'))
+			_.in(function () {
+				vw.R()
+			})
+		},
+		I: function () {
+			this.R()
+		}
+	})
+	Vw2 = V$({
+		R: function () {
+			this.A($.ul(['hello']).fZ(30))
+		},
+		I: function () {
+			this.R()
+		}
+	})
+	new Vw()
+	$.bt('orange', function () {
+		new Vw2({el: $.d('O', 500, 500)})
+		Vw({el: $.d('O', 500, 500)})
+	})
+}
+BB17 = NJA = MDV = MVW = BMV = XMDVW = function () {
+	Md = _M({d: {n: 'j', a: 20, o: 'p'}})
+	Vw = _V({
+		tagName: 'li',
+		_: 'some-per', k: 'per',
+		R: function () {
+			this.$el.A('n').A()
+		},
+		I: function () {
+			this.R()
+		}
+	})
+	md = Md()
+	md.V = function (Vw, ob) {
+		ob = ob || {}
+		ob.md = ob.m = this
+		return Vw(ob)
+	}
+	md.V(Vw)
+	_.in(1, function () {
+		$.C('R')
+		md.l()
+		$Ms(J.s(md.J()))
+	})
+}
+BB12 = PVR = PER = function () {
+	pV = _V({
+		t: 'li', k: 'per',
+		r: function () {
+			this.$el.A('n').A()
+		},
+		i: function () {
+			this.r()
+		}
+	})({
+		m: $M({d: {n: 'j', a: 20, o: 'p'}})
+	})
+	_.ev(.5, function () {
+		pV.r()
+	})
+}
+//rouer
+  ROUT = function () {
+	ct = $.d()
+	_.e(['home', 'about'], function (o) {
+		ct.A($nav(o))
+		$mockPage(o)
+		$('.' + o + '-nav').$(function () {
+			rtr.N(o)
+		})
+	})
+	$Rt({
+		'': sh('home'), home: sh('home'),
+		about: sh('about')
+	}, '/box/rout')
+	function sh(o) {
+		return function () {
+			$('.pg').hd()
+			$('*').rmK('A')
+			$('#' + o + '-pg').sh()
+			$('.' + o + '-nav').K('A')
+		}
+	}
+	
+	$s({_A: {C: 'y', c: 'z'}})
+}
+//events
+BB5 = SAMP = function () {
+ 
+	d = $.d()
+	Rec = bb.M.x()
+	RecV = bb.V.x({
+		tagName: 'div', className: 'rec',
+		events: {'click': 'move'},
+		move: function () {$l('clk move')
+			this.$el.css('left', this.$el.position().left + 10)
+		},
+		rr: function () {
+			return this.sDims().sPos().sCol()
+		},
+		sDims: function () {
+			this.$el.WH(this.model.get('w'), this.model.get('h'))
+			return this
+		},
+		sPos: function () {
+			this.$el.ab().LR(
+					this.model.get('pos').x, this.model.get('pos').y)
+			return this
+		},
+		sCol: function () {
+			this.$el.C(this.model.get('C'))
+			return this
+		}
+	})
+	_.e([
+		new Rec({w: 100, h: 30, pos: {x: 300, y: 400}, C: 'o'}),
+		new Rec({w: 100, h: 20, pos: {x: 400, y: 400}, C: 'g'}),
+		new Rec({w: 100, h: 200, pos: {x: 0, y: 100}, C: 'y'})
+	], function (md) {
+		var r = new RecV({
+			model: md
+		})
+		r.rr().$el.a2(d)
+	})
+}
+
+BB6 = MCH = CHG = ONCHANGE = SIDEBAR = function () {
+	$('body').fS(30).A(ip = $.ip())
+	md = M_({rx: 'antibiotic'})
+	_V({
+		ren: function () {
+			return this.h(this.g('rx'))
+		},
+		initialize: function () {
+			var vw = this;
+			this.ren()
+			this.model.on('change', function () {
+				vw.ren()
+			})
+		}
+	})({
+		el: $.dA('o', 300, 400).XY(200, 200),
+		model: md
+	})
+	$.bt('submit input val', function () {
+		md.set('rx', ip.v())
+	})
+}
+BB8 = EVENTS = BEAUTY = function () {
+	dv = $.d('r', 200).A($.h1('hello'),
+			bt = $.bt('-------'))
+	Vw = Bb.V.x({
+		events: {
+			'click button': function () {
+				bt.C($r())
+			},
+			'dblclick': 'R',
+			'mouseover': function () {
+				dv.C($r())
+			}
+		},
+		R: function () {
+			$.C($r())
+		}
+	})
+	new Vw({
+		I: 1,
+		el: dv
+	})
+}
+//
+BB15 = XCHANGECOL = PROMPTCOLOR = function () {
+	z()
+	d = $.dA(400, 400, 300, 200)
+	Md = $$M({
+		promptColor: function () {
+			this.s({
+				co: prompt('color:')
+			})
+		}
+	})
+	sb = Md()
+	sb.on('change:co', function (mod, col, ops) {
+		$l('new color!: ' + col);
+		d.C(col)
+	})
+	sb.s({co: 'g'})
+	_.in(2, function () {
+		sb.promptColor()
+	})
+}
+BB18 = XDEFAULT = function () {
+	Md = _M({defaults: {n: 'j', a: 20, o: 'p'}})
+	Vw = _V({
+		tagName: 'li',
+		R: function () {
+			this.$el.A('n: ' + this.g('n'))
+		},
+		I: function () {
+			this.$el.A().C('r').col('b').fS(149);
+			this.R()
+		}
+	})
+	md = Md()
+	vw = Vw({m: md})
+}
+BB19 = MDG = function () {
+	$.h3('p: ' + M_({name: 'jay'}).g('name'))
+}
+BB9 = VD1 = BB7 = BVD = MVD = function () {
+	VD2 = XBACKVALL = function () {
+		$l('backvall')
+		Md = $$M({
+			defaults: {lame: true},
+			validate: function (at) {
+				$l('in validate')
+				_at = at
+				if (!at) {
+					return false
+				}
+				if (at.n == 'rigo') {
+					return "name can't be rigo!"
+				}
+			},
+			i: function () {
+				var t = this
+				t.on('error', function (m, e) {
+					alert(3);
+					$l(e)
+				})
+				t.on('change:n', function (m, e) {
+					alert(3);
+					$l(e)
+				})
+			}
+		})
+		md = Md({n: "migo", a: 7})
+		_.in(3, function () {
+			$.C('r')
+			md.oIv(function (m, er) {
+				$Ms('...');
+				$Ms('er: ' + er);
+				$Ms('...')
+			})
+			md.s({n: 'rigo'}, {validate: true})
+		})
+	}
+	Md = _M({
+		defaults: {lame: true},
+		validate: function (at) {
+			if (!at) {
+				return false
+			}
+			if (at.n == 'rigo') {
+				return "name can't be rigo!"
+			}
+		},
+		i: function () {
+			this.on('error', function (m, e) {
+				alert(3);
+				$l(e)
+			})
+			this.on('change:n', function (m, e) {
+				alert(3);
+				$l(e)
+			})
+		}
+	})
+	md = Md({n: "migo", a: 7})
+	_.in(1, function () {
+		$.C('r')
+		md.oIv(function (m, er) {
+			$Ms('...');
+			$Ms('er: ' + er);
+			$Ms('...')
+		})
+		md.s({n: 'rigo'}, {validate: true})
+	})
+}
+$.bd=function(){return $('body')}
