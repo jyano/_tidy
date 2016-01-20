@@ -81,23 +81,22 @@ function routes() {
 			//web
 			'both', 'jq', 'web', 'events', 'css', 'html', 'img',
 			'l', 'webApps', 'mock', 'gpc', 'clipper',
-			'context', 'canvas', 'ctxApps', 'clipApps', 'shapeDefs'], [
+			'context', 'canvas', 'ctxApps', 'clipApps', 'shapeDefs'],
+			[
+				//easel
+				'cjs', 'defaultMug',
+				'createBaseEvents', 'createDraw', 'dobs',
+				'gradFilterCache', 'loaderBitmap', 'official',
+				'sprite', 'spriteSheet', 'tween'
+			]
+			  , [
 			
 			//front
 			'bb', 'ko', 'jqui',
 			'bone', 'bbServer', 'bbColl',
 			'jquiWids', 'wid',
 			'knock', 'koCustom',
-			'wappy', 'cutouts', 'muggy', 'home'], [
-			
-			//easel
-			'cjs', 'defaultMug', 'official',
-			'createBaseEvents', 'createDraw', 'dobs',
-			'gradFilterCache', 'loaderBitmap',
-			'sprite', 'spriteSheet', 'tween'
-			
-		
-		]])
+			'wappy', 'cutouts', 'muggy', 'home']])
 		
 		html += '<script> $(function(){ $l("app:  ' + app + '"); ' + app + '()})</script>'
 		p.send(html)
@@ -165,9 +164,9 @@ function node() {
 		)
 	})
 //require('./server/serverWap/socialRts')
-	require('./routes/imgRts')
-	require('./routes/adminRts')
-	require('./routes/userRts')
+	require('./server/imgRts')
+	require('./server/adminRts')
+	require('./server/userRts')
 	require('./server/$twitServer$')
 }
 
