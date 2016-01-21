@@ -839,4 +839,7 @@ REMOVEEVENT = function () {
 		}
 		b.on('pressmove', b)
 	})
-} 
+}
+$t = function (fn) {
+	T.t(fn)
+}
