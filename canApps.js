@@ -172,6 +172,16 @@ function bmap() {
 		//lnDasho
 	}
 }
+$Ol = function () {
+	var str = '', g = G(arguments), o
+	o = {style: g.f, color: g.s, size: g.t}
+	o.style = o.style || 'dashed'
+	o.color = oO('c', o.color || 'red')
+	o.size = S(o.size) ? o.size : $S(N(o.size, 20)) + 'px'
+	str = o.style + ' ' + o.color + ' ' + o.size
+	$l(str)
+	return str
+}
 function globComp() {
 	GCO = XORCX = GCOMP = SHADOW = DRI = DRAWIMAGE = function () {
 		$s({
@@ -180,13 +190,18 @@ function globComp() {
 				C: 'r', P: 10,
 				M: 10, B: 10,
 			},
-			c: {outline: 'dashed yellow 20px'}
+			canvas: {
+				outline: 'dashed black 20px'
+			}
 		})
+		
 		__C()
 		$Im('chicks').ld(function () {
 			x.dI(this, 100, 100)
 			x.dI(this, 400, 100, 500, 200)
+			
 			x.xShadow = 3
+			
 			x.yShadow = 3
 			x.shadowBlur = 10
 			x.shadowStyle = 'red'

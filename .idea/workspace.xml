@@ -21,138 +21,161 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tut8.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tigris/more/tut8.js">
+      <file leaf-file-name="tut5.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tigris/core/tut5.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding>
+                <element signature="e#245#475#0" expanded="false" />
+                <element signature="e#280#470#0" expanded="false" />
+                <element signature="e#361#464#0" expanded="false" />
+                <element signature="e#1155#1538#0" expanded="false" />
+                <element signature="e#1202#1537#0" expanded="false" />
+                <element signature="e#1283#1531#0" expanded="false" />
+                <element signature="e#1358#1393#0" expanded="false" />
+                <element signature="e#1424#1460#0" expanded="false" />
+                <element signature="e#1482#1524#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tut2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tigris/core/tut2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="e#13#209#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tut6.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tigris/tut6.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tut9.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tigris/more/tut9.js">
+      <file leaf-file-name="girlSS.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/girlSS.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tut7.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tigris/tut7.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="137" selection-end-column="1" />
+              <folding>
+                <element signature="e#462#494#0" expanded="false" />
+                <element signature="e#502#599#0" expanded="false" />
+                <element signature="e#915#1151#0" expanded="false" />
+                <element signature="e#1518#1523#0" expanded="false" />
+                <element signature="e#1542#1601#0" expanded="false" />
+                <element signature="e#1608#1653#0" expanded="false" />
+                <element signature="e#1671#1799#0" expanded="false" />
+                <element signature="e#2550#2932#0" expanded="false" />
+                <element signature="e#2597#2927#0" expanded="false" />
+                <element signature="e#2678#2921#0" expanded="false" />
+                <element signature="e#2755#2784#0" expanded="false" />
+                <element signature="e#2827#2855#0" expanded="false" />
+                <element signature="e#2872#2914#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tut8" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tigris/tut8">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tut8.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tigris/tut8.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="108" column="31" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="31" />
+              <folding>
+                <element signature="e#218#373#0" expanded="true" />
+                <element signature="e#608#634#0" expanded="false" />
+                <element signature="e#665#690#0" expanded="false" />
+                <element signature="e#718#740#0" expanded="false" />
+                <element signature="e#770#794#0" expanded="false" />
+                <element signature="e#862#886#0" expanded="false" />
+                <element signature="e#917#942#0" expanded="false" />
+                <element signature="e#970#992#0" expanded="false" />
+                <element signature="e#1022#1046#0" expanded="false" />
+                <element signature="e#1822#2192#0" expanded="false" />
+                <element signature="e#1869#2187#0" expanded="false" />
+                <element signature="e#1950#2181#0" expanded="false" />
+                <element signature="e#2027#2056#0" expanded="false" />
+                <element signature="e#2087#2115#0" expanded="false" />
+                <element signature="e#2132#2174#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tut10" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tigris/tut10">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="tut10.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tigris/more/tut10.js">
+        <entry file="file://$PROJECT_DIR$/tigris/tut10.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tut1" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tigris/tut1">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="a.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/a.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.609375">
-              <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
               <folding>
-                <element signature="n#!!block;n#dirs#0" expanded="true" />
-                <element signature="e#3057#3215#0" expanded="true" />
-                <element signature="e#3332#3687#0" expanded="true" />
+                <element signature="e#852#1222#0" expanded="false" />
+                <element signature="e#899#1217#0" expanded="false" />
+                <element signature="e#980#1211#0" expanded="false" />
+                <element signature="e#1057#1086#0" expanded="false" />
+                <element signature="e#1117#1145#0" expanded="false" />
+                <element signature="e#1162#1204#0" expanded="false" />
+                <element signature="e#1241#1262#0" expanded="false" />
+                <element signature="e#1280#1301#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shad.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shad.js">
+      <file leaf-file-name="canApps.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/canApps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.5338983">
+              <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
               <folding>
-                <element signature="e#626#1503#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/text.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-              <folding>
-                <element signature="e#30#33#0" expanded="true" />
-                <element signature="e#320#371#0" expanded="false" />
-                <element signature="e#713#763#0" expanded="false" />
-                <element signature="e#1388#1408#0" expanded="false" />
-                <element signature="e#1419#1464#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transform.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transform.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="133" column="1" selection-start-line="133" selection-start-column="1" selection-end-line="133" selection-end-column="1" />
-              <folding>
-                <element signature="e#20#75#0" expanded="true" />
-                <element signature="e#273#291#0" expanded="false" />
-                <element signature="e#304#326#0" expanded="false" />
-                <element signature="e#596#632#0" expanded="false" />
-                <element signature="e#764#800#0" expanded="false" />
-                <element signature="e#2018#2030#0" expanded="false" />
-                <element signature="e#2523#2595#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/background.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-              <folding>
-                <element signature="e#68#123#0" expanded="true" />
-                <element signature="e#184#233#0" expanded="true" />
-                <element signature="e#367#461#0" expanded="true" />
-                <element signature="e#1167#1240#0" expanded="true" />
-                <element signature="e#1265#1318#0" expanded="true" />
-                <element signature="e#1323#1507#0" expanded="true" />
-                <element signature="e#1331#1412#0" expanded="true" />
-                <element signature="e#1419#1504#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gradWorks.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/easel/cjsGrad/_/gradWorks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="169" selection-end-column="2" />
-              <folding>
-                <element signature="e#36#633#0" expanded="true" />
-                <element signature="e#62#274#0" expanded="true" />
-                <element signature="e#300#543#0" expanded="true" />
-                <element signature="e#1218#1232#0" expanded="false" />
-                <element signature="e#2083#2097#0" expanded="false" />
-                <element signature="e#2226#2232#0" expanded="false" />
-                <element signature="e#3719#4057#0" expanded="true" />
+                <element signature="e#4712#4845#0" expanded="false" />
+                <element signature="e#5193#5356#0" expanded="false" />
+                <element signature="e#6725#6887#0" expanded="false" />
+                <element signature="e#8329#8491#0" expanded="false" />
+                <element signature="e#8982#9446#0" expanded="false" />
+                <element signature="e#10324#10487#0" expanded="false" />
+                <element signature="e#11098#11220#0" expanded="false" />
+                <element signature="e#11242#11378#0" expanded="false" />
+                <element signature="e#11887#11914#0" expanded="false" />
+                <element signature="e#12647#12779#0" expanded="false" />
+                <element signature="e#13032#13091#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -171,12 +194,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/colorGrad.js" />
+        <option value="$PROJECT_DIR$/tigris/tut6.js" />
+        <option value="$PROJECT_DIR$/tigris/tut7.js" />
+        <option value="$PROJECT_DIR$/tigris/tut8" />
+        <option value="$PROJECT_DIR$/tigris/tut8.js" />
+        <option value="$PROJECT_DIR$/tigris/tut10.js" />
         <option value="$PROJECT_DIR$/canApps.js" />
-        <option value="$PROJECT_DIR$/bmap.js" />
-        <option value="$PROJECT_DIR$/front/bbServer.js" />
-        <option value="$PROJECT_DIR$/tigris/tut1.js" />
-        <option value="$PROJECT_DIR$/a.js" />
       </list>
     </option>
   </component>
@@ -188,10 +211,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="891" />
-    <option name="y" value="22" />
-    <option name="width" value="1615" />
-    <option name="height" value="784" />
+    <option name="x" value="881" />
+    <option name="y" value="107" />
+    <option name="width" value="992" />
+    <option name="height" value="616" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -216,6 +239,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -234,24 +258,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_tidy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_tidy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tigris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,11 +278,11 @@
       <recent name="$PROJECT_DIR$/bap2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tigris/more" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/_" />
+      <recent name="$PROJECT_DIR$/tigris" />
+      <recent name="$PROJECT_DIR$/tiles" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/wheels" />
+      <recent name="$PROJECT_DIR$/tigris/core" />
+      <recent name="$PROJECT_DIR$/tigris/pre" />
     </key>
   </component>
   <component name="RunManager">
@@ -298,13 +307,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="891" y="22" width="1615" height="784" extended-state="0" />
+    <frame x="881" y="107" width="992" height="616" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.049763035" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24936171" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16687578" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1791967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19836956" sideWeight="0.51816744" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -321,20 +330,20 @@
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14764492" sideWeight="0.4839389" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934132" sideWeight="0.48183253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14764492" sideWeight="0.51606107" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19836956" sideWeight="0.51816744" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.049763035" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24936171" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19694576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16654107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -353,54 +362,97 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tigris/more/tut5.js">
+    <entry file="file://$PROJECT_DIR$/tigris/tut8">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tigris/more/tut10.js">
+    <entry file="file://$PROJECT_DIR$/tigris/tut8.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tigris/more/tut6.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tigris/tut1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tigris/more/tut7.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.609375">
-          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+          <caret line="108" column="31" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="31" />
           <folding>
-            <element signature="n#!!block;n#dirs#0" expanded="true" />
-            <element signature="e#3057#3215#0" expanded="true" />
-            <element signature="e#3332#3687#0" expanded="true" />
+            <element signature="e#218#373#0" expanded="true" />
+            <element signature="e#608#634#0" expanded="false" />
+            <element signature="e#665#690#0" expanded="false" />
+            <element signature="e#718#740#0" expanded="false" />
+            <element signature="e#770#794#0" expanded="false" />
+            <element signature="e#862#886#0" expanded="false" />
+            <element signature="e#917#942#0" expanded="false" />
+            <element signature="e#970#992#0" expanded="false" />
+            <element signature="e#1022#1046#0" expanded="false" />
+            <element signature="e#1822#2192#0" expanded="false" />
+            <element signature="e#1869#2187#0" expanded="false" />
+            <element signature="e#1950#2181#0" expanded="false" />
+            <element signature="e#2027#2056#0" expanded="false" />
+            <element signature="e#2087#2115#0" expanded="false" />
+            <element signature="e#2132#2174#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigris/tut10">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigris/core/tut5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <element signature="e#245#475#0" expanded="false" />
+            <element signature="e#280#470#0" expanded="false" />
+            <element signature="e#361#464#0" expanded="false" />
+            <element signature="e#1155#1538#0" expanded="false" />
+            <element signature="e#1202#1537#0" expanded="false" />
+            <element signature="e#1283#1531#0" expanded="false" />
+            <element signature="e#1358#1393#0" expanded="false" />
+            <element signature="e#1424#1460#0" expanded="false" />
+            <element signature="e#1482#1524#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigris/tut10.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="e#852#1222#0" expanded="false" />
+            <element signature="e#899#1217#0" expanded="false" />
+            <element signature="e#980#1211#0" expanded="false" />
+            <element signature="e#1057#1086#0" expanded="false" />
+            <element signature="e#1117#1145#0" expanded="false" />
+            <element signature="e#1162#1204#0" expanded="false" />
+            <element signature="e#1241#1262#0" expanded="false" />
+            <element signature="e#1280#1301#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canApps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5338983">
+          <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <folding>
+            <element signature="e#4712#4845#0" expanded="false" />
+            <element signature="e#5193#5356#0" expanded="false" />
+            <element signature="e#6725#6887#0" expanded="false" />
+            <element signature="e#8329#8491#0" expanded="false" />
+            <element signature="e#8982#9446#0" expanded="false" />
+            <element signature="e#10324#10487#0" expanded="false" />
+            <element signature="e#11098#11220#0" expanded="false" />
+            <element signature="e#11242#11378#0" expanded="false" />
+            <element signature="e#11887#11914#0" expanded="false" />
+            <element signature="e#12647#12779#0" expanded="false" />
+            <element signature="e#13032#13091#0" expanded="false" />
           </folding>
         </state>
       </provider>

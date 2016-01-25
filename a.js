@@ -64,7 +64,9 @@ function dirs() {
 			}
 		}
 	}
-	$stc('', '../art', '../deps', '../data', '../imgFiles',
+	$stc('', '../art', 'tiles',
+	'tilesets',
+	'../deps', '../data', '../imgFiles',
 			'easel', 'cjsGrad', 'cjsGrad/_',
 			'front', 'web',
 			'tigris'
