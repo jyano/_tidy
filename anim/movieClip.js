@@ -3477,9 +3477,7 @@ MC = MOVIECLIP = function () {
 				$Cir(50, 'b').Y(200).tw({x: 600}, [{x: 100}, 40], [{x: 600}, 40])
 		).p("middle")
 	})
-}
-//A++++++++++
-}
+}//A++++++++++
 MC = MOVIECLIP = function () {
 	Q(['me', 'guy'], function () {
 		W()
@@ -3656,3 +3654,24 @@ MC = MOVIECLIP = function () {
 		})
 	}//A++++++++++ 
 }//A++++++++++
+mup = function () {
+	mc.gotoAndStop('RoboMoveUp')
+}
+dw = function () {
+	mc.gotoAndStop('RoboDown')
+}
+mdw = function () {
+	mc.gotoAndStop('RoboMoveDown')
+}
+fw = function () {
+	mc.gotoAndStop('RoboForward')
+}
+mfw = function () {
+	mc.gotoAndStop('RoboMoveForward')
+}
+bw = function () {
+	mc.gotoAndStop('RoboBackward')
+}
+mbw = function () {
+	mc.gotoAndStop('RoboMoveBackward')
+}

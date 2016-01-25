@@ -65,7 +65,9 @@ function dirs() {
 		}
 	}
 	$stc('', '../art', '../deps', '../data', '../imgFiles',
-			'easel', 'front', 'web'
+			'easel', 'cjsGrad', 'cjsGrad/_',
+			'front', 'web',
+			'tigris'
 			//, 'box', 'fiz', 'spaz', 'joints', 'controller', 'scroll', 'track', 'protos', 'arcade', 'bap0', 'bap1', 'bap2', 'box/bap1', 'box/bap2', 'fiz/box', 'fiz/spaz', 'fiz/clipperBox', 'fiz/collide', 'fiz/controller', 'fiz/edge', 'fiz/joints', 'fiz/query', 'fiz/arcade', 'fiz/makeWorkd', 'fiz/_'
 	)
 }
@@ -80,15 +82,27 @@ function routes() {
 		
 			//web
 			'both', 'jq', 'web', 'events', 'css', 'html', 'img',
-			'l', 'webApps', 'mock', 'gpc', 'clipper',
-			'context', 'canvas', 'ctxApps', 'clipApps', 'shapeDefs'],
+			'l', 'webApps', 'mock', 'gpc', 'clipper', 
+			'canvas', 
+			 'clipApps', 'shapeDefs','canApps',
+			'canBAD','canGOOD', 'canGREAT','cxPt','cxRect',
+			'bmap','colorGrad','globComp','imgDa','background','bgImg','clipping',
+			'borderRadius','spacing','drawingApp','paths','text','font','shad',
+			'transform'
+			],
 			[
 				//easel
 				'cjs', 'defaultMug',
-				'createBaseEvents', 'createDraw', 'dobs',
-				'gradFilterCache', 'loaderBitmap','ldrBmApps',
+				'createBaseEvents', 'createDraw', 'dobs', 'cjsCir','cjsCurve','cjsGrad',
+				'cjsDomEl','cjsKeys','easelJSApiTest','graphix',
+				'loader',
+				'filterCache', 'loaderBitmap','bitmap','ldrbmApps','solve','iso','createGames',
 				 'official',
-				'sprite', 'spriteSheet', 'tween','tweenApps'
+				'sprite', 'spriteSheet', 'tween','tweenApps',
+				
+				'gradWorks','gradNot','$h','lin','rad', 'gxLin','gxRad','stroke',
+				'tut1', 'tut2', 'tut3', 'tut4', 'tut5', 'tut6',
+				'tut7', 'tut8', 'tut9', 'tut10'
 			]
 			  , [
 			

@@ -175,7 +175,7 @@ $.fn.mU = function (l) {
 }
 short()
 function short() {
-	$.oMM = function (fn) {
+	$.oMM = $.fn.mM= function (fn) {
 		$.mm(function (e) {
 			fn(e.clientX, e.clientY, e)
 		});
@@ -229,10 +229,12 @@ $.fn.pM = function (l) {
 }
 $.fn.dg = $.fn.drag = function () {
 	this.A()
+	
 	this.each(function () {
 		$(this).css('top', $(this).position().top)
 		$(this).css('left', $(this).position().left)
 	})
+	
 	this.P('a')
 	this.on('mousedown', function (e) {
 		var el = $(this)
@@ -251,6 +253,7 @@ $.fn.dg = $.fn.drag = function () {
 	//touchDrg(element)
 	return this
 }
+
 $.scroll = function (a) {
 	return $(window).scroll(a || function () {
 		$('body').C('*')

@@ -1,1 +1,0 @@
-//http://www.olivierpons.fr/createjs/EaselJS-master/examples/APITest.html#5

@@ -78,52 +78,7 @@ function styles() {
 		}
 		return $
 	}
-	$.fn.fS = $.fn.fZ = $.fn.fontSize = function (z) {
-		this.css('font-size', z)
-		return this
-	}
-	$.Fo = $.font = $f = function (a, b) {
-		var g = G(arguments)
-		if (O(a)) {
-			return ss(
-					oB(b), {fz: a || 50}
-			)
-		}
-		a = N(a) ? _S(a) : U(a) ? '' : a;
-		var F = 'fantasy', W = 'normal', S = 'normal', Z = px(100);
-		_.e(
-				a.split(' '), function (p) {
-					if (M(p[0])) {
-						p = p.split('/')
-						Z = p[0] + 'px' + p[1] ? '/' + p[1] + 'px' : ''
-					}
-					F = Oo('fF', p) || F
-					W = Oo('fW', p) || W
-					S = Oo('fS', p) || S
-				}
-		)
-		return [W, S, Z, F].join(' ')
-	}
-	$.fn.T = function () {
-		var g = G(arguments)
-		if (g.u) {
-			return this.text()
-		}
-		this.text(g.f)
-		return this
-	}
-	$.fn.tA = $.fn.textAlign = function (z) {
-		this.css('text-align', z)
-		return this
-	}
-	$.fn.T0 = function () {
-		var d = this, g = G(arguments)
-		d.E()
-		g.e(function (str) {
-			d.A($.h3(str))
-		})
-		return d
-	}
+ 
 	$.fn.pad = function (padding) {
 		if (U(padding)) {
 			return this.css('padding')
@@ -252,76 +207,7 @@ function styles() {
 		this.css('margin', margin);
 		return this
 	}
-	$.fn.bdC = $.fn.borCol = $.fn.bdC = $.fn.borderColor = function (a) {
-		return this.css("border-color", oO('c', a || 'r'))
-	}
-	$.fn.bS = $.fn.borSty = $.fn.borderStyle = function (style) {
-		this.css('border-style', style)
-		return this
-	}
-	$.fn.borWidth = $.fn.bW = $.fn.borderWidth = function (w) {
-		this.css('border-width', w)
-		return this
-	}
-	$.fn.bor = function (border) {
-		if (U(border)) {
-			return this.css('border')
-		}
-		this.css('border', border);
-		return this
-	}
-	$.fn.bdC = function (a) {
-		return this.css("border-color", oO('c', a || 'r'))
-	}
-	$.Ol = $.outline = function () {
-		var g = G(arguments), o, ol
-		o = g.N_ ? {w: g.f} :
-				Oo('c', o) ?
-				{c: g.f, w: g.s, s: g.t} :
-				{w: g.f, s: g.s}
-		if (S(g.f)) {
-			o = g.f.split(' ')
-			ol = _.j([
-				$r('c', o[0]),
-				oO('oW', o[1] || 5) + 'px',
-				oO('oS', o[2] || '-')
-			])
-			$l(ol)
-			return ol
-		}
-		ol = _.j([
-			$r('c', o.c),
-			N(o.w) ? o.w + 'px' : $r('ow', o.w),
-			$r('os', o.s)
-		])
-		//$l( ol )
-		return ol
-	}
-	$.fn.bgImg = $.fn.backgroundImage = $.fn.bg = function (bg) {
-		if (U(bg)) {
-			return this.css('background')
-		}
-		this.css('background', bg)
-		return this
-	}
-	$.fn.bgP = function (bg) {
-		if (U(bg)) {
-			return this.css('backgroundPosition')
-		}
-		this.css('backgroundPosition', bg)
-		return this
-	}
-	$.fn.bgI = function (url) {//set background image
-		this.bgI('url("' + $.src(url) + '")');
-		return this
-	}
-	$.fn.pBgI = $.fn.bp = function (x, y) {
-		var g = G(arguments), x = g[0], y = g[1];
-		x = N(x) ? x : 0;
-		y = N(y) ? y : 0;
-		this.css({backgroundPos: x + 'px ' + y + 'px'});
-		return this
-	}
+ 
 	function size() {
 		$.fn.getPosition = $.fn.getTotalOffset = function () {
 			alert('$.fn.getPosition')
@@ -466,10 +352,13 @@ function styles() {
 		$.fn.H = function (h) {
 			return h ? this.height(h) : this.height()
 		}
-		$.fn.WH = function (w, h) {
+		
+		  $.fn.WH = function (w, h) {
 			h = h || w;
+			
 			return this.W(w).H(h)
 		}
+		
 		$.fn.MW = $.fn.maxW = function (a) {
 			return this.css('max-width', a)
 		}
@@ -482,13 +371,23 @@ function styles() {
 		$.fn.maxH = function (a) {
 			return this.css('max-height', a)
 		}
-		$.fn.Z = function (w, h) {
-			return this.W(w).H(h || w)
-		}
+	 
 		$.fn.oH = $.fn.outerHeight
 		$.fn.long = function () {
 			return this.css({width: '100%'})
 		}
+		
+		$.fn.z =  function (z, y) {
+			
+			
+			z = N(z,0)
+			y = N(y,z)
+			
+			z *= 100
+			y *=100
+			return this.W(z).H(y)
+		}
+		
 	}
 	
 	size()
